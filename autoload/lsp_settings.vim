@@ -9,24 +9,24 @@ export def Clangd(opts: dict<any> = {})
     name: 'clangd',
     filetype: ['c', 'cpp', 'objc', 'objcpp', 'cuda'],
     path: 'clangd',
-    args: ['--background-index']
+    args: ['--background-index'],
   }
   RegisterServer(settings, opts)
 enddef
 
-export def RustAnalyzer(opts: dict<any> = {})
+export def Gopls(opts: dict<any> = {})
   var settings = {
-    name: 'rustanalyzer',
-    filetype: ['rust'],
-    path: 'rust-analyzer',
-    args: [],
-    syncInit: true
+    name: 'gopls',
+    filetype: 'go',
+    path: 'gopls',
+    args: ['serve']
   }
   RegisterServer(settings, opts)
 enddef
 
 export def Pyright(opts: dict<any> = {})
   var settings = {
+    name: 'pyright',
     filetype: 'python',
     path: 'pyright-langserver',
     args: ['--stdio'],
@@ -39,22 +39,23 @@ export def Pyright(opts: dict<any> = {})
   RegisterServer(settings, opts)
 enddef
 
+export def RustAnalyzer(opts: dict<any> = {})
+  var settings = {
+    name: 'rust-analyzer',
+    filetype: 'rust',
+    path: 'rust-analyzer',
+    args: [],
+    syncInit: true
+  }
+  RegisterServer(settings, opts)
+enddef
+
 export def TypstLsp(opts: dict<any> = {})
   var settings = { 
     name: 'typst-lsp',
     filetype: 'typst',
     path: 'typst-lsp',
     args: [],
-  }
-  RegisterServer(settings, opts)
-enddef
-
-export def Gopls(opts: dict<any> = {})
-  var settings = {
-    name: 'gopls',
-    filetype: 'go',
-    path: 'gopls',
-    args: ['serve']
   }
   RegisterServer(settings, opts)
 enddef
