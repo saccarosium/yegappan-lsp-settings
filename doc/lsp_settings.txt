@@ -1,3 +1,23 @@
+LSP BUFFER MAPPINGS                             *lsp-settings-buffer-mappings*
+
+This plugin will remap and change some options, on lsps attached buffers,
+depending on the capabilities of current setuped lsps.
+
+The following option are set:
+- |keywordprg| is set to |LspHover|
+- |formatexpr| is set to `lsp#lsp#FormatExpr`
+- |tagfunc| is set to `lsp#lsp#TagFunc`
+
+The following mappings are provided:
+- `gd`: |LspGotoDeclaration|
+- `gD`: |LspPeekDeclaration|
+- `[d`: |LspDiag-prev|
+- `]d`: |LspDiag-next|
+- `[D`: |LspDiag-first|
+- `]D`: |LspDiag-last|
+- `CTRL-W_d`: |LspDiag-current|
+
+
 SERVERS
 
                                                          *lsp-settings-clangd*
