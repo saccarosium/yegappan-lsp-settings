@@ -6,17 +6,38 @@ output = subprocess.run(
 )
 configs = json.loads(output.stdout)
 
-file_contents = "vim9script\n\n"
-for key, value in configs.items():
+
+servers = []
+buffer = "vim9script\n\n"
+for key, value in sorted(configs.items()):
+    name = key.replace("_", " ").replace("-", " ").title()
+    # Save servers names for documentation
+    servers.append(name)
     # Convert server names from snake case to PascalCase
-    fn_name = key.replace("_", " ").replace("-", " ").title().replace(" ", "")
-    file_contents += f"export def {fn_name}(opts: dict<any> = {{}})\n"
+    fn_name = name.replace(" ", "")
+    buffer += f"export def {fn_name}(opts: dict<any> = {{}})\n"
     # Creating a local variable to the function with the correct configuration
     config = json.dumps(value)
-    file_contents += f"  var settings = {config}\n"
+    buffer += f"  var settings = {config}\n"
     # Registering the LSP
-    file_contents += "  g:LspAddServer([settings->extend(opts, 'force')])\n"
-    file_contents += "enddef\n"
+    buffer += "  g:LspAddServer([settings->extend(opts, 'force')])\n"
+    buffer += "enddef\n"
 
 with open("autoload/lsp_settings.vim", "w") as f:
-    f.write(file_contents)
+    f.write(buffer)
+
+with open("doc/lsp_settings_servers.txt", "w") as f:
+    buffer = "LSP SERVER LIST"
+    doc_tag = "*lsp-settings-server-list*"
+    buffer += " " * (78 - len(buffer) - len(doc_tag)) + doc_tag + "\n"
+    buffer += "\n"
+    servers.sort()
+    for name in servers:
+        buffer += name.upper() + " ~\n"
+        buffer += ">\n"
+        name = name.replace(" ", "")
+        buffer += f"    call lsp_settings#{name}()\n"
+        buffer += "<\n"
+        buffer += "\n"
+    buffer += "vim:tw=78:ts=8:noet:ft=help:norl:\n"
+    f.write(buffer)

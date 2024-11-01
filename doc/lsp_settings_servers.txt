@@ -1,0 +1,1698 @@
+LSP SERVER LIST                                     *lsp-settings-server-list*
+
+ADA LS ~
+>
+    call lsp_settings#AdaLs()
+<
+
+AGDA LS ~
+>
+    call lsp_settings#AgdaLs()
+<
+
+AIKEN ~
+>
+    call lsp_settings#Aiken()
+<
+
+ANAKIN LANGUAGE SERVER ~
+>
+    call lsp_settings#AnakinLanguageServer()
+<
+
+ANGULARLS ~
+>
+    call lsp_settings#Angularls()
+<
+
+ANSIBLELS ~
+>
+    call lsp_settings#Ansiblels()
+<
+
+ANTLERSLS ~
+>
+    call lsp_settings#Antlersls()
+<
+
+APEX LS ~
+>
+    call lsp_settings#ApexLs()
+<
+
+ARDUINO LANGUAGE SERVER ~
+>
+    call lsp_settings#ArduinoLanguageServer()
+<
+
+ASM LSP ~
+>
+    call lsp_settings#AsmLsp()
+<
+
+AST GREP ~
+>
+    call lsp_settings#AstGrep()
+<
+
+ASTRO ~
+>
+    call lsp_settings#Astro()
+<
+
+AUTOTOOLS LS ~
+>
+    call lsp_settings#AutotoolsLs()
+<
+
+AWK LS ~
+>
+    call lsp_settings#AwkLs()
+<
+
+AZURE PIPELINES LS ~
+>
+    call lsp_settings#AzurePipelinesLs()
+<
+
+BACON LS ~
+>
+    call lsp_settings#BaconLs()
+<
+
+BALLERINA ~
+>
+    call lsp_settings#Ballerina()
+<
+
+BASEDPYRIGHT ~
+>
+    call lsp_settings#Basedpyright()
+<
+
+BASHLS ~
+>
+    call lsp_settings#Bashls()
+<
+
+BASICS LS ~
+>
+    call lsp_settings#BasicsLs()
+<
+
+BAZELRC LSP ~
+>
+    call lsp_settings#BazelrcLsp()
+<
+
+BEANCOUNT ~
+>
+    call lsp_settings#Beancount()
+<
+
+BICEP ~
+>
+    call lsp_settings#Bicep()
+<
+
+BIOME ~
+>
+    call lsp_settings#Biome()
+<
+
+BITBAKE LANGUAGE SERVER ~
+>
+    call lsp_settings#BitbakeLanguageServer()
+<
+
+BITBAKE LS ~
+>
+    call lsp_settings#BitbakeLs()
+<
+
+BLUEPRINT LS ~
+>
+    call lsp_settings#BlueprintLs()
+<
+
+BQNLSP ~
+>
+    call lsp_settings#Bqnlsp()
+<
+
+BRIGHT SCRIPT ~
+>
+    call lsp_settings#BrightScript()
+<
+
+BSL LS ~
+>
+    call lsp_settings#BslLs()
+<
+
+BUCK2 ~
+>
+    call lsp_settings#Buck2()
+<
+
+BUDDY LS ~
+>
+    call lsp_settings#BuddyLs()
+<
+
+BUFLS ~
+>
+    call lsp_settings#Bufls()
+<
+
+BZL ~
+>
+    call lsp_settings#Bzl()
+<
+
+C3 LSP ~
+>
+    call lsp_settings#C3Lsp()
+<
+
+CADENCE ~
+>
+    call lsp_settings#Cadence()
+<
+
+CAIRO LS ~
+>
+    call lsp_settings#CairoLs()
+<
+
+CCLS ~
+>
+    call lsp_settings#Ccls()
+<
+
+CDS LSP ~
+>
+    call lsp_settings#CdsLsp()
+<
+
+CIRCOM LSP ~
+>
+    call lsp_settings#CircomLsp()
+<
+
+CLANGD ~
+>
+    call lsp_settings#Clangd()
+<
+
+CLARITY LSP ~
+>
+    call lsp_settings#ClarityLsp()
+<
+
+CLOJURE LSP ~
+>
+    call lsp_settings#ClojureLsp()
+<
+
+CMAKE ~
+>
+    call lsp_settings#Cmake()
+<
+
+COBOL LS ~
+>
+    call lsp_settings#CobolLs()
+<
+
+CODEQLLS ~
+>
+    call lsp_settings#Codeqlls()
+<
+
+COFFEESENSE ~
+>
+    call lsp_settings#Coffeesense()
+<
+
+CONTEXTIVE ~
+>
+    call lsp_settings#Contextive()
+<
+
+COQ LSP ~
+>
+    call lsp_settings#CoqLsp()
+<
+
+CRYSTALLINE ~
+>
+    call lsp_settings#Crystalline()
+<
+
+CSHARP LS ~
+>
+    call lsp_settings#CsharpLs()
+<
+
+CSS VARIABLES ~
+>
+    call lsp_settings#CssVariables()
+<
+
+CSSLS ~
+>
+    call lsp_settings#Cssls()
+<
+
+CSSMODULES LS ~
+>
+    call lsp_settings#CssmodulesLs()
+<
+
+CUCUMBER LANGUAGE SERVER ~
+>
+    call lsp_settings#CucumberLanguageServer()
+<
+
+CUSTOM ELEMENTS LS ~
+>
+    call lsp_settings#CustomElementsLs()
+<
+
+CYPHER LS ~
+>
+    call lsp_settings#CypherLs()
+<
+
+DAEDALUS LS ~
+>
+    call lsp_settings#DaedalusLs()
+<
+
+DAFNY ~
+>
+    call lsp_settings#Dafny()
+<
+
+DAGGER ~
+>
+    call lsp_settings#Dagger()
+<
+
+DARTLS ~
+>
+    call lsp_settings#Dartls()
+<
+
+DCMLS ~
+>
+    call lsp_settings#Dcmls()
+<
+
+DEBPUTY ~
+>
+    call lsp_settings#Debputy()
+<
+
+DELPHI LS ~
+>
+    call lsp_settings#DelphiLs()
+<
+
+DENOLS ~
+>
+    call lsp_settings#Denols()
+<
+
+DHALL LSP SERVER ~
+>
+    call lsp_settings#DhallLspServer()
+<
+
+DIAGNOSTICLS ~
+>
+    call lsp_settings#Diagnosticls()
+<
+
+DIGESTIF ~
+>
+    call lsp_settings#Digestif()
+<
+
+DJLSP ~
+>
+    call lsp_settings#Djlsp()
+<
+
+DOCKER COMPOSE LANGUAGE SERVICE ~
+>
+    call lsp_settings#DockerComposeLanguageService()
+<
+
+DOCKERLS ~
+>
+    call lsp_settings#Dockerls()
+<
+
+DOLMENLS ~
+>
+    call lsp_settings#Dolmenls()
+<
+
+DOTLS ~
+>
+    call lsp_settings#Dotls()
+<
+
+DPRINT ~
+>
+    call lsp_settings#Dprint()
+<
+
+DROOLS LSP ~
+>
+    call lsp_settings#DroolsLsp()
+<
+
+DS PINYIN LSP ~
+>
+    call lsp_settings#DsPinyinLsp()
+<
+
+EARTHLYLS ~
+>
+    call lsp_settings#Earthlyls()
+<
+
+ECSACT ~
+>
+    call lsp_settings#Ecsact()
+<
+
+EFM ~
+>
+    call lsp_settings#Efm()
+<
+
+ELIXIRLS ~
+>
+    call lsp_settings#Elixirls()
+<
+
+ELMLS ~
+>
+    call lsp_settings#Elmls()
+<
+
+ELP ~
+>
+    call lsp_settings#Elp()
+<
+
+EMBER ~
+>
+    call lsp_settings#Ember()
+<
+
+EMMET LANGUAGE SERVER ~
+>
+    call lsp_settings#EmmetLanguageServer()
+<
+
+EMMET LS ~
+>
+    call lsp_settings#EmmetLs()
+<
+
+ERG LANGUAGE SERVER ~
+>
+    call lsp_settings#ErgLanguageServer()
+<
+
+ERLANGLS ~
+>
+    call lsp_settings#Erlangls()
+<
+
+ESBONIO ~
+>
+    call lsp_settings#Esbonio()
+<
+
+ESLINT ~
+>
+    call lsp_settings#Eslint()
+<
+
+FACILITY LANGUAGE SERVER ~
+>
+    call lsp_settings#FacilityLanguageServer()
+<
+
+FENNEL LANGUAGE SERVER ~
+>
+    call lsp_settings#FennelLanguageServer()
+<
+
+FENNEL LS ~
+>
+    call lsp_settings#FennelLs()
+<
+
+FISH LSP ~
+>
+    call lsp_settings#FishLsp()
+<
+
+FLOW ~
+>
+    call lsp_settings#Flow()
+<
+
+FLUX LSP ~
+>
+    call lsp_settings#FluxLsp()
+<
+
+FOAM LS ~
+>
+    call lsp_settings#FoamLs()
+<
+
+FORTLS ~
+>
+    call lsp_settings#Fortls()
+<
+
+FSAUTOCOMPLETE ~
+>
+    call lsp_settings#Fsautocomplete()
+<
+
+FSHARP LANGUAGE SERVER ~
+>
+    call lsp_settings#FsharpLanguageServer()
+<
+
+FSTAR ~
+>
+    call lsp_settings#Fstar()
+<
+
+FUTHARK LSP ~
+>
+    call lsp_settings#FutharkLsp()
+<
+
+GDSCRIPT ~
+>
+    call lsp_settings#Gdscript()
+<
+
+GDSHADER LSP ~
+>
+    call lsp_settings#GdshaderLsp()
+<
+
+GHCIDE ~
+>
+    call lsp_settings#Ghcide()
+<
+
+GHDL LS ~
+>
+    call lsp_settings#GhdlLs()
+<
+
+GINKO LS ~
+>
+    call lsp_settings#GinkoLs()
+<
+
+GITLAB CI LS ~
+>
+    call lsp_settings#GitlabCiLs()
+<
+
+GLASGOW ~
+>
+    call lsp_settings#Glasgow()
+<
+
+GLEAM ~
+>
+    call lsp_settings#Gleam()
+<
+
+GLINT ~
+>
+    call lsp_settings#Glint()
+<
+
+GLSL ANALYZER ~
+>
+    call lsp_settings#GlslAnalyzer()
+<
+
+GLSLLS ~
+>
+    call lsp_settings#Glslls()
+<
+
+GOLANGCI LINT LS ~
+>
+    call lsp_settings#GolangciLintLs()
+<
+
+GOPLS ~
+>
+    call lsp_settings#Gopls()
+<
+
+GRADLE LS ~
+>
+    call lsp_settings#GradleLs()
+<
+
+GRAMMARLY ~
+>
+    call lsp_settings#Grammarly()
+<
+
+GRAPHQL ~
+>
+    call lsp_settings#Graphql()
+<
+
+GROOVYLS ~
+>
+    call lsp_settings#Groovyls()
+<
+
+GUILE LS ~
+>
+    call lsp_settings#GuileLs()
+<
+
+HARPER LS ~
+>
+    call lsp_settings#HarperLs()
+<
+
+HAXE LANGUAGE SERVER ~
+>
+    call lsp_settings#HaxeLanguageServer()
+<
+
+HDL CHECKER ~
+>
+    call lsp_settings#HdlChecker()
+<
+
+HELM LS ~
+>
+    call lsp_settings#HelmLs()
+<
+
+HHVM ~
+>
+    call lsp_settings#Hhvm()
+<
+
+HIE ~
+>
+    call lsp_settings#Hie()
+<
+
+HLASM ~
+>
+    call lsp_settings#Hlasm()
+<
+
+HLS ~
+>
+    call lsp_settings#Hls()
+<
+
+HOON LS ~
+>
+    call lsp_settings#HoonLs()
+<
+
+HTML ~
+>
+    call lsp_settings#Html()
+<
+
+HTMX ~
+>
+    call lsp_settings#Htmx()
+<
+
+HYDRA LSP ~
+>
+    call lsp_settings#HydraLsp()
+<
+
+HYPRLS ~
+>
+    call lsp_settings#Hyprls()
+<
+
+IDRIS2 LSP ~
+>
+    call lsp_settings#Idris2Lsp()
+<
+
+INTELEPHENSE ~
+>
+    call lsp_settings#Intelephense()
+<
+
+JANET LSP ~
+>
+    call lsp_settings#JanetLsp()
+<
+
+JAVA LANGUAGE SERVER ~
+>
+    call lsp_settings#JavaLanguageServer()
+<
+
+JDTLS ~
+>
+    call lsp_settings#Jdtls()
+<
+
+JEDI LANGUAGE SERVER ~
+>
+    call lsp_settings#JediLanguageServer()
+<
+
+JINJA LSP ~
+>
+    call lsp_settings#JinjaLsp()
+<
+
+JQLS ~
+>
+    call lsp_settings#Jqls()
+<
+
+JSONLS ~
+>
+    call lsp_settings#Jsonls()
+<
+
+JSONNET LS ~
+>
+    call lsp_settings#JsonnetLs()
+<
+
+JULIALS ~
+>
+    call lsp_settings#Julials()
+<
+
+KCL ~
+>
+    call lsp_settings#Kcl()
+<
+
+KOKA ~
+>
+    call lsp_settings#Koka()
+<
+
+KOTLIN LANGUAGE SERVER ~
+>
+    call lsp_settings#KotlinLanguageServer()
+<
+
+KULALA LS ~
+>
+    call lsp_settings#KulalaLs()
+<
+
+LEAN3LS ~
+>
+    call lsp_settings#Lean3Ls()
+<
+
+LEANLS ~
+>
+    call lsp_settings#Leanls()
+<
+
+LELWEL LS ~
+>
+    call lsp_settings#LelwelLs()
+<
+
+LEMMINX ~
+>
+    call lsp_settings#Lemminx()
+<
+
+LEXICAL ~
+>
+    call lsp_settings#Lexical()
+<
+
+LSP AI ~
+>
+    call lsp_settings#LspAi()
+<
+
+LTEX ~
+>
+    call lsp_settings#Ltex()
+<
+
+LUA LS ~
+>
+    call lsp_settings#LuaLs()
+<
+
+LUAU LSP ~
+>
+    call lsp_settings#LuauLsp()
+<
+
+LWC LS ~
+>
+    call lsp_settings#LwcLs()
+<
+
+M68K ~
+>
+    call lsp_settings#M68K()
+<
+
+MARKDOWN OXIDE ~
+>
+    call lsp_settings#MarkdownOxide()
+<
+
+MARKO JS ~
+>
+    call lsp_settings#MarkoJs()
+<
+
+MARKSMAN ~
+>
+    call lsp_settings#Marksman()
+<
+
+MATLAB LS ~
+>
+    call lsp_settings#MatlabLs()
+<
+
+MDX ANALYZER ~
+>
+    call lsp_settings#MdxAnalyzer()
+<
+
+MESONLSP ~
+>
+    call lsp_settings#Mesonlsp()
+<
+
+METALS ~
+>
+    call lsp_settings#Metals()
+<
+
+MILLET ~
+>
+    call lsp_settings#Millet()
+<
+
+MINT ~
+>
+    call lsp_settings#Mint()
+<
+
+MLIR LSP SERVER ~
+>
+    call lsp_settings#MlirLspServer()
+<
+
+MLIR PDLL LSP SERVER ~
+>
+    call lsp_settings#MlirPdllLspServer()
+<
+
+MM0 LS ~
+>
+    call lsp_settings#Mm0Ls()
+<
+
+MOJO ~
+>
+    call lsp_settings#Mojo()
+<
+
+MOTOKO LSP ~
+>
+    call lsp_settings#MotokoLsp()
+<
+
+MOVE ANALYZER ~
+>
+    call lsp_settings#MoveAnalyzer()
+<
+
+MSBUILD PROJECT TOOLS SERVER ~
+>
+    call lsp_settings#MsbuildProjectToolsServer()
+<
+
+MUTT LS ~
+>
+    call lsp_settings#MuttLs()
+<
+
+NELUA LSP ~
+>
+    call lsp_settings#NeluaLsp()
+<
+
+NEOCMAKE ~
+>
+    call lsp_settings#Neocmake()
+<
+
+NEXTLS ~
+>
+    call lsp_settings#Nextls()
+<
+
+NGINX LANGUAGE SERVER ~
+>
+    call lsp_settings#NginxLanguageServer()
+<
+
+NICKEL LS ~
+>
+    call lsp_settings#NickelLs()
+<
+
+NIL LS ~
+>
+    call lsp_settings#NilLs()
+<
+
+NIM LANGSERVER ~
+>
+    call lsp_settings#NimLangserver()
+<
+
+NIMLS ~
+>
+    call lsp_settings#Nimls()
+<
+
+NIXD ~
+>
+    call lsp_settings#Nixd()
+<
+
+NOMAD LSP ~
+>
+    call lsp_settings#NomadLsp()
+<
+
+NTT ~
+>
+    call lsp_settings#Ntt()
+<
+
+NUSHELL ~
+>
+    call lsp_settings#Nushell()
+<
+
+NXLS ~
+>
+    call lsp_settings#Nxls()
+<
+
+OCAMLLS ~
+>
+    call lsp_settings#Ocamlls()
+<
+
+OCAMLLSP ~
+>
+    call lsp_settings#Ocamllsp()
+<
+
+OLS ~
+>
+    call lsp_settings#Ols()
+<
+
+OMNISHARP ~
+>
+    call lsp_settings#Omnisharp()
+<
+
+OPENCL LS ~
+>
+    call lsp_settings#OpenclLs()
+<
+
+OPENEDGE LS ~
+>
+    call lsp_settings#OpenedgeLs()
+<
+
+OPENSCAD LS ~
+>
+    call lsp_settings#OpenscadLs()
+<
+
+OPENSCAD LSP ~
+>
+    call lsp_settings#OpenscadLsp()
+<
+
+PACT LS ~
+>
+    call lsp_settings#PactLs()
+<
+
+PASLS ~
+>
+    call lsp_settings#Pasls()
+<
+
+PBLS ~
+>
+    call lsp_settings#Pbls()
+<
+
+PERLLS ~
+>
+    call lsp_settings#Perlls()
+<
+
+PERLNAVIGATOR ~
+>
+    call lsp_settings#Perlnavigator()
+<
+
+PERLPLS ~
+>
+    call lsp_settings#Perlpls()
+<
+
+PEST LS ~
+>
+    call lsp_settings#PestLs()
+<
+
+PHAN ~
+>
+    call lsp_settings#Phan()
+<
+
+PHPACTOR ~
+>
+    call lsp_settings#Phpactor()
+<
+
+PICO8 LS ~
+>
+    call lsp_settings#Pico8Ls()
+<
+
+PKGBUILD LANGUAGE SERVER ~
+>
+    call lsp_settings#PkgbuildLanguageServer()
+<
+
+PLEASE ~
+>
+    call lsp_settings#Please()
+<
+
+PORYSCRIPT PLS ~
+>
+    call lsp_settings#PoryscriptPls()
+<
+
+POSTGRES LSP ~
+>
+    call lsp_settings#PostgresLsp()
+<
+
+POWERSHELL ES ~
+>
+    call lsp_settings#PowershellEs()
+<
+
+PRISMALS ~
+>
+    call lsp_settings#Prismals()
+<
+
+PROLOG LS ~
+>
+    call lsp_settings#PrologLs()
+<
+
+PROSEMD LSP ~
+>
+    call lsp_settings#ProsemdLsp()
+<
+
+PROTOLS ~
+>
+    call lsp_settings#Protols()
+<
+
+PSALM ~
+>
+    call lsp_settings#Psalm()
+<
+
+PUG ~
+>
+    call lsp_settings#Pug()
+<
+
+PUPPET ~
+>
+    call lsp_settings#Puppet()
+<
+
+PURESCRIPTLS ~
+>
+    call lsp_settings#Purescriptls()
+<
+
+PYLSP ~
+>
+    call lsp_settings#Pylsp()
+<
+
+PYLYZER ~
+>
+    call lsp_settings#Pylyzer()
+<
+
+PYRE ~
+>
+    call lsp_settings#Pyre()
+<
+
+PYRIGHT ~
+>
+    call lsp_settings#Pyright()
+<
+
+QML LSP ~
+>
+    call lsp_settings#QmlLsp()
+<
+
+QMLLS ~
+>
+    call lsp_settings#Qmlls()
+<
+
+QUICK LINT JS ~
+>
+    call lsp_settings#QuickLintJs()
+<
+
+R LANGUAGE SERVER ~
+>
+    call lsp_settings#RLanguageServer()
+<
+
+RACKET LANGSERVER ~
+>
+    call lsp_settings#RacketLangserver()
+<
+
+RAKU NAVIGATOR ~
+>
+    call lsp_settings#RakuNavigator()
+<
+
+REASON LS ~
+>
+    call lsp_settings#ReasonLs()
+<
+
+REGAL ~
+>
+    call lsp_settings#Regal()
+<
+
+REGOLS ~
+>
+    call lsp_settings#Regols()
+<
+
+RELAY LSP ~
+>
+    call lsp_settings#RelayLsp()
+<
+
+REMARK LS ~
+>
+    call lsp_settings#RemarkLs()
+<
+
+RESCRIPTLS ~
+>
+    call lsp_settings#Rescriptls()
+<
+
+RLS ~
+>
+    call lsp_settings#Rls()
+<
+
+RNIX ~
+>
+    call lsp_settings#Rnix()
+<
+
+ROBOTFRAMEWORK LS ~
+>
+    call lsp_settings#RobotframeworkLs()
+<
+
+ROC LS ~
+>
+    call lsp_settings#RocLs()
+<
+
+ROME ~
+>
+    call lsp_settings#Rome()
+<
+
+RUBOCOP ~
+>
+    call lsp_settings#Rubocop()
+<
+
+RUBY LSP ~
+>
+    call lsp_settings#RubyLsp()
+<
+
+RUFF ~
+>
+    call lsp_settings#Ruff()
+<
+
+RUFF LSP ~
+>
+    call lsp_settings#RuffLsp()
+<
+
+RUNE LANGUAGESERVER ~
+>
+    call lsp_settings#RuneLanguageserver()
+<
+
+RUST ANALYZER ~
+>
+    call lsp_settings#RustAnalyzer()
+<
+
+SALT LS ~
+>
+    call lsp_settings#SaltLs()
+<
+
+SCHEME LANGSERVER ~
+>
+    call lsp_settings#SchemeLangserver()
+<
+
+SCRY ~
+>
+    call lsp_settings#Scry()
+<
+
+SERVE D ~
+>
+    call lsp_settings#ServeD()
+<
+
+SHOPIFY THEME LS ~
+>
+    call lsp_settings#ShopifyThemeLs()
+<
+
+SIXTYFPS ~
+>
+    call lsp_settings#Sixtyfps()
+<
+
+SLANGD ~
+>
+    call lsp_settings#Slangd()
+<
+
+SLINT LSP ~
+>
+    call lsp_settings#SlintLsp()
+<
+
+SMARTY LS ~
+>
+    call lsp_settings#SmartyLs()
+<
+
+SMITHY LS ~
+>
+    call lsp_settings#SmithyLs()
+<
+
+SNAKESKIN LS ~
+>
+    call lsp_settings#SnakeskinLs()
+<
+
+SNYK LS ~
+>
+    call lsp_settings#SnykLs()
+<
+
+SOLANG ~
+>
+    call lsp_settings#Solang()
+<
+
+SOLARGRAPH ~
+>
+    call lsp_settings#Solargraph()
+<
+
+SOLC ~
+>
+    call lsp_settings#Solc()
+<
+
+SOLIDITY ~
+>
+    call lsp_settings#Solidity()
+<
+
+SOLIDITY LS ~
+>
+    call lsp_settings#SolidityLs()
+<
+
+SOLIDITY LS NOMICFOUNDATION ~
+>
+    call lsp_settings#SolidityLsNomicfoundation()
+<
+
+SOMESASS LS ~
+>
+    call lsp_settings#SomesassLs()
+<
+
+SORBET ~
+>
+    call lsp_settings#Sorbet()
+<
+
+SOURCEKIT ~
+>
+    call lsp_settings#Sourcekit()
+<
+
+SOURCERY ~
+>
+    call lsp_settings#Sourcery()
+<
+
+SPECTRAL ~
+>
+    call lsp_settings#Spectral()
+<
+
+SPYGLASSMC LANGUAGE SERVER ~
+>
+    call lsp_settings#SpyglassmcLanguageServer()
+<
+
+SQLLS ~
+>
+    call lsp_settings#Sqlls()
+<
+
+SQLS ~
+>
+    call lsp_settings#Sqls()
+<
+
+STANDARDRB ~
+>
+    call lsp_settings#Standardrb()
+<
+
+STARLARK RUST ~
+>
+    call lsp_settings#StarlarkRust()
+<
+
+STARPLS ~
+>
+    call lsp_settings#Starpls()
+<
+
+STATIX ~
+>
+    call lsp_settings#Statix()
+<
+
+STEEP ~
+>
+    call lsp_settings#Steep()
+<
+
+STIMULUS LS ~
+>
+    call lsp_settings#StimulusLs()
+<
+
+STYLELINT LSP ~
+>
+    call lsp_settings#StylelintLsp()
+<
+
+SUPERHTML ~
+>
+    call lsp_settings#Superhtml()
+<
+
+SVELTE ~
+>
+    call lsp_settings#Svelte()
+<
+
+SVLANGSERVER ~
+>
+    call lsp_settings#Svlangserver()
+<
+
+SVLS ~
+>
+    call lsp_settings#Svls()
+<
+
+SWIFT MESONLS ~
+>
+    call lsp_settings#SwiftMesonls()
+<
+
+SYNTAX TREE ~
+>
+    call lsp_settings#SyntaxTree()
+<
+
+TABBY ML ~
+>
+    call lsp_settings#TabbyMl()
+<
+
+TAILWINDCSS ~
+>
+    call lsp_settings#Tailwindcss()
+<
+
+TAPLO ~
+>
+    call lsp_settings#Taplo()
+<
+
+TBLGEN LSP SERVER ~
+>
+    call lsp_settings#TblgenLspServer()
+<
+
+TEAL LS ~
+>
+    call lsp_settings#TealLs()
+<
+
+TEMPL ~
+>
+    call lsp_settings#Templ()
+<
+
+TERRAFORM LSP ~
+>
+    call lsp_settings#TerraformLsp()
+<
+
+TERRAFORMLS ~
+>
+    call lsp_settings#Terraformls()
+<
+
+TEXLAB ~
+>
+    call lsp_settings#Texlab()
+<
+
+TEXTLSP ~
+>
+    call lsp_settings#Textlsp()
+<
+
+TFLINT ~
+>
+    call lsp_settings#Tflint()
+<
+
+THEME CHECK ~
+>
+    call lsp_settings#ThemeCheck()
+<
+
+THRIFTLS ~
+>
+    call lsp_settings#Thriftls()
+<
+
+TILT LS ~
+>
+    call lsp_settings#TiltLs()
+<
+
+TINYMIST ~
+>
+    call lsp_settings#Tinymist()
+<
+
+TS LS ~
+>
+    call lsp_settings#TsLs()
+<
+
+TS QUERY LS ~
+>
+    call lsp_settings#TsQueryLs()
+<
+
+TSP SERVER ~
+>
+    call lsp_settings#TspServer()
+<
+
+TTAGS ~
+>
+    call lsp_settings#Ttags()
+<
+
+TURTLE LS ~
+>
+    call lsp_settings#TurtleLs()
+<
+
+TVM FFI NAVIGATOR ~
+>
+    call lsp_settings#TvmFfiNavigator()
+<
+
+TWIGGY LANGUAGE SERVER ~
+>
+    call lsp_settings#TwiggyLanguageServer()
+<
+
+TYPEPROF ~
+>
+    call lsp_settings#Typeprof()
+<
+
+TYPOS LSP ~
+>
+    call lsp_settings#TyposLsp()
+<
+
+TYPST LSP ~
+>
+    call lsp_settings#TypstLsp()
+<
+
+UIUA ~
+>
+    call lsp_settings#Uiua()
+<
+
+UNGRAMMAR LANGUAGESERVER ~
+>
+    call lsp_settings#UngrammarLanguageserver()
+<
+
+UNISON ~
+>
+    call lsp_settings#Unison()
+<
+
+UNOCSS ~
+>
+    call lsp_settings#Unocss()
+<
+
+UVLS ~
+>
+    call lsp_settings#Uvls()
+<
+
+V ANALYZER ~
+>
+    call lsp_settings#VAnalyzer()
+<
+
+VACUUM ~
+>
+    call lsp_settings#Vacuum()
+<
+
+VALA LS ~
+>
+    call lsp_settings#ValaLs()
+<
+
+VALE LS ~
+>
+    call lsp_settings#ValeLs()
+<
+
+VDMJ ~
+>
+    call lsp_settings#Vdmj()
+<
+
+VERIBLE ~
+>
+    call lsp_settings#Verible()
+<
+
+VERIDIAN ~
+>
+    call lsp_settings#Veridian()
+<
+
+VERYL LS ~
+>
+    call lsp_settings#VerylLs()
+<
+
+VHDL LS ~
+>
+    call lsp_settings#VhdlLs()
+<
+
+VIMLS ~
+>
+    call lsp_settings#Vimls()
+<
+
+VISUALFORCE LS ~
+>
+    call lsp_settings#VisualforceLs()
+<
+
+VLS ~
+>
+    call lsp_settings#Vls()
+<
+
+VOLAR ~
+>
+    call lsp_settings#Volar()
+<
+
+VSCOQTOP ~
+>
+    call lsp_settings#Vscoqtop()
+<
+
+VTSLS ~
+>
+    call lsp_settings#Vtsls()
+<
+
+VUELS ~
+>
+    call lsp_settings#Vuels()
+<
+
+WGSL ANALYZER ~
+>
+    call lsp_settings#WgslAnalyzer()
+<
+
+YAMLLS ~
+>
+    call lsp_settings#Yamlls()
+<
+
+YANG LSP ~
+>
+    call lsp_settings#YangLsp()
+<
+
+YLS ~
+>
+    call lsp_settings#Yls()
+<
+
+ZIGGY ~
+>
+    call lsp_settings#Ziggy()
+<
+
+ZIGGY SCHEMA ~
+>
+    call lsp_settings#ZiggySchema()
+<
+
+ZK ~
+>
+    call lsp_settings#Zk()
+<
+
+ZLS ~
+>
+    call lsp_settings#Zls()
+<
+
+vim:tw=78:ts=8:noet:ft=help:norl:
