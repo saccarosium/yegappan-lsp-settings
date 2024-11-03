@@ -17,7 +17,7 @@ for key, value in sorted(configs.items()):
     fn_name = name.replace(" ", "")
     buffer += f"export def {fn_name}(opts: dict<any> = {{}})\n"
     # Creating a local variable to the function with the correct configuration
-    config = json.dumps(value)
+    config = json.dumps(dict(sorted(value.items())))
     buffer += f"  var settings = {config}\n"
     # Registering the LSP
     buffer += "  g:LspAddServer([settings->extend(opts, 'force')])\n"
