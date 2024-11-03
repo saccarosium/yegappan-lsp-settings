@@ -7,12 +7,10 @@ output = subprocess.run(
 configs = json.loads(output.stdout)
 
 
-servers = []
+servers = {}
 buffer = "vim9script\n\n"
 for key, value in sorted(configs.items()):
     name = key.replace("_", " ").replace("-", " ").title()
-    # Save servers names for documentation
-    servers.append(name)
     # Convert server names from snake case to PascalCase
     fn_name = name.replace(" ", "")
     buffer += f"export def {fn_name}(opts: dict<any> = {{}})\n"
@@ -22,6 +20,8 @@ for key, value in sorted(configs.items()):
     # Registering the LSP
     buffer += "  g:LspAddServer([settings->extend(opts, 'force')])\n"
     buffer += "enddef\n"
+    # Save servers names for documentation
+    servers[name] = json.dumps(value, indent=2)
 
 with open("autoload/lsp_settings.vim", "w") as f:
     f.write(buffer)
@@ -31,13 +31,15 @@ with open("doc/lsp_settings_servers.txt", "w") as f:
     doc_tag = "*lsp-settings-server-list*"
     buffer += " " * (78 - len(buffer) - len(doc_tag)) + doc_tag + "\n"
     buffer += "\n"
-    servers.sort()
-    for name in servers:
+    for name, config in sorted(servers.items()):
         buffer += name.upper() + " ~\n"
-        buffer += ">\n"
+        buffer += "Usage: >\n"
         name = name.replace(" ", "")
         buffer += f"    call lsp_settings#{name}()\n"
         buffer += "<\n"
+        buffer += "Defaults: >\n"
+        for line in config.split('\n'):
+            buffer += f"    {line}\n"
         buffer += "\n"
     buffer += "vim:tw=78:ts=8:noet:ft=help:norl:\n"
     f.write(buffer)

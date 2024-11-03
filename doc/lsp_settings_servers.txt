@@ -1,1698 +1,6471 @@
 LSP SERVER LIST                                     *lsp-settings-server-list*
 
 ADA LS ~
->
+Usage: >
     call lsp_settings#AdaLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ada"
+      ],
+      "path": "ada_language_server",
+      "name": "ada_ls",
+      "args": []
+    }
 
 AGDA LS ~
->
+Usage: >
     call lsp_settings#AgdaLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "als",
+      "name": "agda_ls",
+      "filetype": [
+        "agda"
+      ]
+    }
 
 AIKEN ~
->
+Usage: >
     call lsp_settings#Aiken()
 <
+Defaults: >
+    {
+      "filetype": [
+        "aiken"
+      ],
+      "path": "aiken",
+      "name": "aiken",
+      "args": [
+        "lsp"
+      ]
+    }
 
 ANAKIN LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#AnakinLanguageServer()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": {
+          "anakinls": {
+            "pyflakes_errors": [
+              "ImportStarNotPermitted",
+              "UndefinedExport",
+              "UndefinedLocal",
+              "UndefinedName",
+              "DuplicateArgument",
+              "MultiValueRepeatedKeyLiteral",
+              "MultiValueRepeatedKeyVariable",
+              "FutureFeatureNotDefined",
+              "LateFutureImport",
+              "ReturnOutsideFunction",
+              "YieldOutsideFunction",
+              "ContinueOutsideLoop",
+              "BreakOutsideLoop",
+              "TwoStarredExpressions",
+              "TooManyExpressionsInStarredAssignment",
+              "ForwardAnnotationSyntaxError",
+              "RaiseNotImplemented",
+              "StringDotFormatExtraPositionalArguments",
+              "StringDotFormatExtraNamedArguments",
+              "StringDotFormatMissingArgument",
+              "StringDotFormatMixingAutomatic",
+              "StringDotFormatInvalidFormat",
+              "PercentFormatInvalidFormat",
+              "PercentFormatMixedPositionalAndNamed",
+              "PercentFormatUnsupportedFormat",
+              "PercentFormatPositionalCountMismatch",
+              "PercentFormatExtraNamedArguments",
+              "PercentFormatMissingArgument",
+              "PercentFormatExpectedMapping",
+              "PercentFormatExpectedSequence",
+              "PercentFormatStarRequiresSequence"
+            ]
+          }
+        }
+      },
+      "filetype": [
+        "python"
+      ],
+      "path": "anakinls",
+      "name": "anakin_language_server"
+    }
 
 ANGULARLS ~
->
+Usage: >
     call lsp_settings#Angularls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "typescript",
+        "html",
+        "typescriptreact",
+        "typescript.tsx",
+        "htmlangular"
+      ],
+      "path": "ngserver",
+      "name": "angularls",
+      "args": [
+        "--stdio",
+        "--tsProbeLocations",
+        "",
+        "--ngProbeLocations",
+        ""
+      ]
+    }
 
 ANSIBLELS ~
->
+Usage: >
     call lsp_settings#Ansiblels()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "ansible": {
+            "ansible": {
+              "path": "ansible"
+            },
+            "validation": {
+              "lint": {
+                "path": "ansible-lint",
+                "enabled": true
+              },
+              "enabled": true
+            },
+            "executionEnvironment": {
+              "enabled": false
+            },
+            "python": {
+              "interpreterPath": "python"
+            }
+          }
+        }
+      },
+      "filetype": [
+        "yaml.ansible"
+      ],
+      "path": "ansible-language-server",
+      "name": "ansiblels"
+    }
 
 ANTLERSLS ~
->
+Usage: >
     call lsp_settings#Antlersls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "html",
+        "antlers"
+      ],
+      "path": "antlersls",
+      "name": "antlersls",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 APEX LS ~
->
+Usage: >
     call lsp_settings#ApexLs()
 <
+Defaults: >
+    {
+      "name": "apex_ls",
+      "filetype": [
+        "apexcode"
+      ]
+    }
 
 ARDUINO LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#ArduinoLanguageServer()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "arduino_language_server",
+      "filetype": [
+        "arduino"
+      ],
+      "features": {
+        "workspace": {
+          "semanticTokens": null
+        },
+        "textDocument": {
+          "semanticTokens": null
+        }
+      },
+      "path": "arduino-language-server"
+    }
 
 ASM LSP ~
->
+Usage: >
     call lsp_settings#AsmLsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "asm",
+        "vmasm"
+      ],
+      "path": "asm-lsp",
+      "name": "asm_lsp",
+      "args": []
+    }
 
 AST GREP ~
->
+Usage: >
     call lsp_settings#AstGrep()
 <
+Defaults: >
+    {
+      "filetype": [
+        "c",
+        "cpp",
+        "rust",
+        "go",
+        "java",
+        "python",
+        "javascript",
+        "typescript",
+        "html",
+        "css",
+        "kotlin",
+        "dart",
+        "lua"
+      ],
+      "path": "ast-grep",
+      "name": "ast_grep",
+      "args": [
+        "lsp"
+      ]
+    }
 
 ASTRO ~
->
+Usage: >
     call lsp_settings#Astro()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "typescript": []
+      },
+      "name": "astro",
+      "filetype": [
+        "astro"
+      ],
+      "path": "astro-ls"
+    }
 
 AUTOTOOLS LS ~
->
+Usage: >
     call lsp_settings#AutotoolsLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "autotools-language-server",
+      "name": "autotools_ls",
+      "filetype": [
+        "config",
+        "automake",
+        "make"
+      ]
+    }
 
 AWK LS ~
->
+Usage: >
     call lsp_settings#AwkLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "awk-language-server",
+      "name": "awk_ls",
+      "filetype": [
+        "awk"
+      ]
+    }
 
 AZURE PIPELINES LS ~
->
+Usage: >
     call lsp_settings#AzurePipelinesLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "yaml"
+      ],
+      "path": "azure-pipelines-language-server",
+      "name": "azure_pipelines_ls"
+    }
 
 BACON LS ~
->
+Usage: >
     call lsp_settings#BaconLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "rust"
+      ],
+      "path": "bacon-ls",
+      "name": "bacon_ls"
+    }
 
 BALLERINA ~
->
+Usage: >
     call lsp_settings#Ballerina()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ballerina"
+      ],
+      "path": "bal",
+      "name": "ballerina",
+      "args": [
+        "start-language-server"
+      ]
+    }
 
 BASEDPYRIGHT ~
->
+Usage: >
     call lsp_settings#Basedpyright()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "basedpyright": {
+            "analysis": {
+              "useLibraryCodeForTypes": true,
+              "diagnosticMode": "openFilesOnly",
+              "autoSearchPaths": true
+            }
+          }
+        }
+      },
+      "filetype": [
+        "python"
+      ],
+      "path": "basedpyright-langserver",
+      "name": "basedpyright"
+    }
 
 BASHLS ~
->
+Usage: >
     call lsp_settings#Bashls()
 <
+Defaults: >
+    {
+      "args": [
+        "start"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "bashIde": {
+            "globPattern": "*@(.sh|.inc|.bash|.command)"
+          }
+        }
+      },
+      "filetype": [
+        "sh"
+      ],
+      "path": "bash-language-server",
+      "name": "bashls"
+    }
 
 BASICS LS ~
->
+Usage: >
     call lsp_settings#BasicsLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "basics-language-server",
+      "name": "basics_ls",
+      "workspaceConfig": {
+        "settings": {
+          "path": {
+            "enable": true
+          },
+          "buffer": {
+            "enable": true,
+            "minCompletionLength": 4
+          },
+          "snippet": {
+            "enable": false,
+            "sources": []
+          }
+        }
+      }
+    }
 
 BAZELRC LSP ~
->
+Usage: >
     call lsp_settings#BazelrcLsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "bazelrc"
+      ],
+      "path": "bazelrc-lsp",
+      "name": "bazelrc_lsp",
+      "args": []
+    }
 
 BEANCOUNT ~
->
+Usage: >
     call lsp_settings#Beancount()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "name": "beancount",
+      "init_options": [],
+      "filetype": [
+        "beancount",
+        "bean"
+      ],
+      "path": "beancount-language-server"
+    }
 
 BICEP ~
->
+Usage: >
     call lsp_settings#Bicep()
 <
+Defaults: >
+    {
+      "name": "bicep",
+      "init_options": [],
+      "filetype": [
+        "bicep"
+      ]
+    }
 
 BIOME ~
->
+Usage: >
     call lsp_settings#Biome()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp-proxy"
+      ],
+      "path": "biome",
+      "name": "biome",
+      "filetype": [
+        "astro",
+        "css",
+        "graphql",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "jsonc",
+        "svelte",
+        "typescript",
+        "typescript.tsx",
+        "typescriptreact",
+        "vue"
+      ]
+    }
 
 BITBAKE LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#BitbakeLanguageServer()
 <
+Defaults: >
+    {
+      "filetype": [
+        "bitbake"
+      ],
+      "path": "bitbake-language-server",
+      "name": "bitbake_language_server",
+      "args": []
+    }
 
 BITBAKE LS ~
->
+Usage: >
     call lsp_settings#BitbakeLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "language-server-bitbake",
+      "name": "bitbake_ls",
+      "filetype": [
+        "bitbake"
+      ]
+    }
 
 BLUEPRINT LS ~
->
+Usage: >
     call lsp_settings#BlueprintLs()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp"
+      ],
+      "cmd_env": {
+        "GLOB_PATTERN": "*@(.blp)"
+      },
+      "name": "blueprint_ls",
+      "filetype": [
+        "blueprint"
+      ],
+      "path": "blueprint-compiler"
+    }
 
 BQNLSP ~
->
+Usage: >
     call lsp_settings#Bqnlsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "bqnlsp",
+      "filetype": [
+        "bqn"
+      ],
+      "path": "bqnlsp"
+    }
 
 BRIGHT SCRIPT ~
->
+Usage: >
     call lsp_settings#BrightScript()
 <
+Defaults: >
+    {
+      "args": [
+        "--lsp",
+        "--stdio"
+      ],
+      "path": "bsc",
+      "name": "bright_script",
+      "filetype": [
+        "brs"
+      ]
+    }
 
 BSL LS ~
->
+Usage: >
     call lsp_settings#BslLs()
 <
+Defaults: >
+    {
+      "name": "bsl_ls",
+      "filetype": [
+        "bsl",
+        "os"
+      ]
+    }
 
 BUCK2 ~
->
+Usage: >
     call lsp_settings#Buck2()
 <
+Defaults: >
+    {
+      "filetype": [
+        "bzl"
+      ],
+      "path": "buck2",
+      "name": "buck2",
+      "args": [
+        "lsp"
+      ]
+    }
 
 BUDDY LS ~
->
+Usage: >
     call lsp_settings#BuddyLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "buddy-lsp-server",
+      "name": "buddy_ls",
+      "filetype": [
+        "mlir"
+      ]
+    }
 
 BUFLS ~
->
+Usage: >
     call lsp_settings#Bufls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "proto"
+      ],
+      "path": "bufls",
+      "name": "bufls",
+      "args": [
+        "serve"
+      ]
+    }
 
 BZL ~
->
+Usage: >
     call lsp_settings#Bzl()
 <
+Defaults: >
+    {
+      "filetype": [
+        "bzl"
+      ],
+      "path": "bzl",
+      "name": "bzl",
+      "args": [
+        "lsp",
+        "serve"
+      ]
+    }
 
 C3 LSP ~
->
+Usage: >
     call lsp_settings#C3Lsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "c3",
+        "c3i"
+      ],
+      "path": "c3lsp",
+      "name": "c3_lsp",
+      "args": []
+    }
 
 CADENCE ~
->
+Usage: >
     call lsp_settings#Cadence()
 <
+Defaults: >
+    {
+      "args": [
+        "cadence",
+        "language-server"
+      ],
+      "init_options": {
+        "numberOfAccounts": "1"
+      },
+      "name": "cadence",
+      "filetype": [
+        "cdc"
+      ],
+      "path": "flow"
+    }
 
 CAIRO LS ~
->
+Usage: >
     call lsp_settings#CairoLs()
 <
+Defaults: >
+    {
+      "args": [
+        "/C",
+        "--node-ipc"
+      ],
+      "init_options": {
+        "hostInfo": "neovim"
+      },
+      "filetype": [
+        "cairo"
+      ],
+      "path": "scarb-cairo-language-server",
+      "name": "cairo_ls"
+    }
 
 CCLS ~
->
+Usage: >
     call lsp_settings#Ccls()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "ccls",
+      "offset_encoding": "utf-32",
+      "filetype": [
+        "c",
+        "cpp",
+        "objc",
+        "objcpp",
+        "cuda"
+      ],
+      "path": "ccls"
+    }
 
 CDS LSP ~
->
+Usage: >
     call lsp_settings#CdsLsp()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "cds": {
+            "validate": true
+          }
+        }
+      },
+      "filetype": [
+        "cds"
+      ],
+      "path": "cds-lsp",
+      "name": "cds_lsp"
+    }
 
 CIRCOM LSP ~
->
+Usage: >
     call lsp_settings#CircomLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "circom-lsp",
+      "name": "circom-lsp",
+      "filetype": [
+        "circom"
+      ]
+    }
 
 CLANGD ~
->
+Usage: >
     call lsp_settings#Clangd()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "clangd",
+      "filetype": [
+        "c",
+        "cpp",
+        "objc",
+        "objcpp",
+        "cuda",
+        "proto"
+      ],
+      "name": "clangd",
+      "features": {
+        "offsetEncoding": [
+          "utf-8",
+          "utf-16"
+        ],
+        "textDocument": {
+          "completion": {
+            "editsNearCursor": true
+          }
+        }
+      }
+    }
 
 CLARITY LSP ~
->
+Usage: >
     call lsp_settings#ClarityLsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "clar",
+        "clarity"
+      ],
+      "path": "clarity-lsp",
+      "name": "clarity_lsp",
+      "args": []
+    }
 
 CLOJURE LSP ~
->
+Usage: >
     call lsp_settings#ClojureLsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "clojure",
+        "edn"
+      ],
+      "path": "clojure-lsp",
+      "name": "clojure_lsp",
+      "args": []
+    }
 
 CMAKE ~
->
+Usage: >
     call lsp_settings#Cmake()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "cmake",
+      "init_options": {
+        "buildDirectory": "build"
+      },
+      "filetype": [
+        "cmake"
+      ],
+      "path": "cmake-language-server"
+    }
 
 COBOL LS ~
->
+Usage: >
     call lsp_settings#CobolLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "cobol"
+      ],
+      "path": "cobol-language-support",
+      "name": "cobol_ls",
+      "args": []
+    }
 
 CODEQLLS ~
->
+Usage: >
     call lsp_settings#Codeqlls()
 <
+Defaults: >
+    {
+      "args": [
+        "execute",
+        "language-server",
+        "--check-errors",
+        "ON_CHANGE",
+        "-q"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "search_path": {}
+        }
+      },
+      "filetype": [
+        "ql"
+      ],
+      "path": "codeql",
+      "name": "codeqlls",
+      "log_level": 2
+    }
 
 COFFEESENSE ~
->
+Usage: >
     call lsp_settings#Coffeesense()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "coffeesense-language-server",
+      "name": "coffeesense",
+      "filetype": [
+        "coffee"
+      ]
+    }
 
 CONTEXTIVE ~
->
+Usage: >
     call lsp_settings#Contextive()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "Contextive.LanguageServer",
+      "name": "contextive"
+    }
 
 COQ LSP ~
->
+Usage: >
     call lsp_settings#CoqLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "coq-lsp",
+      "name": "coq_lsp",
+      "filetype": [
+        "coq"
+      ]
+    }
 
 CRYSTALLINE ~
->
+Usage: >
     call lsp_settings#Crystalline()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "crystalline",
+      "name": "crystalline",
+      "filetype": [
+        "crystal"
+      ]
+    }
 
 CSHARP LS ~
->
+Usage: >
     call lsp_settings#CsharpLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": {
+        "AutomaticWorkspaceInit": true
+      },
+      "filetype": [
+        "cs"
+      ],
+      "path": "csharp-ls",
+      "name": "csharp_ls"
+    }
 
 CSS VARIABLES ~
->
+Usage: >
     call lsp_settings#CssVariables()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "cssVariables": {
+            "lookupFiles": [
+              "**/*.less",
+              "**/*.scss",
+              "**/*.sass",
+              "**/*.css"
+            ],
+            "blacklistFolders": [
+              "**/.cache",
+              "**/.DS_Store",
+              "**/.git",
+              "**/.hg",
+              "**/.next",
+              "**/.svn",
+              "**/bower_components",
+              "**/CVS",
+              "**/dist",
+              "**/node_modules",
+              "**/tests",
+              "**/tmp"
+            ]
+          }
+        }
+      },
+      "filetype": [
+        "css",
+        "scss",
+        "less"
+      ],
+      "path": "css-variables-language-server",
+      "name": "css_variables"
+    }
 
 CSSLS ~
->
+Usage: >
     call lsp_settings#Cssls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "provideFormatter": true
+      },
+      "workspaceConfig": {
+        "settings": {
+          "scss": {
+            "validate": true
+          },
+          "css": {
+            "validate": true
+          },
+          "less": {
+            "validate": true
+          }
+        }
+      },
+      "filetype": [
+        "css",
+        "scss",
+        "less"
+      ],
+      "path": "vscode-css-language-server",
+      "name": "cssls"
+    }
 
 CSSMODULES LS ~
->
+Usage: >
     call lsp_settings#CssmodulesLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+      ],
+      "path": "cssmodules-language-server",
+      "name": "cssmodules_ls",
+      "args": []
+    }
 
 CUCUMBER LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#CucumberLanguageServer()
 <
+Defaults: >
+    {
+      "filetype": [
+        "cucumber"
+      ],
+      "path": "cucumber-language-server",
+      "name": "cucumber_language_server",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 CUSTOM ELEMENTS LS ~
->
+Usage: >
     call lsp_settings#CustomElementsLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "custom-elements-languageserver",
+      "name": "custom_elements_ls",
+      "init_options": {
+        "hostInfo": "neovim"
+      }
+    }
 
 CYPHER LS ~
->
+Usage: >
     call lsp_settings#CypherLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "cypher-language-server",
+      "name": "cypher_ls",
+      "filetype": [
+        "cypher"
+      ]
+    }
 
 DAEDALUS LS ~
->
+Usage: >
     call lsp_settings#DaedalusLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": {
+          "DaedalusLanguageServer": {
+            "srcFileEncoding": "Windows-1252",
+            "loglevel": "debug",
+            "inlayHints": {
+              "constants": true
+            },
+            "numParserThreads": 16,
+            "fileEncoding": "Windows-1252"
+          }
+        }
+      },
+      "filetype": [
+        "d"
+      ],
+      "path": "DaedalusLanguageServer",
+      "name": "daedalus_ls"
+    }
 
 DAFNY ~
->
+Usage: >
     call lsp_settings#Dafny()
 <
+Defaults: >
+    {
+      "args": [
+        "server"
+      ],
+      "path": "dafny",
+      "name": "dafny",
+      "filetype": [
+        "dfy",
+        "dafny"
+      ]
+    }
 
 DAGGER ~
->
+Usage: >
     call lsp_settings#Dagger()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "cuelsp",
+      "name": "dagger",
+      "filetype": [
+        "cue"
+      ]
+    }
 
 DARTLS ~
->
+Usage: >
     call lsp_settings#Dartls()
 <
+Defaults: >
+    {
+      "args": [
+        "language-server",
+        "--protocol=lsp"
+      ],
+      "init_options": {
+        "onlyAnalyzeProjectsWithOpenFiles": true,
+        "suggestFromUnimportedLibraries": true,
+        "closingLabels": true,
+        "outline": true,
+        "flutterOutline": true
+      },
+      "workspaceConfig": {
+        "settings": {
+          "dart": {
+            "completeFunctionCalls": true,
+            "showTodos": true
+          }
+        }
+      },
+      "filetype": [
+        "dart"
+      ],
+      "path": "dart",
+      "name": "dartls"
+    }
 
 DCMLS ~
->
+Usage: >
     call lsp_settings#Dcmls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "dart"
+      ],
+      "path": "dcm",
+      "name": "dcmls",
+      "args": [
+        "start-server",
+        "--client=neovim"
+      ]
+    }
 
 DEBPUTY ~
->
+Usage: >
     call lsp_settings#Debputy()
 <
+Defaults: >
+    {
+      "filetype": [
+        "debcontrol",
+        "debcopyright",
+        "debchangelog",
+        "make",
+        "yaml"
+      ],
+      "path": "debputy",
+      "name": "debputy",
+      "args": [
+        "lsp",
+        "server"
+      ]
+    }
 
 DELPHI LS ~
->
+Usage: >
     call lsp_settings#DelphiLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "DelphiLSP.exe",
+      "name": "delphi_ls",
+      "filetype": [
+        "pascal"
+      ]
+    }
 
 DENOLS ~
->
+Usage: >
     call lsp_settings#Denols()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp"
+      ],
+      "cmd_env": {
+        "NO_COLOR": true
+      },
+      "handlers": [],
+      "workspaceConfig": {
+        "settings": {
+          "deno": {
+            "enable": true,
+            "suggest": {
+              "imports": {
+                "hosts": {
+                  "https://deno.land": true
+                }
+              }
+            }
+          }
+        }
+      },
+      "filetype": [
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx",
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx"
+      ],
+      "path": "deno",
+      "name": "denols"
+    }
 
 DHALL LSP SERVER ~
->
+Usage: >
     call lsp_settings#DhallLspServer()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "dhall-lsp-server",
+      "name": "dhall_lsp_server",
+      "filetype": [
+        "dhall"
+      ]
+    }
 
 DIAGNOSTICLS ~
->
+Usage: >
     call lsp_settings#Diagnosticls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "diagnostic-languageserver",
+      "name": "diagnosticls",
+      "filetype": []
+    }
 
 DIGESTIF ~
->
+Usage: >
     call lsp_settings#Digestif()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "digestif",
+      "name": "digestif",
+      "filetype": [
+        "tex",
+        "plaintex",
+        "context"
+      ]
+    }
 
 DJLSP ~
->
+Usage: >
     call lsp_settings#Djlsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "html",
+        "htmldjango"
+      ],
+      "path": "djlsp",
+      "name": "djlsp"
+    }
 
 DOCKER COMPOSE LANGUAGE SERVICE ~
->
+Usage: >
     call lsp_settings#DockerComposeLanguageService()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "docker-compose-langserver",
+      "name": "docker_compose_language_service",
+      "filetype": [
+        "yaml.docker-compose"
+      ]
+    }
 
 DOCKERLS ~
->
+Usage: >
     call lsp_settings#Dockerls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "docker-langserver",
+      "name": "dockerls",
+      "filetype": [
+        "dockerfile"
+      ]
+    }
 
 DOLMENLS ~
->
+Usage: >
     call lsp_settings#Dolmenls()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "dolmenls",
+      "name": "dolmenls",
+      "filetype": [
+        "smt2",
+        "tptp",
+        "p",
+        "cnf",
+        "icnf",
+        "zf"
+      ]
+    }
 
 DOTLS ~
->
+Usage: >
     call lsp_settings#Dotls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "dot-language-server",
+      "name": "dotls",
+      "filetype": [
+        "dot"
+      ]
+    }
 
 DPRINT ~
->
+Usage: >
     call lsp_settings#Dprint()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp"
+      ],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "json",
+        "jsonc",
+        "markdown",
+        "python",
+        "toml",
+        "rust",
+        "roslyn",
+        "graphql"
+      ],
+      "path": "dprint",
+      "name": "dprint"
+    }
 
 DROOLS LSP ~
->
+Usage: >
     call lsp_settings#DroolsLsp()
 <
+Defaults: >
+    {
+      "name": "drools_lsp",
+      "filetype": [
+        "drools"
+      ]
+    }
 
 DS PINYIN LSP ~
->
+Usage: >
     call lsp_settings#DsPinyinLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "ds_pinyin_lsp",
+      "init_options": {
+        "completion_on": true,
+        "max_suggest": 15,
+        "match_long_input": true,
+        "show_symbols": true,
+        "show_symbols_only_follow_by_hanzi": false,
+        "show_symbols_by_n_times": 0,
+        "match_as_same_as_input": true
+      },
+      "filetype": [
+        "markdown",
+        "org"
+      ],
+      "path": "ds-pinyin-lsp"
+    }
 
 EARTHLYLS ~
->
+Usage: >
     call lsp_settings#Earthlyls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "earthfile"
+      ],
+      "path": "earthlyls",
+      "name": "earthlyls",
+      "args": []
+    }
 
 ECSACT ~
->
+Usage: >
     call lsp_settings#Ecsact()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "ecsact_lsp_server",
+      "name": "ecsact",
+      "filetype": [
+        "ecsact"
+      ]
+    }
 
 EFM ~
->
+Usage: >
     call lsp_settings#Efm()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "efm-langserver",
+      "name": "efm"
+    }
 
 ELIXIRLS ~
->
+Usage: >
     call lsp_settings#Elixirls()
 <
+Defaults: >
+    {
+      "name": "elixirls",
+      "filetype": [
+        "elixir",
+        "eelixir",
+        "heex",
+        "surface"
+      ]
+    }
 
 ELMLS ~
->
+Usage: >
     call lsp_settings#Elmls()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": {
+        "skipInstallPackageConfirmation": false,
+        "disableElmLSDiagnostics": false,
+        "onlyUpdateDiagnosticsOnSave": false,
+        "elmReviewDiagnostics": "off"
+      },
+      "path": "elm-language-server",
+      "filetype": [
+        "elm"
+      ],
+      "name": "elmls",
+      "features": {
+        "offsetEncoding": [
+          "utf-8",
+          "utf-16"
+        ]
+      }
+    }
 
 ELP ~
->
+Usage: >
     call lsp_settings#Elp()
 <
+Defaults: >
+    {
+      "args": [
+        "server"
+      ],
+      "path": "elp",
+      "name": "elp",
+      "filetype": [
+        "erlang"
+      ]
+    }
 
 EMBER ~
->
+Usage: >
     call lsp_settings#Ember()
 <
+Defaults: >
+    {
+      "filetype": [
+        "handlebars",
+        "typescript",
+        "javascript",
+        "typescript.glimmer",
+        "javascript.glimmer"
+      ],
+      "path": "ember-language-server",
+      "name": "ember",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 EMMET LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#EmmetLanguageServer()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "emmet-language-server",
+      "name": "emmet_language_server",
+      "filetype": [
+        "css",
+        "eruby",
+        "html",
+        "htmldjango",
+        "javascriptreact",
+        "less",
+        "pug",
+        "sass",
+        "scss",
+        "typescriptreact",
+        "htmlangular"
+      ]
+    }
 
 EMMET LS ~
->
+Usage: >
     call lsp_settings#EmmetLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "emmet-ls",
+      "name": "emmet_ls",
+      "filetype": [
+        "astro",
+        "css",
+        "eruby",
+        "html",
+        "htmldjango",
+        "javascriptreact",
+        "less",
+        "pug",
+        "sass",
+        "scss",
+        "svelte",
+        "typescriptreact",
+        "vue",
+        "htmlangular"
+      ]
+    }
 
 ERG LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#ErgLanguageServer()
 <
+Defaults: >
+    {
+      "filetype": [
+        "erg"
+      ],
+      "path": "erg",
+      "name": "erg_language_server",
+      "args": [
+        "--language-server"
+      ]
+    }
 
 ERLANGLS ~
->
+Usage: >
     call lsp_settings#Erlangls()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "erlang_ls",
+      "name": "erlangls",
+      "filetype": [
+        "erlang"
+      ]
+    }
 
 ESBONIO ~
->
+Usage: >
     call lsp_settings#Esbonio()
 <
+Defaults: >
+    {
+      "filetype": [
+        "rst"
+      ],
+      "path": "python3",
+      "name": "esbonio",
+      "args": [
+        "-m",
+        "esbonio"
+      ]
+    }
 
 ESLINT ~
->
+Usage: >
     call lsp_settings#Eslint()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "handlers": [],
+      "workspaceConfig": {
+        "settings": {
+          "format": true,
+          "useESLintClass": false,
+          "experimental": {
+            "useFlatConfig": false
+          },
+          "validate": "on",
+          "codeActionOnSave": {
+            "enable": false,
+            "mode": "all"
+          },
+          "quiet": false,
+          "onIgnoredFiles": "off",
+          "rulesCustomizations": [],
+          "codeAction": {
+            "disableRuleComment": {
+              "enable": true,
+              "location": "separateLine"
+            },
+            "showDocumentation": {
+              "enable": true
+            }
+          },
+          "problems": {
+            "shortenToSingleLine": false
+          },
+          "run": "onType",
+          "nodePath": "",
+          "workingDirectory": {
+            "mode": "location"
+          }
+        }
+      },
+      "filetype": [
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx",
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx",
+        "vue",
+        "svelte",
+        "astro"
+      ],
+      "path": "vscode-eslint-language-server",
+      "name": "eslint"
+    }
 
 FACILITY LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#FacilityLanguageServer()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "facility-language-server",
+      "name": "facility_language_server",
+      "filetype": [
+        "fsd"
+      ]
+    }
 
 FENNEL LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#FennelLanguageServer()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "fennel"
+      ],
+      "path": "fennel-language-server",
+      "name": "fennel_language_server"
+    }
 
 FENNEL LS ~
->
+Usage: >
     call lsp_settings#FennelLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "fennel_ls",
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "fennel"
+      ],
+      "features": {
+        "offsetEncoding": [
+          "utf-8",
+          "utf-16"
+        ]
+      },
+      "path": "fennel-ls"
+    }
 
 FISH LSP ~
->
+Usage: >
     call lsp_settings#FishLsp()
 <
+Defaults: >
+    {
+      "args": [
+        "start"
+      ],
+      "cmd_env": {
+        "fish_lsp_show_client_popups": false
+      },
+      "name": "fish_lsp",
+      "filetype": [
+        "fish"
+      ],
+      "path": "fish-lsp"
+    }
 
 FLOW ~
->
+Usage: >
     call lsp_settings#Flow()
 <
+Defaults: >
+    {
+      "filetype": [
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx"
+      ],
+      "path": "npx",
+      "name": "flow",
+      "args": [
+        "--no-install",
+        "flow",
+        "lsp"
+      ]
+    }
 
 FLUX LSP ~
->
+Usage: >
     call lsp_settings#FluxLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "flux-lsp",
+      "name": "flux_lsp",
+      "filetype": [
+        "flux"
+      ]
+    }
 
 FOAM LS ~
->
+Usage: >
     call lsp_settings#FoamLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "foam",
+        "OpenFOAM"
+      ],
+      "path": "foam-ls",
+      "name": "foam_ls",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 FORTLS ~
->
+Usage: >
     call lsp_settings#Fortls()
 <
+Defaults: >
+    {
+      "args": [
+        "--notify_init",
+        "--hover_signature",
+        "--hover_language=fortran",
+        "--use_signature_help"
+      ],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "fortran"
+      ],
+      "path": "fortls",
+      "name": "fortls"
+    }
 
 FSAUTOCOMPLETE ~
->
+Usage: >
     call lsp_settings#Fsautocomplete()
 <
+Defaults: >
+    {
+      "args": [
+        "--adaptive-lsp-server-enabled"
+      ],
+      "init_options": {
+        "AutomaticWorkspaceInit": true
+      },
+      "workspaceConfig": {
+        "settings": {
+          "FSharp": {
+            "EnableReferenceCodeLens": true,
+            "RecordStubGeneration": true,
+            "RecordStubGenerationBody": "failwith \"Not Implemented\"",
+            "InterfaceStubGeneration": true,
+            "InterfaceStubGenerationObjectIdentifier": "this",
+            "ResolveNamespaces": true,
+            "InterfaceStubGenerationMethodBody": "failwith \"Not Implemented\"",
+            "UnusedOpensAnalyzer": true,
+            "UnusedDeclarationsAnalyzer": true,
+            "UseSdkScripts": true,
+            "SimplifyNameAnalyzer": true,
+            "keywordsAutocomplete": true,
+            "ExternalAutocomplete": false,
+            "Linter": true,
+            "UnionCaseStubGeneration": true,
+            "UnionCaseStubGenerationBody": "failwith \"Not Implemented\""
+          }
+        }
+      },
+      "filetype": [
+        "fsharp"
+      ],
+      "path": "fsautocomplete",
+      "name": "fsautocomplete"
+    }
 
 FSHARP LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#FsharpLanguageServer()
 <
+Defaults: >
+    {
+      "args": [
+        "FSharpLanguageServer.dll"
+      ],
+      "init_options": {
+        "AutomaticWorkspaceInit": true
+      },
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "fsharp"
+      ],
+      "path": "dotnet",
+      "name": "fsharp_language_server"
+    }
 
 FSTAR ~
->
+Usage: >
     call lsp_settings#Fstar()
 <
+Defaults: >
+    {
+      "filetype": [
+        "fstar"
+      ],
+      "path": "fstar.exe",
+      "name": "fstar",
+      "args": [
+        "--lsp"
+      ]
+    }
 
 FUTHARK LSP ~
->
+Usage: >
     call lsp_settings#FutharkLsp()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp"
+      ],
+      "path": "futhark",
+      "name": "futhark_lsp",
+      "filetype": [
+        "futhark",
+        "fut"
+      ]
+    }
 
 GDSCRIPT ~
->
+Usage: >
     call lsp_settings#Gdscript()
 <
+Defaults: >
+    {
+      "name": "gdscript",
+      "filetype": [
+        "gd",
+        "gdscript",
+        "gdscript3"
+      ]
+    }
 
 GDSHADER LSP ~
->
+Usage: >
     call lsp_settings#GdshaderLsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "gdshader",
+        "gdshaderinc"
+      ],
+      "path": "gdshader-lsp",
+      "name": "gdshader_lsp",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 GHCIDE ~
->
+Usage: >
     call lsp_settings#Ghcide()
 <
+Defaults: >
+    {
+      "filetype": [
+        "haskell",
+        "lhaskell"
+      ],
+      "path": "ghcide",
+      "name": "ghcide",
+      "args": [
+        "--lsp"
+      ]
+    }
 
 GHDL LS ~
->
+Usage: >
     call lsp_settings#GhdlLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "ghdl-ls",
+      "name": "ghdl_ls",
+      "filetype": [
+        "vhdl"
+      ]
+    }
 
 GINKO LS ~
->
+Usage: >
     call lsp_settings#GinkoLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "dts"
+      ],
+      "path": "ginko_ls",
+      "name": "ginko_ls"
+    }
 
 GITLAB CI LS ~
->
+Usage: >
     call lsp_settings#GitlabCiLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": {
+        "cache_path": "/home/sacca/.cache/gitlab-ci-ls/",
+        "log_path": "/home/sacca/.cache/gitlab-ci-ls//log/gitlab-ci-ls.log"
+      },
+      "filetype": [
+        "yaml.gitlab"
+      ],
+      "path": "gitlab-ci-ls",
+      "name": "gitlab_ci_ls"
+    }
 
 GLASGOW ~
->
+Usage: >
     call lsp_settings#Glasgow()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "wgsl"
+      ],
+      "path": "glasgow",
+      "name": "glasgow"
+    }
 
 GLEAM ~
->
+Usage: >
     call lsp_settings#Gleam()
 <
+Defaults: >
+    {
+      "filetype": [
+        "gleam"
+      ],
+      "path": "gleam",
+      "name": "gleam",
+      "args": [
+        "lsp"
+      ]
+    }
 
 GLINT ~
->
+Usage: >
     call lsp_settings#Glint()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "glint-language-server",
+      "name": "glint",
+      "filetype": [
+        "html.handlebars",
+        "handlebars",
+        "typescript",
+        "typescript.glimmer",
+        "javascript",
+        "javascript.glimmer"
+      ]
+    }
 
 GLSL ANALYZER ~
->
+Usage: >
     call lsp_settings#GlslAnalyzer()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "glsl_analyzer",
+      "filetype": [
+        "glsl",
+        "vert",
+        "tesc",
+        "tese",
+        "frag",
+        "geom",
+        "comp"
+      ],
+      "name": "glsl_analyzer",
+      "features": []
+    }
 
 GLSLLS ~
->
+Usage: >
     call lsp_settings#Glslls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdin"
+      ],
+      "path": "glslls",
+      "filetype": [
+        "glsl",
+        "vert",
+        "tesc",
+        "tese",
+        "frag",
+        "geom",
+        "comp"
+      ],
+      "name": "glslls",
+      "features": {
+        "offsetEncoding": [
+          "utf-8",
+          "utf-16"
+        ],
+        "textDocument": {
+          "completion": {
+            "editsNearCursor": true
+          }
+        }
+      }
+    }
 
 GOLANGCI LINT LS ~
->
+Usage: >
     call lsp_settings#GolangciLintLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": {
+        "command": [
+          "golangci-lint",
+          "run",
+          "--out-format",
+          "json"
+        ]
+      },
+      "filetype": [
+        "go",
+        "gomod"
+      ],
+      "path": "golangci-lint-langserver",
+      "name": "golangci_lint_ls"
+    }
 
 GOPLS ~
->
+Usage: >
     call lsp_settings#Gopls()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "gopls",
+      "name": "gopls",
+      "filetype": [
+        "go",
+        "gomod",
+        "gowork",
+        "gotmpl"
+      ]
+    }
 
 GRADLE LS ~
->
+Usage: >
     call lsp_settings#GradleLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": {
+        "settings": {
+          "gradleWrapperEnabled": true
+        }
+      },
+      "filetype": [
+        "groovy"
+      ],
+      "path": "gradle-language-server",
+      "name": "gradle_ls"
+    }
 
 GRAMMARLY ~
->
+Usage: >
     call lsp_settings#Grammarly()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "clientId": "client_BaDkMgx4X19X9UxxYRCXZo"
+      },
+      "handlers": [],
+      "filetype": [
+        "markdown"
+      ],
+      "path": "grammarly-languageserver",
+      "name": "grammarly"
+    }
 
 GRAPHQL ~
->
+Usage: >
     call lsp_settings#Graphql()
 <
+Defaults: >
+    {
+      "filetype": [
+        "graphql",
+        "typescriptreact",
+        "javascriptreact"
+      ],
+      "path": "graphql-lsp",
+      "name": "graphql",
+      "args": [
+        "server",
+        "-m",
+        "stream"
+      ]
+    }
 
 GROOVYLS ~
->
+Usage: >
     call lsp_settings#Groovyls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "groovy"
+      ],
+      "path": "java",
+      "name": "groovyls",
+      "args": [
+        "-jar",
+        "groovy-language-server-all.jar"
+      ]
+    }
 
 GUILE LS ~
->
+Usage: >
     call lsp_settings#GuileLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "guile-lsp-server",
+      "name": "guile_ls",
+      "filetype": [
+        "scheme.guile"
+      ]
+    }
 
 HARPER LS ~
->
+Usage: >
     call lsp_settings#HarperLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "harper-ls",
+      "name": "harper_ls",
+      "filetype": [
+        "c",
+        "cpp",
+        "cs",
+        "gitcommit",
+        "go",
+        "html",
+        "java",
+        "javascript",
+        "lua",
+        "markdown",
+        "nix",
+        "python",
+        "ruby",
+        "rust",
+        "swift",
+        "toml",
+        "typescript",
+        "typescriptreact"
+      ]
+    }
 
 HAXE LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#HaxeLanguageServer()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": [],
+      "workspaceConfig": {
+        "settings": {
+          "haxe": {
+            "executable": "haxe"
+          }
+        }
+      },
+      "filetype": [
+        "haxe"
+      ],
+      "path": "haxe-language-server",
+      "name": "haxe_language_server"
+    }
 
 HDL CHECKER ~
->
+Usage: >
     call lsp_settings#HdlChecker()
 <
+Defaults: >
+    {
+      "args": [
+        "--lsp"
+      ],
+      "path": "hdl_checker",
+      "name": "hdl_checker",
+      "filetype": [
+        "vhdl",
+        "verilog",
+        "systemverilog"
+      ]
+    }
 
 HELM LS ~
->
+Usage: >
     call lsp_settings#HelmLs()
 <
+Defaults: >
+    {
+      "args": [
+        "serve"
+      ],
+      "path": "helm_ls",
+      "filetype": [
+        "helm"
+      ],
+      "name": "helm_ls",
+      "features": {
+        "workspace": {
+          "didChangeWatchedFiles": {
+            "dynamicRegistration": true
+          }
+        }
+      }
+    }
 
 HHVM ~
->
+Usage: >
     call lsp_settings#Hhvm()
 <
+Defaults: >
+    {
+      "filetype": [
+        "php",
+        "hack"
+      ],
+      "path": "hh_client",
+      "name": "hhvm",
+      "args": [
+        "lsp"
+      ]
+    }
 
 HIE ~
->
+Usage: >
     call lsp_settings#Hie()
 <
+Defaults: >
+    {
+      "filetype": [
+        "haskell"
+      ],
+      "path": "hie-wrapper",
+      "name": "hie",
+      "args": [
+        "--lsp"
+      ]
+    }
 
 HLASM ~
->
+Usage: >
     call lsp_settings#Hlasm()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "hlasm_language_server",
+      "name": "hlasm",
+      "filetype": [
+        "hlasm"
+      ]
+    }
 
 HLS ~
->
+Usage: >
     call lsp_settings#Hls()
 <
+Defaults: >
+    {
+      "args": [
+        "--lsp"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "haskell": {
+            "cabalFormattingProvider": "cabalfmt",
+            "formattingProvider": "ormolu"
+          }
+        }
+      },
+      "filetype": [
+        "haskell",
+        "lhaskell"
+      ],
+      "path": "haskell-language-server-wrapper",
+      "name": "hls"
+    }
 
 HOON LS ~
->
+Usage: >
     call lsp_settings#HoonLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "hoon-language-server",
+      "name": "hoon_ls",
+      "filetype": [
+        "hoon"
+      ]
+    }
 
 HTML ~
->
+Usage: >
     call lsp_settings#Html()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "embeddedLanguages": {
+          "css": true,
+          "javascript": true
+        },
+        "configurationSection": [
+          "html",
+          "css",
+          "javascript"
+        ],
+        "provideFormatter": true
+      },
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "html",
+        "templ"
+      ],
+      "path": "vscode-html-language-server",
+      "name": "html"
+    }
 
 HTMX ~
->
+Usage: >
     call lsp_settings#Htmx()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "htmx-lsp",
+      "name": "htmx",
+      "filetype": [
+        "aspnetcorerazor",
+        "astro",
+        "astro-markdown",
+        "blade",
+        "clojure",
+        "django-html",
+        "htmldjango",
+        "edge",
+        "eelixir",
+        "elixir",
+        "ejs",
+        "erb",
+        "eruby",
+        "gohtml",
+        "gohtmltmpl",
+        "haml",
+        "handlebars",
+        "hbs",
+        "html",
+        "htmlangular",
+        "html-eex",
+        "heex",
+        "jade",
+        "leaf",
+        "liquid",
+        "markdown",
+        "mdx",
+        "mustache",
+        "njk",
+        "nunjucks",
+        "php",
+        "razor",
+        "slim",
+        "twig",
+        "javascript",
+        "javascriptreact",
+        "reason",
+        "rescript",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "svelte",
+        "templ"
+      ]
+    }
 
 HYDRA LSP ~
->
+Usage: >
     call lsp_settings#HydraLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "hydra-lsp",
+      "name": "hydra_lsp",
+      "filetype": [
+        "yaml"
+      ]
+    }
 
 HYPRLS ~
->
+Usage: >
     call lsp_settings#Hyprls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "hyprls",
+      "name": "hyprls",
+      "filetype": [
+        "hyprlang"
+      ]
+    }
 
 IDRIS2 LSP ~
->
+Usage: >
     call lsp_settings#Idris2Lsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "idris2"
+      ],
+      "path": "idris2-lsp",
+      "name": "idris2_lsp",
+      "args": []
+    }
 
 INTELEPHENSE ~
->
+Usage: >
     call lsp_settings#Intelephense()
 <
+Defaults: >
+    {
+      "filetype": [
+        "php"
+      ],
+      "path": "intelephense",
+      "name": "intelephense",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 JANET LSP ~
->
+Usage: >
     call lsp_settings#JanetLsp()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "janet-lsp",
+      "name": "janet_lsp",
+      "filetype": [
+        "janet"
+      ]
+    }
 
 JAVA LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#JavaLanguageServer()
 <
+Defaults: >
+    {
+      "filetype": [
+        "java"
+      ],
+      "name": "java_language_server",
+      "workspaceConfig": {
+        "settings": []
+      }
+    }
 
 JDTLS ~
->
+Usage: >
     call lsp_settings#Jdtls()
 <
+Defaults: >
+    {
+      "args": [
+        "-configuration",
+        "/home/sacca/.cache/jdtls/config",
+        "-data",
+        "/home/sacca/.cache/jdtls/workspace"
+      ],
+      "init_options": {
+        "jvm_args": [],
+        "workspace": "/home/sacca/.cache/jdtls/workspace"
+      },
+      "handlers": [],
+      "filetype": [
+        "java"
+      ],
+      "path": "jdtls",
+      "name": "jdtls"
+    }
 
 JEDI LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#JediLanguageServer()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "jedi-language-server",
+      "name": "jedi_language_server",
+      "filetype": [
+        "python"
+      ]
+    }
 
 JINJA LSP ~
->
+Usage: >
     call lsp_settings#JinjaLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "filetype": [
+        "jinja"
+      ],
+      "name": "jinja_lsp",
+      "path": "jinja-lsp"
+    }
 
 JQLS ~
->
+Usage: >
     call lsp_settings#Jqls()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "jq-lsp",
+      "name": "jqls",
+      "filetype": [
+        "jq"
+      ]
+    }
 
 JSONLS ~
->
+Usage: >
     call lsp_settings#Jsonls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "provideFormatter": true
+      },
+      "name": "jsonls",
+      "filetype": [
+        "json",
+        "jsonc"
+      ],
+      "path": "vscode-json-language-server"
+    }
 
 JSONNET LS ~
->
+Usage: >
     call lsp_settings#JsonnetLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "jsonnet_ls",
+      "filetype": [
+        "jsonnet",
+        "libsonnet"
+      ],
+      "path": "jsonnet-language-server"
+    }
 
 JULIALS ~
->
+Usage: >
     call lsp_settings#Julials()
 <
+Defaults: >
+    {
+      "args": [
+        "--startup-file=no",
+        "--history-file=no",
+        "-e",
+        "    # Load LanguageServer.jl: attempt to load from ~/.julia/environments/nvim-lspconfig\n    # with the regular load path as a fallback\n    ls_install_path = joinpath(\n        get(DEPOT_PATH, 1, joinpath(homedir(), \".julia\")),\n        \"environments\", \"nvim-lspconfig\"\n    )\n    pushfirst!(LOAD_PATH, ls_install_path)\n    using LanguageServer\n    popfirst!(LOAD_PATH)\n    depot_path = get(ENV, \"JULIA_DEPOT_PATH\", \"\")\n    project_path = let\n        dirname(something(\n            ## 1. Finds an explicitly set project (JULIA_PROJECT)\n            Base.load_path_expand((\n                p = get(ENV, \"JULIA_PROJECT\", nothing);\n                p === nothing ? nothing : isempty(p) ? nothing : p\n            )),\n            ## 2. Look for a Project.toml file in the current working directory,\n            ##    or parent directories, with $HOME as an upper boundary\n            Base.current_project(),\n            ## 3. First entry in the load path\n            get(Base.load_path(), 1, nothing),\n            ## 4. Fallback to default global environment,\n            ##    this is more or less unreachable\n            Base.load_path_expand(\"@v#.#\"),\n        ))\n    end\n    @info \"Running language server\" VERSION pwd() project_path depot_path\n    server = LanguageServer.LanguageServerInstance(stdin, stdout, project_path, depot_path)\n    server.runlinter = true\n    run(server)\n  "
+      ],
+      "path": "julia",
+      "name": "julials",
+      "filetype": [
+        "julia"
+      ]
+    }
 
 KCL ~
->
+Usage: >
     call lsp_settings#Kcl()
 <
+Defaults: >
+    {
+      "filetype": [
+        "kcl"
+      ],
+      "path": "kcl-language-server",
+      "name": "kcl",
+      "args": []
+    }
 
 KOKA ~
->
+Usage: >
     call lsp_settings#Koka()
 <
+Defaults: >
+    {
+      "args": [
+        "--language-server",
+        "--lsstdio"
+      ],
+      "path": "koka",
+      "name": "koka",
+      "filetype": [
+        "koka"
+      ]
+    }
 
 KOTLIN LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#KotlinLanguageServer()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": [],
+      "filetype": [
+        "kotlin"
+      ],
+      "path": "kotlin-language-server",
+      "name": "kotlin_language_server"
+    }
 
 KULALA LS ~
->
+Usage: >
     call lsp_settings#KulalaLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "kulala-ls",
+      "name": "kulala_ls",
+      "filetype": [
+        "http"
+      ]
+    }
 
 LEAN3LS ~
->
+Usage: >
     call lsp_settings#Lean3Ls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio",
+        "--",
+        "-M",
+        "4096",
+        "-T",
+        "100000"
+      ],
+      "name": "lean3ls",
+      "offset_encoding": "utf-32",
+      "filetype": [
+        "lean3"
+      ],
+      "path": "lean-language-server"
+    }
 
 LEANLS ~
->
+Usage: >
     call lsp_settings#Leanls()
 <
+Defaults: >
+    {
+      "args": [
+        "serve",
+        "--"
+      ],
+      "name": "leanls",
+      "filetype": [
+        "lean"
+      ],
+      "path": "lake"
+    }
 
 LELWEL LS ~
->
+Usage: >
     call lsp_settings#LelwelLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "llw"
+      ],
+      "path": "lelwel-ls",
+      "name": "lelwel_ls",
+      "args": []
+    }
 
 LEMMINX ~
->
+Usage: >
     call lsp_settings#Lemminx()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "lemminx",
+      "name": "lemminx",
+      "filetype": [
+        "xml",
+        "xsd",
+        "xsl",
+        "xslt",
+        "svg"
+      ]
+    }
 
 LEXICAL ~
->
+Usage: >
     call lsp_settings#Lexical()
 <
+Defaults: >
+    {
+      "name": "lexical",
+      "filetype": [
+        "elixir",
+        "eelixir",
+        "heex",
+        "surface"
+      ]
+    }
 
 LSP AI ~
->
+Usage: >
     call lsp_settings#LspAi()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "lsp_ai",
+      "filetype": [],
+      "path": "lsp-ai",
+      "init_options": {
+        "memory": {
+          "file_store": {}
+        },
+        "models": {}
+      }
+    }
 
 LTEX ~
->
+Usage: >
     call lsp_settings#Ltex()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": {
+          "ltex": {
+            "enabled": [
+              "bibtex",
+              "gitcommit",
+              "markdown",
+              "org",
+              "tex",
+              "restructuredtext",
+              "rsweave",
+              "latex",
+              "quarto",
+              "rmd",
+              "context",
+              "html",
+              "xhtml",
+              "mail",
+              "plaintext"
+            ]
+          }
+        }
+      },
+      "filetype": [
+        "bib",
+        "gitcommit",
+        "markdown",
+        "org",
+        "plaintex",
+        "rst",
+        "rnoweb",
+        "tex",
+        "pandoc",
+        "quarto",
+        "rmd",
+        "context",
+        "html",
+        "xhtml",
+        "mail",
+        "text"
+      ],
+      "path": "ltex-ls",
+      "name": "ltex"
+    }
 
 LUA LS ~
->
+Usage: >
     call lsp_settings#LuaLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "lua_ls",
+      "filetype": [
+        "lua"
+      ],
+      "log_level": 2,
+      "path": "lua-language-server"
+    }
 
 LUAU LSP ~
->
+Usage: >
     call lsp_settings#LuauLsp()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp"
+      ],
+      "path": "luau-lsp",
+      "name": "luau_lsp",
+      "filetype": [
+        "luau"
+      ]
+    }
 
 LWC LS ~
->
+Usage: >
     call lsp_settings#LwcLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "embeddedLanguages": {
+          "javascript": true
+        }
+      },
+      "filetype": [
+        "javascript",
+        "html"
+      ],
+      "path": "lwc-language-server",
+      "name": "lwc_ls"
+    }
 
 M68K ~
->
+Usage: >
     call lsp_settings#M68K()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "m68k-lsp-server",
+      "name": "m68k",
+      "filetype": [
+        "asm68k"
+      ]
+    }
 
 MARKDOWN OXIDE ~
->
+Usage: >
     call lsp_settings#MarkdownOxide()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "markdown-oxide",
+      "name": "markdown_oxide",
+      "filetype": [
+        "markdown"
+      ]
+    }
 
 MARKO JS ~
->
+Usage: >
     call lsp_settings#MarkoJs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "marko"
+      ],
+      "path": "marko-language-server",
+      "name": "marko-js",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 MARKSMAN ~
->
+Usage: >
     call lsp_settings#Marksman()
 <
+Defaults: >
+    {
+      "args": [
+        "server"
+      ],
+      "path": "marksman",
+      "name": "marksman",
+      "filetype": [
+        "markdown",
+        "markdown.mdx"
+      ]
+    }
 
 MATLAB LS ~
->
+Usage: >
     call lsp_settings#MatlabLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "MATLAB": {
+            "installPath": "",
+            "matlabConnectionTiming": "onStart",
+            "telemetry": true,
+            "indexWorkspace": false
+          }
+        }
+      },
+      "filetype": [
+        "matlab"
+      ],
+      "path": "matlab-language-server",
+      "name": "matlab_ls"
+    }
 
 MDX ANALYZER ~
->
+Usage: >
     call lsp_settings#MdxAnalyzer()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "typescript": []
+      },
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "markdown.mdx"
+      ],
+      "path": "mdx-language-server",
+      "name": "mdx_analyzer"
+    }
 
 MESONLSP ~
->
+Usage: >
     call lsp_settings#Mesonlsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "meson"
+      ],
+      "path": "mesonlsp",
+      "name": "mesonlsp",
+      "args": [
+        "--lsp"
+      ]
+    }
 
 METALS ~
->
+Usage: >
     call lsp_settings#Metals()
 <
+Defaults: >
+    {
+      "message_level": 4,
+      "init_options": {
+        "compilerOptions": {
+          "snippetAutoIndent": false
+        },
+        "statusBarProvider": "show-message",
+        "isHttpEnabled": true
+      },
+      "name": "metals",
+      "args": [],
+      "filetype": [
+        "scala"
+      ],
+      "features": {
+        "workspace": {
+          "configuration": false
+        }
+      },
+      "path": "metals"
+    }
 
 MILLET ~
->
+Usage: >
     call lsp_settings#Millet()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "millet",
+      "name": "millet",
+      "filetype": [
+        "sml"
+      ]
+    }
 
 MINT ~
->
+Usage: >
     call lsp_settings#Mint()
 <
+Defaults: >
+    {
+      "args": [
+        "ls"
+      ],
+      "path": "mint",
+      "name": "mint",
+      "filetype": [
+        "mint"
+      ]
+    }
 
 MLIR LSP SERVER ~
->
+Usage: >
     call lsp_settings#MlirLspServer()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "mlir-lsp-server",
+      "name": "mlir_lsp_server",
+      "filetype": [
+        "mlir"
+      ]
+    }
 
 MLIR PDLL LSP SERVER ~
->
+Usage: >
     call lsp_settings#MlirPdllLspServer()
 <
+Defaults: >
+    {
+      "filetype": [
+        "pdll"
+      ],
+      "path": "mlir-pdll-lsp-server",
+      "name": "mlir_pdll_lsp_server",
+      "args": []
+    }
 
 MM0 LS ~
->
+Usage: >
     call lsp_settings#Mm0Ls()
 <
+Defaults: >
+    {
+      "args": [
+        "server"
+      ],
+      "path": "mm0-rs",
+      "name": "mm0_ls",
+      "filetype": [
+        "metamath-zero"
+      ]
+    }
 
 MOJO ~
->
+Usage: >
     call lsp_settings#Mojo()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "mojo-lsp-server",
+      "name": "mojo",
+      "filetype": [
+        "mojo"
+      ]
+    }
 
 MOTOKO LSP ~
->
+Usage: >
     call lsp_settings#MotokoLsp()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "formatter": "auto"
+      },
+      "name": "motoko_lsp",
+      "filetype": [
+        "motoko"
+      ],
+      "path": "motoko-lsp"
+    }
 
 MOVE ANALYZER ~
->
+Usage: >
     call lsp_settings#MoveAnalyzer()
 <
+Defaults: >
+    {
+      "filetype": [
+        "move"
+      ],
+      "path": "move-analyzer",
+      "name": "move_analyzer",
+      "args": []
+    }
 
 MSBUILD PROJECT TOOLS SERVER ~
->
+Usage: >
     call lsp_settings#MsbuildProjectToolsServer()
 <
+Defaults: >
+    {
+      "args": [
+        "MSBuildProjectTools.LanguageServer.Host.dll"
+      ],
+      "init_options": [],
+      "filetype": [
+        "xml.csproj",
+        "xml.fsproj",
+        "sln"
+      ],
+      "path": "dotnet",
+      "name": "msbuild_project_tools_server"
+    }
 
 MUTT LS ~
->
+Usage: >
     call lsp_settings#MuttLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "muttrc",
+        "neomuttrc"
+      ],
+      "path": "mutt-language-server",
+      "name": "mutt_ls"
+    }
 
 NELUA LSP ~
->
+Usage: >
     call lsp_settings#NeluaLsp()
 <
+Defaults: >
+    {
+      "name": "nelua_lsp",
+      "filetype": [
+        "nelua"
+      ]
+    }
 
 NEOCMAKE ~
->
+Usage: >
     call lsp_settings#Neocmake()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "neocmakelsp",
+      "name": "neocmake",
+      "filetype": [
+        "cmake"
+      ]
+    }
 
 NEXTLS ~
->
+Usage: >
     call lsp_settings#Nextls()
 <
+Defaults: >
+    {
+      "name": "nextls",
+      "filetype": [
+        "elixir",
+        "eelixir",
+        "heex",
+        "surface"
+      ]
+    }
 
 NGINX LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#NginxLanguageServer()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "nginx-language-server",
+      "name": "nginx_language_server",
+      "filetype": [
+        "nginx"
+      ]
+    }
 
 NICKEL LS ~
->
+Usage: >
     call lsp_settings#NickelLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ncl",
+        "nickel"
+      ],
+      "path": "nls",
+      "name": "nickel_ls",
+      "args": []
+    }
 
 NIL LS ~
->
+Usage: >
     call lsp_settings#NilLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "nil",
+      "name": "nil_ls",
+      "filetype": [
+        "nix"
+      ]
+    }
 
 NIM LANGSERVER ~
->
+Usage: >
     call lsp_settings#NimLangserver()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "nimlangserver",
+      "name": "nim_langserver",
+      "filetype": [
+        "nim"
+      ]
+    }
 
 NIMLS ~
->
+Usage: >
     call lsp_settings#Nimls()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "nimlsp",
+      "name": "nimls",
+      "filetype": [
+        "nim"
+      ]
+    }
 
 NIXD ~
->
+Usage: >
     call lsp_settings#Nixd()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "nixd",
+      "name": "nixd",
+      "filetype": [
+        "nix"
+      ]
+    }
 
 NOMAD LSP ~
->
+Usage: >
     call lsp_settings#NomadLsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "hcl.nomad",
+        "nomad"
+      ],
+      "path": "nomad-lsp",
+      "name": "nomad_lsp",
+      "args": []
+    }
 
 NTT ~
->
+Usage: >
     call lsp_settings#Ntt()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ttcn"
+      ],
+      "path": "ntt",
+      "name": "ntt",
+      "args": [
+        "langserver"
+      ]
+    }
 
 NUSHELL ~
->
+Usage: >
     call lsp_settings#Nushell()
 <
+Defaults: >
+    {
+      "args": [
+        "--lsp"
+      ],
+      "path": "nu",
+      "name": "nushell",
+      "filetype": [
+        "nu"
+      ]
+    }
 
 NXLS ~
->
+Usage: >
     call lsp_settings#Nxls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "json",
+        "jsonc"
+      ],
+      "path": "nxls",
+      "name": "nxls",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 OCAMLLS ~
->
+Usage: >
     call lsp_settings#Ocamlls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ocaml",
+        "reason"
+      ],
+      "path": "ocaml-language-server",
+      "name": "ocamlls",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 OCAMLLSP ~
->
+Usage: >
     call lsp_settings#Ocamllsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "ocamllsp",
+      "name": "ocamllsp",
+      "filetype": [
+        "ocaml",
+        "menhir",
+        "ocamlinterface",
+        "ocamllex",
+        "reason",
+        "dune"
+      ]
+    }
 
 OLS ~
->
+Usage: >
     call lsp_settings#Ols()
 <
+Defaults: >
+    {
+      "filetype": [
+        "odin"
+      ],
+      "path": "ols",
+      "name": "ols",
+      "args": []
+    }
 
 OMNISHARP ~
->
+Usage: >
     call lsp_settings#Omnisharp()
 <
+Defaults: >
+    {
+      "init_options": [],
+      "workspaceConfig": {
+        "settings": {
+          "Sdk": {
+            "IncludePrereleases": true
+          },
+          "MsBuild": [],
+          "FormattingOptions": {
+            "EnableEditorConfigSupport": true
+          },
+          "RoslynExtensionsOptions": []
+        }
+      },
+      "filetype": [
+        "cs",
+        "vb"
+      ],
+      "name": "omnisharp"
+    }
 
 OPENCL LS ~
->
+Usage: >
     call lsp_settings#OpenclLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "opencl"
+      ],
+      "path": "opencl-language-server",
+      "name": "opencl_ls",
+      "args": []
+    }
 
 OPENEDGE LS ~
->
+Usage: >
     call lsp_settings#OpenedgeLs()
 <
+Defaults: >
+    {
+      "name": "openedge_ls",
+      "filetype": [
+        "progress"
+      ]
+    }
 
 OPENSCAD LS ~
->
+Usage: >
     call lsp_settings#OpenscadLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "openscad-language-server",
+      "name": "openscad_ls",
+      "filetype": [
+        "openscad"
+      ]
+    }
 
 OPENSCAD LSP ~
->
+Usage: >
     call lsp_settings#OpenscadLsp()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "openscad-lsp",
+      "name": "openscad_lsp",
+      "filetype": [
+        "openscad"
+      ]
+    }
 
 PACT LS ~
->
+Usage: >
     call lsp_settings#PactLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "pact-lsp",
+      "name": "pact_ls",
+      "filetype": [
+        "pact"
+      ]
+    }
 
 PASLS ~
->
+Usage: >
     call lsp_settings#Pasls()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "pasls",
+      "name": "pasls",
+      "filetype": [
+        "pascal"
+      ]
+    }
 
 PBLS ~
->
+Usage: >
     call lsp_settings#Pbls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "proto"
+      ],
+      "path": "pbls",
+      "name": "pbls",
+      "args": []
+    }
 
 PERLLS ~
->
+Usage: >
     call lsp_settings#Perlls()
 <
+Defaults: >
+    {
+      "args": [
+        "-MPerl::LanguageServer",
+        "-e",
+        "Perl::LanguageServer::run",
+        "--",
+        "--port 13603",
+        "--nostdio 0"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "perl": {
+            "perlInc": " ",
+            "fileFilter": [
+              ".pm",
+              ".pl"
+            ],
+            "ignoreDirs": ".git",
+            "perlCmd": "perl"
+          }
+        }
+      },
+      "filetype": [
+        "perl"
+      ],
+      "path": "perl",
+      "name": "perlls"
+    }
 
 PERLNAVIGATOR ~
->
+Usage: >
     call lsp_settings#Perlnavigator()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "perlnavigator",
+      "name": "perlnavigator",
+      "filetype": [
+        "perl"
+      ]
+    }
 
 PERLPLS ~
->
+Usage: >
     call lsp_settings#Perlpls()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": {
+          "perl": {
+            "perlcritic": {
+              "enabled": false
+            },
+            "syntax": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "filetype": [
+        "perl"
+      ],
+      "path": "pls",
+      "name": "perlpls"
+    }
 
 PEST LS ~
->
+Usage: >
     call lsp_settings#PestLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "pest-language-server",
+      "name": "pest_ls",
+      "filetype": [
+        "pest"
+      ]
+    }
 
 PHAN ~
->
+Usage: >
     call lsp_settings#Phan()
 <
+Defaults: >
+    {
+      "args": [
+        "-m",
+        "json",
+        "--no-color",
+        "--no-progress-bar",
+        "-x",
+        "-u",
+        "-S",
+        "--language-server-on-stdin",
+        "--allow-polyfill-parser"
+      ],
+      "path": "phan",
+      "name": "phan",
+      "filetype": [
+        "php"
+      ]
+    }
 
 PHPACTOR ~
->
+Usage: >
     call lsp_settings#Phpactor()
 <
+Defaults: >
+    {
+      "filetype": [
+        "php"
+      ],
+      "path": "phpactor",
+      "name": "phpactor",
+      "args": [
+        "language-server"
+      ]
+    }
 
 PICO8 LS ~
->
+Usage: >
     call lsp_settings#Pico8Ls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "p8"
+      ],
+      "path": "pico8-ls",
+      "name": "pico8_ls"
+    }
 
 PKGBUILD LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#PkgbuildLanguageServer()
 <
+Defaults: >
+    {
+      "filetype": [
+        "PKGBUILD"
+      ],
+      "path": "pkgbuild-language-server",
+      "name": "pkgbuild_language_server",
+      "args": []
+    }
 
 PLEASE ~
->
+Usage: >
     call lsp_settings#Please()
 <
+Defaults: >
+    {
+      "args": [
+        "tool",
+        "lps"
+      ],
+      "path": "plz",
+      "name": "please",
+      "filetype": [
+        "bzl"
+      ]
+    }
 
 PORYSCRIPT PLS ~
->
+Usage: >
     call lsp_settings#PoryscriptPls()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "poryscript-pls",
+      "name": "poryscript_pls",
+      "filetype": [
+        "pory"
+      ]
+    }
 
 POSTGRES LSP ~
->
+Usage: >
     call lsp_settings#PostgresLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "postgres_lsp",
+      "name": "postgres_lsp",
+      "filetype": [
+        "sql"
+      ]
+    }
 
 POWERSHELL ES ~
->
+Usage: >
     call lsp_settings#PowershellEs()
 <
+Defaults: >
+    {
+      "shell": "pwsh",
+      "filetype": [
+        "ps1"
+      ],
+      "name": "powershell_es"
+    }
 
 PRISMALS ~
->
+Usage: >
     call lsp_settings#Prismals()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "prisma": {
+            "prismaFmtBinPath": ""
+          }
+        }
+      },
+      "filetype": [
+        "prisma"
+      ],
+      "path": "prisma-language-server",
+      "name": "prismals"
+    }
 
 PROLOG LS ~
->
+Usage: >
     call lsp_settings#PrologLs()
 <
+Defaults: >
+    {
+      "args": [
+        "-g",
+        "use_module(library(lsp_server)).",
+        "-g",
+        "lsp_server:main",
+        "-t",
+        "halt",
+        "--",
+        "stdio"
+      ],
+      "path": "swipl",
+      "name": "prolog_ls",
+      "filetype": [
+        "prolog"
+      ]
+    }
 
 PROSEMD LSP ~
->
+Usage: >
     call lsp_settings#ProsemdLsp()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "prosemd-lsp",
+      "name": "prosemd_lsp",
+      "filetype": [
+        "markdown"
+      ]
+    }
 
 PROTOLS ~
->
+Usage: >
     call lsp_settings#Protols()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "protols",
+      "name": "protols",
+      "filetype": [
+        "proto"
+      ]
+    }
 
 PSALM ~
->
+Usage: >
     call lsp_settings#Psalm()
 <
+Defaults: >
+    {
+      "filetype": [
+        "php"
+      ],
+      "path": "psalm",
+      "name": "psalm",
+      "args": [
+        "--language-server"
+      ]
+    }
 
 PUG ~
->
+Usage: >
     call lsp_settings#Pug()
 <
+Defaults: >
+    {
+      "filetype": [
+        "pug"
+      ],
+      "path": "pug-lsp",
+      "name": "pug",
+      "args": []
+    }
 
 PUPPET ~
->
+Usage: >
     call lsp_settings#Puppet()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "puppet-languageserver",
+      "name": "puppet",
+      "filetype": [
+        "puppet"
+      ]
+    }
 
 PURESCRIPTLS ~
->
+Usage: >
     call lsp_settings#Purescriptls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "purescript"
+      ],
+      "path": "purescript-language-server",
+      "name": "purescriptls",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 PYLSP ~
->
+Usage: >
     call lsp_settings#Pylsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "pylsp",
+      "name": "pylsp",
+      "filetype": [
+        "python"
+      ]
+    }
 
 PYLYZER ~
->
+Usage: >
     call lsp_settings#Pylyzer()
 <
+Defaults: >
+    {
+      "args": [
+        "--server"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "python": {
+            "smartCompletion": true,
+            "inlayHints": true,
+            "checkOnType": false,
+            "diagnostics": true
+          }
+        }
+      },
+      "filetype": [
+        "python"
+      ],
+      "path": "pylyzer",
+      "name": "pylyzer"
+    }
 
 PYRE ~
->
+Usage: >
     call lsp_settings#Pyre()
 <
+Defaults: >
+    {
+      "filetype": [
+        "python"
+      ],
+      "path": "pyre",
+      "name": "pyre",
+      "args": [
+        "persistent"
+      ]
+    }
 
 PYRIGHT ~
->
+Usage: >
     call lsp_settings#Pyright()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "python": {
+            "analysis": {
+              "useLibraryCodeForTypes": true,
+              "diagnosticMode": "openFilesOnly",
+              "autoSearchPaths": true
+            }
+          }
+        }
+      },
+      "filetype": [
+        "python"
+      ],
+      "path": "pyright-langserver",
+      "name": "pyright"
+    }
 
 QML LSP ~
->
+Usage: >
     call lsp_settings#QmlLsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "qmljs"
+      ],
+      "path": "qml-lsp",
+      "name": "qml_lsp",
+      "args": []
+    }
 
 QMLLS ~
->
+Usage: >
     call lsp_settings#Qmlls()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "qmlls",
+      "name": "qmlls",
+      "filetype": [
+        "qml",
+        "qmljs"
+      ]
+    }
 
 QUICK LINT JS ~
->
+Usage: >
     call lsp_settings#QuickLintJs()
 <
+Defaults: >
+    {
+      "args": [
+        "--lsp-server"
+      ],
+      "path": "quick-lint-js",
+      "name": "quick_lint_js",
+      "filetype": [
+        "javascript",
+        "typescript"
+      ]
+    }
 
 R LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#RLanguageServer()
 <
+Defaults: >
+    {
+      "args": [
+        "--no-echo",
+        "-e",
+        "languageserver::run()"
+      ],
+      "name": "r_language_server",
+      "filetype": [
+        "r",
+        "rmd"
+      ],
+      "path": "R",
+      "log_level": 2
+    }
 
 RACKET LANGSERVER ~
->
+Usage: >
     call lsp_settings#RacketLangserver()
 <
+Defaults: >
+    {
+      "args": [
+        "--lib",
+        "racket-langserver"
+      ],
+      "path": "racket",
+      "name": "racket_langserver",
+      "filetype": [
+        "racket",
+        "scheme"
+      ]
+    }
 
 RAKU NAVIGATOR ~
->
+Usage: >
     call lsp_settings#RakuNavigator()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "raku_navigator",
+      "filetype": [
+        "raku"
+      ]
+    }
 
 REASON LS ~
->
+Usage: >
     call lsp_settings#ReasonLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "reason"
+      ],
+      "path": "reason-language-server",
+      "name": "reason_ls",
+      "args": []
+    }
 
 REGAL ~
->
+Usage: >
     call lsp_settings#Regal()
 <
+Defaults: >
+    {
+      "args": [
+        "language-server"
+      ],
+      "path": "regal",
+      "name": "regal",
+      "filetype": [
+        "rego"
+      ]
+    }
 
 REGOLS ~
->
+Usage: >
     call lsp_settings#Regols()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "regols",
+      "name": "regols",
+      "filetype": [
+        "rego"
+      ]
+    }
 
 RELAY LSP ~
->
+Usage: >
     call lsp_settings#RelayLsp()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp"
+      ],
+      "name": "relay_lsp",
+      "handlers": [],
+      "path": "relay-compiler",
+      "filetype": [
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx",
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx"
+      ],
+      "auto_start_compiler": false
+    }
 
 REMARK LS ~
->
+Usage: >
     call lsp_settings#RemarkLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "remark-language-server",
+      "name": "remark_ls",
+      "filetype": [
+        "markdown"
+      ]
+    }
 
 RESCRIPTLS ~
->
+Usage: >
     call lsp_settings#Rescriptls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "extensionConfiguration": {
+          "codeLens": true,
+          "cache": {
+            "projectConfig": {
+              "enabled": true
+            }
+          },
+          "askToStartBuild": false,
+          "allowBuiltInFormatter": true,
+          "incrementalTypechecking": {
+            "acrossFiles": true,
+            "enabled": true
+          },
+          "inlayHints": {
+            "enable": true
+          }
+        }
+      },
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "rescript"
+      ],
+      "path": "rescript-language-server",
+      "name": "rescriptls"
+    }
 
 RLS ~
->
+Usage: >
     call lsp_settings#Rls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "rust"
+      ],
+      "path": "rls",
+      "name": "rls",
+      "args": []
+    }
 
 RNIX ~
->
+Usage: >
     call lsp_settings#Rnix()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": [],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "nix"
+      ],
+      "path": "rnix-lsp",
+      "name": "rnix"
+    }
 
 ROBOTFRAMEWORK LS ~
->
+Usage: >
     call lsp_settings#RobotframeworkLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "robot"
+      ],
+      "path": "robotframework_ls",
+      "name": "robotframework_ls",
+      "args": []
+    }
 
 ROC LS ~
->
+Usage: >
     call lsp_settings#RocLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "roc_language_server",
+      "name": "roc_ls",
+      "filetype": [
+        "roc"
+      ]
+    }
 
 ROME ~
->
+Usage: >
     call lsp_settings#Rome()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp-proxy"
+      ],
+      "path": "rome",
+      "name": "rome",
+      "filetype": [
+        "javascript",
+        "javascriptreact",
+        "json",
+        "typescript",
+        "typescript.tsx",
+        "typescriptreact"
+      ]
+    }
 
 RUBOCOP ~
->
+Usage: >
     call lsp_settings#Rubocop()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ruby"
+      ],
+      "path": "rubocop",
+      "name": "rubocop",
+      "args": [
+        "--lsp"
+      ]
+    }
 
 RUBY LSP ~
->
+Usage: >
     call lsp_settings#RubyLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": {
+        "formatter": "auto"
+      },
+      "name": "ruby_lsp",
+      "filetype": [
+        "ruby"
+      ],
+      "path": "ruby-lsp"
+    }
 
 RUFF ~
->
+Usage: >
     call lsp_settings#Ruff()
 <
+Defaults: >
+    {
+      "args": [
+        "server"
+      ],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "python"
+      ],
+      "path": "ruff",
+      "name": "ruff"
+    }
 
 RUFF LSP ~
->
+Usage: >
     call lsp_settings#RuffLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "python"
+      ],
+      "path": "ruff-lsp",
+      "name": "ruff_lsp"
+    }
 
 RUNE LANGUAGESERVER ~
->
+Usage: >
     call lsp_settings#RuneLanguageserver()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "rune-languageserver",
+      "name": "rune_languageserver",
+      "filetype": [
+        "rune"
+      ]
+    }
 
 RUST ANALYZER ~
->
+Usage: >
     call lsp_settings#RustAnalyzer()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "rust-analyzer",
+      "filetype": [
+        "rust"
+      ],
+      "name": "rust_analyzer",
+      "features": {
+        "experimental": {
+          "serverStatusNotification": true
+        }
+      }
+    }
 
 SALT LS ~
->
+Usage: >
     call lsp_settings#SaltLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "salt_lsp_server",
+      "name": "salt_ls",
+      "filetype": [
+        "sls"
+      ]
+    }
 
 SCHEME LANGSERVER ~
->
+Usage: >
     call lsp_settings#SchemeLangserver()
 <
+Defaults: >
+    {
+      "args": [
+        "~/.scheme-langserver.log",
+        "enable",
+        "disable"
+      ],
+      "path": "scheme-langserver",
+      "name": "scheme_langserver",
+      "filetype": [
+        "scheme"
+      ]
+    }
 
 SCRY ~
->
+Usage: >
     call lsp_settings#Scry()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "scry",
+      "name": "scry",
+      "filetype": [
+        "crystal"
+      ]
+    }
 
 SERVE D ~
->
+Usage: >
     call lsp_settings#ServeD()
 <
+Defaults: >
+    {
+      "filetype": [
+        "d"
+      ],
+      "path": "serve-d",
+      "name": "serve_d",
+      "args": []
+    }
 
 SHOPIFY THEME LS ~
->
+Usage: >
     call lsp_settings#ShopifyThemeLs()
 <
+Defaults: >
+    {
+      "args": [
+        "theme",
+        "language-server"
+      ],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "liquid"
+      ],
+      "path": "shopify",
+      "name": "shopify_theme_ls"
+    }
 
 SIXTYFPS ~
->
+Usage: >
     call lsp_settings#Sixtyfps()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "sixtyfps-lsp",
+      "name": "sixtyfps",
+      "filetype": [
+        "sixtyfps"
+      ]
+    }
 
 SLANGD ~
->
+Usage: >
     call lsp_settings#Slangd()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "slangd",
+      "name": "slangd",
+      "filetype": [
+        "hlsl",
+        "shaderslang"
+      ]
+    }
 
 SLINT LSP ~
->
+Usage: >
     call lsp_settings#SlintLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "slint-lsp",
+      "name": "slint_lsp",
+      "filetype": [
+        "slint"
+      ]
+    }
 
 SMARTY LS ~
->
+Usage: >
     call lsp_settings#SmartyLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": [],
+      "workspaceConfig": {
+        "settings": {
+          "css": {
+            "validate": true
+          },
+          "smarty": {
+            "pluginDirs": []
+          }
+        }
+      },
+      "filetype": [
+        "smarty"
+      ],
+      "path": "smarty-language-server",
+      "name": "smarty_ls"
+    }
 
 SMITHY LS ~
->
+Usage: >
     call lsp_settings#SmithyLs()
 <
+Defaults: >
+    {
+      "args": [
+        "0"
+      ],
+      "path": "smithy-language-server",
+      "name": "smithy_ls",
+      "filetype": [
+        "smithy"
+      ]
+    }
 
 SNAKESKIN LS ~
->
+Usage: >
     call lsp_settings#SnakeskinLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ss"
+      ],
+      "path": "snakeskin-cli",
+      "name": "snakeskin_ls",
+      "args": [
+        "lsp",
+        "--stdio"
+      ]
+    }
 
 SNYK LS ~
->
+Usage: >
     call lsp_settings#SnykLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": {
+        "activateSnykCode": "true"
+      },
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "go",
+        "gomod",
+        "javascript",
+        "typescript",
+        "json",
+        "python",
+        "requirements",
+        "helm",
+        "yaml",
+        "terraform",
+        "terraform-vars"
+      ],
+      "path": "snyk-ls",
+      "name": "snyk_ls"
+    }
 
 SOLANG ~
->
+Usage: >
     call lsp_settings#Solang()
 <
+Defaults: >
+    {
+      "filetype": [
+        "solidity"
+      ],
+      "path": "solang",
+      "name": "solang",
+      "args": [
+        "language-server",
+        "--target",
+        "evm"
+      ]
+    }
 
 SOLARGRAPH ~
->
+Usage: >
     call lsp_settings#Solargraph()
 <
+Defaults: >
+    {
+      "args": [
+        "stdio"
+      ],
+      "init_options": {
+        "formatting": true
+      },
+      "workspaceConfig": {
+        "settings": {
+          "solargraph": {
+            "diagnostics": true
+          }
+        }
+      },
+      "filetype": [
+        "ruby"
+      ],
+      "path": "solargraph",
+      "name": "solargraph"
+    }
 
 SOLC ~
->
+Usage: >
     call lsp_settings#Solc()
 <
+Defaults: >
+    {
+      "filetype": [
+        "solidity"
+      ],
+      "path": "solc",
+      "name": "solc",
+      "args": [
+        "--lsp"
+      ]
+    }
 
 SOLIDITY ~
->
+Usage: >
     call lsp_settings#Solidity()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "solidity": {
+            "includePath": "",
+            "remapping": []
+          }
+        }
+      },
+      "filetype": [
+        "solidity"
+      ],
+      "path": "solidity-ls",
+      "name": "solidity"
+    }
 
 SOLIDITY LS ~
->
+Usage: >
     call lsp_settings#SolidityLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "vscode-solidity-server",
+      "name": "solidity_ls",
+      "filetype": [
+        "solidity"
+      ]
+    }
 
 SOLIDITY LS NOMICFOUNDATION ~
->
+Usage: >
     call lsp_settings#SolidityLsNomicfoundation()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "nomicfoundation-solidity-language-server",
+      "name": "solidity_ls_nomicfoundation",
+      "filetype": [
+        "solidity"
+      ]
+    }
 
 SOMESASS LS ~
->
+Usage: >
     call lsp_settings#SomesassLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "somesass": {
+            "suggestAllFromOpenDocument": true
+          }
+        }
+      },
+      "name": "somesass_ls",
+      "path": "some-sass-language-server",
+      "filetype": [
+        "scss",
+        "sass"
+      ]
+    }
 
 SORBET ~
->
+Usage: >
     call lsp_settings#Sorbet()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ruby"
+      ],
+      "path": "srb",
+      "name": "sorbet",
+      "args": [
+        "tc",
+        "--lsp"
+      ]
+    }
 
 SOURCEKIT ~
->
+Usage: >
     call lsp_settings#Sourcekit()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "sourcekit-lsp",
+      "name": "sourcekit",
+      "filetype": [
+        "swift",
+        "objc",
+        "objcpp",
+        "c",
+        "cpp"
+      ]
+    }
 
 SOURCERY ~
->
+Usage: >
     call lsp_settings#Sourcery()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp"
+      ],
+      "init_options": {
+        "editor_version": "vim",
+        "extension_version": "vim.lsp"
+      },
+      "name": "sourcery",
+      "filetype": [
+        "javascript",
+        "javascriptreact",
+        "python",
+        "typescript",
+        "typescriptreact"
+      ],
+      "path": "sourcery"
+    }
 
 SPECTRAL ~
->
+Usage: >
     call lsp_settings#Spectral()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "enable": true,
+          "run": "onType",
+          "validateLanguages": [
+            "yaml",
+            "json",
+            "yml"
+          ]
+        }
+      },
+      "filetype": [
+        "yaml",
+        "json",
+        "yml"
+      ],
+      "path": "spectral-language-server",
+      "name": "spectral"
+    }
 
 SPYGLASSMC LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#SpyglassmcLanguageServer()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "spyglassmc-language-server",
+      "name": "spyglassmc_language_server",
+      "filetype": [
+        "mcfunction"
+      ]
+    }
 
 SQLLS ~
->
+Usage: >
     call lsp_settings#Sqlls()
 <
+Defaults: >
+    {
+      "args": [
+        "up",
+        "--method",
+        "stdio"
+      ],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "sql",
+        "mysql"
+      ],
+      "path": "sql-language-server",
+      "name": "sqlls"
+    }
 
 SQLS ~
->
+Usage: >
     call lsp_settings#Sqls()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "sql",
+        "mysql"
+      ],
+      "path": "sqls",
+      "name": "sqls"
+    }
 
 STANDARDRB ~
->
+Usage: >
     call lsp_settings#Standardrb()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ruby"
+      ],
+      "path": "standardrb",
+      "name": "standardrb",
+      "args": [
+        "--lsp"
+      ]
+    }
 
 STARLARK RUST ~
->
+Usage: >
     call lsp_settings#StarlarkRust()
 <
+Defaults: >
+    {
+      "filetype": [
+        "star",
+        "bzl",
+        "BUILD.bazel"
+      ],
+      "path": "starlark",
+      "name": "starlark_rust",
+      "args": [
+        "--lsp"
+      ]
+    }
 
 STARPLS ~
->
+Usage: >
     call lsp_settings#Starpls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "bzl"
+      ],
+      "path": "starpls",
+      "name": "starpls",
+      "args": []
+    }
 
 STATIX ~
->
+Usage: >
     call lsp_settings#Statix()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "statix",
+      "name": "statix",
+      "filetype": [
+        "nix"
+      ]
+    }
 
 STEEP ~
->
+Usage: >
     call lsp_settings#Steep()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ruby",
+        "eruby"
+      ],
+      "path": "steep",
+      "name": "steep",
+      "args": [
+        "langserver"
+      ]
+    }
 
 STIMULUS LS ~
->
+Usage: >
     call lsp_settings#StimulusLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "html",
+        "ruby",
+        "eruby",
+        "blade",
+        "php"
+      ],
+      "path": "stimulus-language-server",
+      "name": "stimulus_ls",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 STYLELINT LSP ~
->
+Usage: >
     call lsp_settings#StylelintLsp()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "css",
+        "less",
+        "scss",
+        "sugarss",
+        "vue",
+        "wxss"
+      ],
+      "path": "stylelint-lsp",
+      "name": "stylelint_lsp"
+    }
 
 SUPERHTML ~
->
+Usage: >
     call lsp_settings#Superhtml()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp"
+      ],
+      "path": "superhtml",
+      "name": "superhtml",
+      "filetype": [
+        "superhtml",
+        "html"
+      ]
+    }
 
 SVELTE ~
->
+Usage: >
     call lsp_settings#Svelte()
 <
+Defaults: >
+    {
+      "filetype": [
+        "svelte"
+      ],
+      "path": "svelteserver",
+      "name": "svelte",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 SVLANGSERVER ~
->
+Usage: >
     call lsp_settings#Svlangserver()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": {
+          "systemverilog": {
+            "includeIndexing": [
+              "*.{v,vh,sv,svh}",
+              "**/*.{v,vh,sv,svh}"
+            ]
+          }
+        }
+      },
+      "filetype": [
+        "verilog",
+        "systemverilog"
+      ],
+      "path": "svlangserver",
+      "name": "svlangserver"
+    }
 
 SVLS ~
->
+Usage: >
     call lsp_settings#Svls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "verilog",
+        "systemverilog"
+      ],
+      "path": "svls",
+      "name": "svls",
+      "args": []
+    }
 
 SWIFT MESONLS ~
->
+Usage: >
     call lsp_settings#SwiftMesonls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "meson"
+      ],
+      "path": "Swift-MesonLSP",
+      "name": "swift_mesonls",
+      "args": [
+        "--lsp"
+      ]
+    }
 
 SYNTAX TREE ~
->
+Usage: >
     call lsp_settings#SyntaxTree()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ruby"
+      ],
+      "path": "stree",
+      "name": "syntax_tree",
+      "args": [
+        "lsp"
+      ]
+    }
 
 TABBY ML ~
->
+Usage: >
     call lsp_settings#TabbyMl()
 <
+Defaults: >
+    {
+      "args": [
+        "--lsp",
+        "--stdio"
+      ],
+      "path": "tabby-agent",
+      "name": "tabby_ml",
+      "filetype": []
+    }
 
 TAILWINDCSS ~
->
+Usage: >
     call lsp_settings#Tailwindcss()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "name": "tailwindcss",
+      "workspaceConfig": {
+        "settings": {
+          "tailwindCSS": {
+            "classAttributes": [
+              "class",
+              "className",
+              "class:list",
+              "classList",
+              "ngClass"
+            ],
+            "lint": {
+              "recommendedVariantOrder": "warning",
+              "cssConflict": "warning",
+              "invalidApply": "error",
+              "invalidScreen": "error",
+              "invalidVariant": "error",
+              "invalidConfigPath": "error",
+              "invalidTailwindDirective": "error"
+            },
+            "includeLanguages": {
+              "eruby": "erb",
+              "htmlangular": "html",
+              "templ": "html",
+              "eelixir": "html-eex"
+            },
+            "validate": true
+          }
+        }
+      },
+      "filetype": [
+        "aspnetcorerazor",
+        "astro",
+        "astro-markdown",
+        "blade",
+        "clojure",
+        "django-html",
+        "htmldjango",
+        "edge",
+        "eelixir",
+        "elixir",
+        "ejs",
+        "erb",
+        "eruby",
+        "gohtml",
+        "gohtmltmpl",
+        "haml",
+        "handlebars",
+        "hbs",
+        "html",
+        "htmlangular",
+        "html-eex",
+        "heex",
+        "jade",
+        "leaf",
+        "liquid",
+        "markdown",
+        "mdx",
+        "mustache",
+        "njk",
+        "nunjucks",
+        "php",
+        "razor",
+        "slim",
+        "twig",
+        "css",
+        "less",
+        "postcss",
+        "sass",
+        "scss",
+        "stylus",
+        "sugarss",
+        "javascript",
+        "javascriptreact",
+        "reason",
+        "rescript",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "svelte",
+        "templ"
+      ],
+      "path": "tailwindcss-language-server"
+    }
 
 TAPLO ~
->
+Usage: >
     call lsp_settings#Taplo()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp",
+        "stdio"
+      ],
+      "path": "taplo",
+      "name": "taplo",
+      "filetype": [
+        "toml"
+      ]
+    }
 
 TBLGEN LSP SERVER ~
->
+Usage: >
     call lsp_settings#TblgenLspServer()
 <
+Defaults: >
+    {
+      "filetype": [
+        "tablegen"
+      ],
+      "path": "tblgen-lsp-server",
+      "name": "tblgen_lsp_server",
+      "args": []
+    }
 
 TEAL LS ~
->
+Usage: >
     call lsp_settings#TealLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "teal"
+      ],
+      "path": "teal-language-server",
+      "name": "teal_ls",
+      "args": []
+    }
 
 TEMPL ~
->
+Usage: >
     call lsp_settings#Templ()
 <
+Defaults: >
+    {
+      "filetype": [
+        "templ"
+      ],
+      "path": "templ",
+      "name": "templ",
+      "args": [
+        "lsp"
+      ]
+    }
 
 TERRAFORM LSP ~
->
+Usage: >
     call lsp_settings#TerraformLsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "terraform",
+        "hcl"
+      ],
+      "path": "terraform-lsp",
+      "name": "terraform_lsp",
+      "args": []
+    }
 
 TERRAFORMLS ~
->
+Usage: >
     call lsp_settings#Terraformls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "terraform",
+        "terraform-vars"
+      ],
+      "path": "terraform-ls",
+      "name": "terraformls",
+      "args": [
+        "serve"
+      ]
+    }
 
 TEXLAB ~
->
+Usage: >
     call lsp_settings#Texlab()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": {
+          "texlab": {
+            "formatterLineLength": 80,
+            "build": {
+              "args": [
+                "-pdf",
+                "-interaction=nonstopmode",
+                "-synctex=1",
+                "%f"
+              ],
+              "executable": "latexmk",
+              "forwardSearchAfter": false,
+              "onSave": false
+            },
+            "diagnosticsDelay": 300,
+            "latexFormatter": "latexindent",
+            "latexindent": {
+              "modifyLineBreaks": false
+            },
+            "bibtexFormatter": "texlab",
+            "forwardSearch": {
+              "args": []
+            },
+            "chktex": {
+              "onOpenAndSave": false,
+              "onEdit": false
+            }
+          }
+        }
+      },
+      "filetype": [
+        "tex",
+        "plaintex",
+        "bib"
+      ],
+      "path": "texlab",
+      "name": "texlab"
+    }
 
 TEXTLSP ~
->
+Usage: >
     call lsp_settings#Textlsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": {
+          "textLSP": {
+            "documents": {
+              "org": {
+                "org_todo_keywords": [
+                  "TODO",
+                  "IN_PROGRESS",
+                  "DONE"
+                ]
+              }
+            },
+            "analysers": {
+              "languagetool": {
+                "check_text": {
+                  "on_open": true,
+                  "on_save": true,
+                  "on_change": false
+                },
+                "enabled": true
+              }
+            }
+          }
+        }
+      },
+      "filetype": [
+        "text",
+        "tex",
+        "org"
+      ],
+      "path": "textlsp",
+      "name": "textlsp"
+    }
 
 TFLINT ~
->
+Usage: >
     call lsp_settings#Tflint()
 <
+Defaults: >
+    {
+      "filetype": [
+        "terraform"
+      ],
+      "path": "tflint",
+      "name": "tflint",
+      "args": [
+        "--langserver"
+      ]
+    }
 
 THEME CHECK ~
->
+Usage: >
     call lsp_settings#ThemeCheck()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "liquid"
+      ],
+      "path": "theme-check-language-server",
+      "name": "theme_check"
+    }
 
 THRIFTLS ~
->
+Usage: >
     call lsp_settings#Thriftls()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "thriftls",
+      "name": "thriftls",
+      "filetype": [
+        "thrift"
+      ]
+    }
 
 TILT LS ~
->
+Usage: >
     call lsp_settings#TiltLs()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp",
+        "start"
+      ],
+      "path": "tilt",
+      "name": "tilt_ls",
+      "filetype": [
+        "tiltfile"
+      ]
+    }
 
 TINYMIST ~
->
+Usage: >
     call lsp_settings#Tinymist()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "tinymist",
+      "name": "tinymist",
+      "filetype": [
+        "typst"
+      ]
+    }
 
 TS LS ~
->
+Usage: >
     call lsp_settings#TsLs()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "hostInfo": "neovim"
+      },
+      "name": "ts_ls",
+      "filetype": [
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx",
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx"
+      ],
+      "path": "typescript-language-server"
+    }
 
 TS QUERY LS ~
->
+Usage: >
     call lsp_settings#TsQueryLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": {
+          "parser_aliases": {
+            "jsx": "javascript",
+            "php_only": "php",
+            "ecma": "javascript"
+          }
+        }
+      },
+      "filetype": [
+        "query"
+      ],
+      "path": "ts_query_ls",
+      "name": "ts_query_ls"
+    }
 
 TSP SERVER ~
->
+Usage: >
     call lsp_settings#TspServer()
 <
+Defaults: >
+    {
+      "filetype": [
+        "typespec"
+      ],
+      "path": "tsp-server",
+      "name": "tsp_server",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 TTAGS ~
->
+Usage: >
     call lsp_settings#Ttags()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ruby",
+        "rust",
+        "javascript",
+        "haskell"
+      ],
+      "path": "ttags",
+      "name": "ttags",
+      "args": [
+        "lsp"
+      ]
+    }
 
 TURTLE LS ~
->
+Usage: >
     call lsp_settings#TurtleLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "turtle",
+        "ttl"
+      ],
+      "path": "node",
+      "name": "turtle_ls",
+      "args": [
+        null,
+        null,
+        "--stdio"
+      ]
+    }
 
 TVM FFI NAVIGATOR ~
->
+Usage: >
     call lsp_settings#TvmFfiNavigator()
 <
+Defaults: >
+    {
+      "filetype": [
+        "python",
+        "cpp"
+      ],
+      "path": "python",
+      "name": "tvm_ffi_navigator",
+      "args": [
+        "-m",
+        "ffi_navigator.langserver"
+      ]
+    }
 
 TWIGGY LANGUAGE SERVER ~
->
+Usage: >
     call lsp_settings#TwiggyLanguageServer()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "twiggy-language-server",
+      "name": "twiggy_language_server",
+      "filetype": [
+        "twig"
+      ]
+    }
 
 TYPEPROF ~
->
+Usage: >
     call lsp_settings#Typeprof()
 <
+Defaults: >
+    {
+      "filetype": [
+        "ruby",
+        "eruby"
+      ],
+      "path": "typeprof",
+      "name": "typeprof",
+      "args": [
+        "--lsp",
+        "--stdio"
+      ]
+    }
 
 TYPOS LSP ~
->
+Usage: >
     call lsp_settings#TyposLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "typos-lsp",
+      "name": "typos_lsp",
+      "workspaceConfig": {
+        "settings": []
+      }
+    }
 
 TYPST LSP ~
->
+Usage: >
     call lsp_settings#TypstLsp()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "typst-lsp",
+      "name": "typst_lsp",
+      "filetype": [
+        "typst"
+      ]
+    }
 
 UIUA ~
->
+Usage: >
     call lsp_settings#Uiua()
 <
+Defaults: >
+    {
+      "filetype": [
+        "uiua"
+      ],
+      "path": "uiua",
+      "name": "uiua",
+      "args": [
+        "lsp"
+      ]
+    }
 
 UNGRAMMAR LANGUAGESERVER ~
->
+Usage: >
     call lsp_settings#UngrammarLanguageserver()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "ungrammar": {
+            "format": {
+              "enable": true
+            },
+            "validate": {
+              "enable": true
+            }
+          }
+        }
+      },
+      "filetype": [
+        "ungrammar"
+      ],
+      "path": "ungrammar-languageserver",
+      "name": "ungrammar_languageserver"
+    }
 
 UNISON ~
->
+Usage: >
     call lsp_settings#Unison()
 <
+Defaults: >
+    {
+      "args": [
+        "localhost",
+        "5757"
+      ],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "unison"
+      ],
+      "path": "nc",
+      "name": "unison"
+    }
 
 UNOCSS ~
->
+Usage: >
     call lsp_settings#Unocss()
 <
+Defaults: >
+    {
+      "filetype": [
+        "erb",
+        "haml",
+        "hbs",
+        "html",
+        "css",
+        "postcss",
+        "javascript",
+        "javascriptreact",
+        "markdown",
+        "ejs",
+        "php",
+        "svelte",
+        "typescript",
+        "typescriptreact",
+        "vue-html",
+        "vue",
+        "sass",
+        "scss",
+        "less",
+        "stylus",
+        "astro",
+        "rescript",
+        "rust"
+      ],
+      "path": "unocss-language-server",
+      "name": "unocss",
+      "args": [
+        "--stdio"
+      ]
+    }
 
 UVLS ~
->
+Usage: >
     call lsp_settings#Uvls()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "uvls",
+      "name": "uvls",
+      "filetype": [
+        "uvl"
+      ]
+    }
 
 V ANALYZER ~
->
+Usage: >
     call lsp_settings#VAnalyzer()
 <
+Defaults: >
+    {
+      "filetype": [
+        "v",
+        "vsh",
+        "vv"
+      ],
+      "path": "v-analyzer",
+      "name": "v_analyzer",
+      "args": []
+    }
 
 VACUUM ~
->
+Usage: >
     call lsp_settings#Vacuum()
 <
+Defaults: >
+    {
+      "args": [
+        "language-server"
+      ],
+      "path": "vacuum",
+      "name": "vacuum",
+      "filetype": [
+        "yaml.openapi",
+        "json.openapi"
+      ]
+    }
 
 VALA LS ~
->
+Usage: >
     call lsp_settings#ValaLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "vala-language-server",
+      "name": "vala_ls",
+      "filetype": [
+        "vala",
+        "genie"
+      ]
+    }
 
 VALE LS ~
->
+Usage: >
     call lsp_settings#ValeLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "vale-ls",
+      "name": "vale_ls",
+      "filetype": [
+        "markdown",
+        "text",
+        "tex"
+      ]
+    }
 
 VDMJ ~
->
+Usage: >
     call lsp_settings#Vdmj()
 <
+Defaults: >
+    {
+      "options": {
+        "annotation_paths": [],
+        "mavenrepo": "/home/sacca/.m2/repository/com/fujitsu",
+        "debugger_port": -1,
+        "high_precision": false,
+        "java_opts": [
+          "-Xmx3000m",
+          "-Xss1m"
+        ],
+        "logfile": "/home/sacca/.cache/nvim/vdm-lsp.log",
+        "java": "java"
+      },
+      "name": "vdmj",
+      "filetype": [
+        "vdmsl",
+        "vdmpp",
+        "vdmrt"
+      ],
+      "path": "java",
+      "args": []
+    }
 
 VERIBLE ~
->
+Usage: >
     call lsp_settings#Verible()
 <
+Defaults: >
+    {
+      "filetype": [
+        "systemverilog",
+        "verilog"
+      ],
+      "path": "verible-verilog-ls",
+      "name": "verible",
+      "args": []
+    }
 
 VERIDIAN ~
->
+Usage: >
     call lsp_settings#Veridian()
 <
+Defaults: >
+    {
+      "filetype": [
+        "systemverilog",
+        "verilog"
+      ],
+      "path": "veridian",
+      "name": "veridian",
+      "args": []
+    }
 
 VERYL LS ~
->
+Usage: >
     call lsp_settings#VerylLs()
 <
+Defaults: >
+    {
+      "filetype": [
+        "veryl"
+      ],
+      "path": "veryl-ls",
+      "name": "veryl_ls",
+      "args": []
+    }
 
 VHDL LS ~
->
+Usage: >
     call lsp_settings#VhdlLs()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "vhdl_ls",
+      "name": "vhdl_ls",
+      "filetype": [
+        "vhd",
+        "vhdl"
+      ]
+    }
 
 VIMLS ~
->
+Usage: >
     call lsp_settings#Vimls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "name": "vimls",
+      "init_options": {
+        "vimruntime": "",
+        "runtimepath": "",
+        "indexes": {
+          "gap": 100,
+          "projectRootPatterns": [
+            "runtime",
+            "nvim",
+            ".git",
+            "autoload",
+            "plugin"
+          ],
+          "runtimepath": true,
+          "count": 3
+        },
+        "diagnostic": {
+          "enable": true
+        },
+        "suggest": {
+          "fromRuntimepath": true,
+          "fromVimruntime": true
+        },
+        "isNeovim": true,
+        "iskeyword": "@,48-57,_,192-255,-#"
+      },
+      "filetype": [
+        "vim"
+      ],
+      "path": "vim-language-server"
+    }
 
 VISUALFORCE LS ~
->
+Usage: >
     call lsp_settings#VisualforceLs()
 <
+Defaults: >
+    {
+      "name": "visualforce_ls",
+      "init_options": {
+        "embeddedLanguages": {
+          "css": true,
+          "javascript": true
+        }
+      },
+      "filetype": [
+        "visualforce"
+      ]
+    }
 
 VLS ~
->
+Usage: >
     call lsp_settings#Vls()
 <
+Defaults: >
+    {
+      "filetype": [
+        "v",
+        "vlang"
+      ],
+      "path": "v",
+      "name": "vls",
+      "args": [
+        "ls"
+      ]
+    }
 
 VOLAR ~
->
+Usage: >
     call lsp_settings#Volar()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "init_options": {
+        "typescript": {
+          "tsdk": ""
+        }
+      },
+      "name": "volar",
+      "filetype": [
+        "vue"
+      ],
+      "path": "vue-language-server"
+    }
 
 VSCOQTOP ~
->
+Usage: >
     call lsp_settings#Vscoqtop()
 <
+Defaults: >
+    {
+      "args": [],
+      "path": "vscoqtop",
+      "name": "vscoqtop",
+      "filetype": [
+        "coq"
+      ]
+    }
 
 VTSLS ~
->
+Usage: >
     call lsp_settings#Vtsls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "path": "vtsls",
+      "name": "vtsls",
+      "filetype": [
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx",
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx"
+      ]
+    }
 
 VUELS ~
->
+Usage: >
     call lsp_settings#Vuels()
 <
+Defaults: >
+    {
+      "args": [],
+      "init_options": {
+        "config": {
+          "emmet": [],
+          "stylusSupremacy": [],
+          "typescript": {
+            "format": []
+          },
+          "vetur": {
+            "validation": {
+              "script": true,
+              "template": true,
+              "style": true
+            },
+            "useWorkspaceDependencies": false,
+            "format": {
+              "defaultFormatter": {
+                "ts": "none",
+                "js": "none"
+              },
+              "styleInitialIndent": false,
+              "defaultFormatterOptions": [],
+              "scriptInitialIndent": false
+            },
+            "completion": {
+              "autoImport": false,
+              "useScaffoldSnippets": false,
+              "tagCasing": "kebab"
+            }
+          },
+          "html": {
+            "suggest": []
+          },
+          "css": [],
+          "javascript": {
+            "format": []
+          }
+        }
+      },
+      "filetype": [
+        "vue"
+      ],
+      "path": "vls",
+      "name": "vuels"
+    }
 
 WGSL ANALYZER ~
->
+Usage: >
     call lsp_settings#WgslAnalyzer()
 <
+Defaults: >
+    {
+      "args": [],
+      "workspaceConfig": {
+        "settings": []
+      },
+      "filetype": [
+        "wgsl"
+      ],
+      "path": "wgsl_analyzer",
+      "name": "wgsl_analyzer"
+    }
 
 YAMLLS ~
->
+Usage: >
     call lsp_settings#Yamlls()
 <
+Defaults: >
+    {
+      "args": [
+        "--stdio"
+      ],
+      "workspaceConfig": {
+        "settings": {
+          "redhat": {
+            "telemetry": {
+              "enabled": false
+            }
+          }
+        }
+      },
+      "filetype": [
+        "yaml",
+        "yaml.docker-compose",
+        "yaml.gitlab"
+      ],
+      "path": "yaml-language-server",
+      "name": "yamlls"
+    }
 
 YANG LSP ~
->
+Usage: >
     call lsp_settings#YangLsp()
 <
+Defaults: >
+    {
+      "filetype": [
+        "yang"
+      ],
+      "path": "yang-language-server",
+      "name": "yang_lsp",
+      "args": []
+    }
 
 YLS ~
->
+Usage: >
     call lsp_settings#Yls()
 <
+Defaults: >
+    {
+      "args": [
+        "-vv"
+      ],
+      "path": "yls",
+      "name": "yls",
+      "filetype": [
+        "yar",
+        "yara"
+      ]
+    }
 
 ZIGGY ~
->
+Usage: >
     call lsp_settings#Ziggy()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp"
+      ],
+      "path": "ziggy",
+      "name": "ziggy",
+      "filetype": [
+        "ziggy"
+      ]
+    }
 
 ZIGGY SCHEMA ~
->
+Usage: >
     call lsp_settings#ZiggySchema()
 <
+Defaults: >
+    {
+      "args": [
+        "lsp",
+        "--schema"
+      ],
+      "path": "ziggy",
+      "name": "ziggy_schema",
+      "filetype": [
+        "ziggy_schema"
+      ]
+    }
 
 ZK ~
->
+Usage: >
     call lsp_settings#Zk()
 <
+Defaults: >
+    {
+      "filetype": [
+        "markdown"
+      ],
+      "path": "zk",
+      "name": "zk",
+      "args": [
+        "lsp"
+      ]
+    }
 
 ZLS ~
->
+Usage: >
     call lsp_settings#Zls()
 <
+Defaults: >
+    {
+      "args": [],
+      "name": "zls",
+      "filetype": [
+        "zig",
+        "zir"
+      ],
+      "path": "zls"
+    }
 
 vim:tw=78:ts=8:noet:ft=help:norl:
