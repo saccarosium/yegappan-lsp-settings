@@ -27,7 +27,7 @@ if [ -d "$path" ]; then
 else
     echo "==> Cloning nvim/nvim-lspconfig repository"
     url="https://github.com/neovim/nvim-lspconfig.git"
-    git clone --filter=blob:none "$url" "$path"
+    git clone --depth=1 "$url" "$path"
 fi
 
 echo "==> Done"
