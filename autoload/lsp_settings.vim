@@ -21,7 +21,7 @@ export def Angularls(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Ansiblels(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["yaml.ansible"], "name": "ansiblels", "path": "ansible-language-server", "workspaceConfig": {"settings": {"ansible": {"ansible": {"path": "ansible"}, "validation": {"lint": {"path": "ansible-lint", "enabled": true}, "enabled": true}, "executionEnvironment": {"enabled": false}, "python": {"interpreterPath": "python"}}}}}
+  var settings = {"args": ["--stdio"], "filetype": ["yaml.ansible"], "name": "ansiblels", "path": "ansible-language-server", "workspaceConfig": {"settings": {"ansible": {"ansible": {"path": "ansible"}, "executionEnvironment": {"enabled": false}, "python": {"interpreterPath": "python"}, "validation": {"enabled": true, "lint": {"enabled": true, "path": "ansible-lint"}}}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Antlersls(opts: dict<any> = {})
@@ -33,7 +33,7 @@ export def ApexLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def ArduinoLanguageServer(opts: dict<any> = {})
-  var settings = {"args": [], "features": {"workspace": {"semanticTokens": null}, "textDocument": {"semanticTokens": null}}, "filetype": ["arduino"], "name": "arduino_language_server", "path": "arduino-language-server"}
+  var settings = {"args": [], "features": {"textDocument": {"semanticTokens": null}, "workspace": {"semanticTokens": null}}, "filetype": ["arduino"], "name": "arduino_language_server", "path": "arduino-language-server"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def AsmLsp(opts: dict<any> = {})
@@ -69,7 +69,7 @@ export def Ballerina(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Basedpyright(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["python"], "name": "basedpyright", "path": "basedpyright-langserver", "workspaceConfig": {"settings": {"basedpyright": {"analysis": {"useLibraryCodeForTypes": true, "diagnosticMode": "openFilesOnly", "autoSearchPaths": true}}}}}
+  var settings = {"args": ["--stdio"], "filetype": ["python"], "name": "basedpyright", "path": "basedpyright-langserver", "workspaceConfig": {"settings": {"basedpyright": {"analysis": {"autoSearchPaths": true, "diagnosticMode": "openFilesOnly", "useLibraryCodeForTypes": true}}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Bashls(opts: dict<any> = {})
@@ -77,7 +77,7 @@ export def Bashls(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def BasicsLs(opts: dict<any> = {})
-  var settings = {"args": [], "name": "basics_ls", "path": "basics-language-server", "workspaceConfig": {"settings": {"path": {"enable": true}, "buffer": {"enable": true, "minCompletionLength": 4}, "snippet": {"enable": false, "sources": []}}}}
+  var settings = {"args": [], "name": "basics_ls", "path": "basics-language-server", "workspaceConfig": {"settings": {"buffer": {"enable": true, "minCompletionLength": 4}, "path": {"enable": true}, "snippet": {"enable": false, "sources": []}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def BazelrcLsp(opts: dict<any> = {})
@@ -126,6 +126,10 @@ export def Buck2(opts: dict<any> = {})
 enddef
 export def BuddyLs(opts: dict<any> = {})
   var settings = {"args": [], "filetype": ["mlir"], "name": "buddy_ls", "path": "buddy-lsp-server"}
+  g:LspAddServer([settings->extend(opts, 'force')])
+enddef
+export def BufLs(opts: dict<any> = {})
+  var settings = {"args": ["beta", "lsp", "--timeout=0", "--log-format=text"], "filetype": ["proto"], "name": "buf_ls", "path": "buf"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Bufls(opts: dict<any> = {})
@@ -205,11 +209,11 @@ export def CsharpLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def CssVariables(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["css", "scss", "less"], "name": "css_variables", "path": "css-variables-language-server", "workspaceConfig": {"settings": {"cssVariables": {"lookupFiles": ["**/*.less", "**/*.scss", "**/*.sass", "**/*.css"], "blacklistFolders": ["**/.cache", "**/.DS_Store", "**/.git", "**/.hg", "**/.next", "**/.svn", "**/bower_components", "**/CVS", "**/dist", "**/node_modules", "**/tests", "**/tmp"]}}}}
+  var settings = {"args": ["--stdio"], "filetype": ["css", "scss", "less"], "name": "css_variables", "path": "css-variables-language-server", "workspaceConfig": {"settings": {"cssVariables": {"blacklistFolders": ["**/.cache", "**/.DS_Store", "**/.git", "**/.hg", "**/.next", "**/.svn", "**/bower_components", "**/CVS", "**/dist", "**/node_modules", "**/tests", "**/tmp"], "lookupFiles": ["**/*.less", "**/*.scss", "**/*.sass", "**/*.css"]}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Cssls(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["css", "scss", "less"], "init_options": {"provideFormatter": true}, "name": "cssls", "path": "vscode-css-language-server", "workspaceConfig": {"settings": {"scss": {"validate": true}, "css": {"validate": true}, "less": {"validate": true}}}}
+  var settings = {"args": ["--stdio"], "filetype": ["css", "scss", "less"], "init_options": {"provideFormatter": true}, "name": "cssls", "path": "vscode-css-language-server", "workspaceConfig": {"settings": {"css": {"validate": true}, "less": {"validate": true}, "scss": {"validate": true}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def CssmodulesLs(opts: dict<any> = {})
@@ -229,7 +233,7 @@ export def CypherLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def DaedalusLs(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["d"], "name": "daedalus_ls", "path": "DaedalusLanguageServer", "workspaceConfig": {"settings": {"DaedalusLanguageServer": {"srcFileEncoding": "Windows-1252", "loglevel": "debug", "inlayHints": {"constants": true}, "numParserThreads": 16, "fileEncoding": "Windows-1252"}}}}
+  var settings = {"args": [], "filetype": ["d"], "name": "daedalus_ls", "path": "DaedalusLanguageServer", "workspaceConfig": {"settings": {"DaedalusLanguageServer": {"fileEncoding": "Windows-1252", "inlayHints": {"constants": true}, "loglevel": "debug", "numParserThreads": 16, "srcFileEncoding": "Windows-1252"}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Dafny(opts: dict<any> = {})
@@ -241,7 +245,7 @@ export def Dagger(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Dartls(opts: dict<any> = {})
-  var settings = {"args": ["language-server", "--protocol=lsp"], "filetype": ["dart"], "init_options": {"onlyAnalyzeProjectsWithOpenFiles": true, "suggestFromUnimportedLibraries": true, "closingLabels": true, "outline": true, "flutterOutline": true}, "name": "dartls", "path": "dart", "workspaceConfig": {"settings": {"dart": {"completeFunctionCalls": true, "showTodos": true}}}}
+  var settings = {"args": ["language-server", "--protocol=lsp"], "filetype": ["dart"], "init_options": {"closingLabels": true, "flutterOutline": true, "onlyAnalyzeProjectsWithOpenFiles": true, "outline": true, "suggestFromUnimportedLibraries": true}, "name": "dartls", "path": "dart", "workspaceConfig": {"settings": {"dart": {"completeFunctionCalls": true, "showTodos": true}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Dcmls(opts: dict<any> = {})
@@ -301,7 +305,7 @@ export def DroolsLsp(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def DsPinyinLsp(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["markdown", "org"], "init_options": {"completion_on": true, "max_suggest": 15, "match_long_input": true, "show_symbols": true, "show_symbols_only_follow_by_hanzi": false, "show_symbols_by_n_times": 0, "match_as_same_as_input": true}, "name": "ds_pinyin_lsp", "path": "ds-pinyin-lsp"}
+  var settings = {"args": [], "filetype": ["markdown", "org"], "init_options": {"completion_on": true, "match_as_same_as_input": true, "match_long_input": true, "max_suggest": 15, "show_symbols": true, "show_symbols_by_n_times": 0, "show_symbols_only_follow_by_hanzi": false}, "name": "ds_pinyin_lsp", "path": "ds-pinyin-lsp"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Earthlyls(opts: dict<any> = {})
@@ -321,7 +325,7 @@ export def Elixirls(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Elmls(opts: dict<any> = {})
-  var settings = {"args": [], "features": {"offsetEncoding": ["utf-8", "utf-16"]}, "filetype": ["elm"], "init_options": {"skipInstallPackageConfirmation": false, "disableElmLSDiagnostics": false, "onlyUpdateDiagnosticsOnSave": false, "elmReviewDiagnostics": "off"}, "name": "elmls", "path": "elm-language-server"}
+  var settings = {"args": [], "features": {"offsetEncoding": ["utf-8", "utf-16"]}, "filetype": ["elm"], "init_options": {"disableElmLSDiagnostics": false, "elmReviewDiagnostics": "off", "onlyUpdateDiagnosticsOnSave": false, "skipInstallPackageConfirmation": false}, "name": "elmls", "path": "elm-language-server"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Elp(opts: dict<any> = {})
@@ -353,7 +357,7 @@ export def Esbonio(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Eslint(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "svelte", "astro"], "handlers": [], "name": "eslint", "path": "vscode-eslint-language-server", "workspaceConfig": {"settings": {"format": true, "useESLintClass": false, "experimental": {"useFlatConfig": false}, "validate": "on", "codeActionOnSave": {"enable": false, "mode": "all"}, "quiet": false, "onIgnoredFiles": "off", "rulesCustomizations": [], "codeAction": {"disableRuleComment": {"enable": true, "location": "separateLine"}, "showDocumentation": {"enable": true}}, "problems": {"shortenToSingleLine": false}, "run": "onType", "nodePath": "", "workingDirectory": {"mode": "location"}}}}
+  var settings = {"args": ["--stdio"], "filetype": ["javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "svelte", "astro"], "handlers": [], "name": "eslint", "path": "vscode-eslint-language-server", "workspaceConfig": {"settings": {"codeAction": {"disableRuleComment": {"enable": true, "location": "separateLine"}, "showDocumentation": {"enable": true}}, "codeActionOnSave": {"enable": false, "mode": "all"}, "experimental": {"useFlatConfig": false}, "format": true, "nodePath": "", "onIgnoredFiles": "off", "problems": {"shortenToSingleLine": false}, "quiet": false, "rulesCustomizations": [], "run": "onType", "useESLintClass": false, "validate": "on", "workingDirectory": {"mode": "location"}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def FacilityLanguageServer(opts: dict<any> = {})
@@ -389,7 +393,7 @@ export def Fortls(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Fsautocomplete(opts: dict<any> = {})
-  var settings = {"args": ["--adaptive-lsp-server-enabled"], "filetype": ["fsharp"], "init_options": {"AutomaticWorkspaceInit": true}, "name": "fsautocomplete", "path": "fsautocomplete", "workspaceConfig": {"settings": {"FSharp": {"EnableReferenceCodeLens": true, "RecordStubGeneration": true, "RecordStubGenerationBody": "failwith \"Not Implemented\"", "InterfaceStubGeneration": true, "InterfaceStubGenerationObjectIdentifier": "this", "ResolveNamespaces": true, "InterfaceStubGenerationMethodBody": "failwith \"Not Implemented\"", "UnusedOpensAnalyzer": true, "UnusedDeclarationsAnalyzer": true, "UseSdkScripts": true, "SimplifyNameAnalyzer": true, "keywordsAutocomplete": true, "ExternalAutocomplete": false, "Linter": true, "UnionCaseStubGeneration": true, "UnionCaseStubGenerationBody": "failwith \"Not Implemented\""}}}}
+  var settings = {"args": ["--adaptive-lsp-server-enabled"], "filetype": ["fsharp"], "init_options": {"AutomaticWorkspaceInit": true}, "name": "fsautocomplete", "path": "fsautocomplete", "workspaceConfig": {"settings": {"FSharp": {"EnableReferenceCodeLens": true, "ExternalAutocomplete": false, "InterfaceStubGeneration": true, "InterfaceStubGenerationMethodBody": "failwith \"Not Implemented\"", "InterfaceStubGenerationObjectIdentifier": "this", "Linter": true, "RecordStubGeneration": true, "RecordStubGenerationBody": "failwith \"Not Implemented\"", "ResolveNamespaces": true, "SimplifyNameAnalyzer": true, "UnionCaseStubGeneration": true, "UnionCaseStubGenerationBody": "failwith \"Not Implemented\"", "UnusedDeclarationsAnalyzer": true, "UnusedOpensAnalyzer": true, "UseSdkScripts": true, "keywordsAutocomplete": true}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def FsharpLanguageServer(opts: dict<any> = {})
@@ -513,7 +517,7 @@ export def HoonLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Html(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["html", "templ"], "init_options": {"embeddedLanguages": {"css": true, "javascript": true}, "configurationSection": ["html", "css", "javascript"], "provideFormatter": true}, "name": "html", "path": "vscode-html-language-server", "workspaceConfig": {"settings": []}}
+  var settings = {"args": ["--stdio"], "filetype": ["html", "templ"], "init_options": {"configurationSection": ["html", "css", "javascript"], "embeddedLanguages": {"css": true, "javascript": true}, "provideFormatter": true}, "name": "html", "path": "vscode-html-language-server", "workspaceConfig": {"settings": []}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Htmx(opts: dict<any> = {})
@@ -645,7 +649,7 @@ export def Marksman(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def MatlabLs(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["matlab"], "name": "matlab_ls", "path": "matlab-language-server", "workspaceConfig": {"settings": {"MATLAB": {"installPath": "", "matlabConnectionTiming": "onStart", "telemetry": true, "indexWorkspace": false}}}}
+  var settings = {"args": ["--stdio"], "filetype": ["matlab"], "name": "matlab_ls", "path": "matlab-language-server", "workspaceConfig": {"settings": {"MATLAB": {"indexWorkspace": false, "installPath": "", "matlabConnectionTiming": "onStart", "telemetry": true}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def MdxAnalyzer(opts: dict<any> = {})
@@ -657,7 +661,7 @@ export def Mesonlsp(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Metals(opts: dict<any> = {})
-  var settings = {"args": [], "features": {"workspace": {"configuration": false}}, "filetype": ["scala"], "init_options": {"compilerOptions": {"snippetAutoIndent": false}, "statusBarProvider": "show-message", "isHttpEnabled": true}, "message_level": 4, "name": "metals", "path": "metals"}
+  var settings = {"args": [], "features": {"workspace": {"configuration": false}}, "filetype": ["scala"], "init_options": {"compilerOptions": {"snippetAutoIndent": false}, "isHttpEnabled": true, "statusBarProvider": "show-message"}, "message_level": 4, "name": "metals", "path": "metals"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Millet(opts: dict<any> = {})
@@ -706,6 +710,10 @@ export def NeluaLsp(opts: dict<any> = {})
 enddef
 export def Neocmake(opts: dict<any> = {})
   var settings = {"args": ["--stdio"], "filetype": ["cmake"], "name": "neocmake", "path": "neocmakelsp"}
+  g:LspAddServer([settings->extend(opts, 'force')])
+enddef
+export def NextflowLs(opts: dict<any> = {})
+  var settings = {"args": ["-jar", "nextflow-language-server-all.jar"], "filetype": ["nextflow"], "name": "nextflow_ls", "path": "java", "workspaceConfig": {"settings": {"nextflow": {"files": {"exclude": [".git", ".nf-test", "work"]}}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Nextls(opts: dict<any> = {})
@@ -765,7 +773,7 @@ export def Ols(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Omnisharp(opts: dict<any> = {})
-  var settings = {"filetype": ["cs", "vb"], "init_options": [], "name": "omnisharp", "workspaceConfig": {"settings": {"Sdk": {"IncludePrereleases": true}, "MsBuild": [], "FormattingOptions": {"EnableEditorConfigSupport": true}, "RoslynExtensionsOptions": []}}}
+  var settings = {"filetype": ["cs", "vb"], "init_options": [], "name": "omnisharp", "workspaceConfig": {"settings": {"FormattingOptions": {"EnableEditorConfigSupport": true}, "MsBuild": [], "RoslynExtensionsOptions": [], "Sdk": {"IncludePrereleases": true}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def OpenclLs(opts: dict<any> = {})
@@ -797,7 +805,7 @@ export def Pbls(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Perlls(opts: dict<any> = {})
-  var settings = {"args": ["-MPerl::LanguageServer", "-e", "Perl::LanguageServer::run", "--", "--port 13603", "--nostdio 0"], "filetype": ["perl"], "name": "perlls", "path": "perl", "workspaceConfig": {"settings": {"perl": {"perlInc": " ", "fileFilter": [".pm", ".pl"], "ignoreDirs": ".git", "perlCmd": "perl"}}}}
+  var settings = {"args": ["-MPerl::LanguageServer", "-e", "Perl::LanguageServer::run", "--", "--port 13603", "--nostdio 0"], "filetype": ["perl"], "name": "perlls", "path": "perl", "workspaceConfig": {"settings": {"perl": {"fileFilter": [".pm", ".pl"], "ignoreDirs": ".git", "perlCmd": "perl", "perlInc": " "}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Perlnavigator(opts: dict<any> = {})
@@ -881,7 +889,7 @@ export def Pylsp(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Pylyzer(opts: dict<any> = {})
-  var settings = {"args": ["--server"], "filetype": ["python"], "name": "pylyzer", "path": "pylyzer", "workspaceConfig": {"settings": {"python": {"smartCompletion": true, "inlayHints": true, "checkOnType": false, "diagnostics": true}}}}
+  var settings = {"args": ["--server"], "filetype": ["python"], "name": "pylyzer", "path": "pylyzer", "workspaceConfig": {"settings": {"python": {"checkOnType": false, "diagnostics": true, "inlayHints": true, "smartCompletion": true}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Pyre(opts: dict<any> = {})
@@ -889,7 +897,7 @@ export def Pyre(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Pyright(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["python"], "name": "pyright", "path": "pyright-langserver", "workspaceConfig": {"settings": {"python": {"analysis": {"useLibraryCodeForTypes": true, "diagnosticMode": "openFilesOnly", "autoSearchPaths": true}}}}}
+  var settings = {"args": ["--stdio"], "filetype": ["python"], "name": "pyright", "path": "pyright-langserver", "workspaceConfig": {"settings": {"python": {"analysis": {"autoSearchPaths": true, "diagnosticMode": "openFilesOnly", "useLibraryCodeForTypes": true}}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def QmlLsp(opts: dict<any> = {})
@@ -937,7 +945,7 @@ export def RemarkLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Rescriptls(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["rescript"], "init_options": {"extensionConfiguration": {"codeLens": true, "cache": {"projectConfig": {"enabled": true}}, "askToStartBuild": false, "allowBuiltInFormatter": true, "incrementalTypechecking": {"acrossFiles": true, "enabled": true}, "inlayHints": {"enable": true}}}, "name": "rescriptls", "path": "rescript-language-server", "workspaceConfig": {"settings": []}}
+  var settings = {"args": ["--stdio"], "filetype": ["rescript"], "init_options": {"extensionConfiguration": {"allowBuiltInFormatter": true, "askToStartBuild": false, "cache": {"projectConfig": {"enabled": true}}, "codeLens": true, "incrementalTypechecking": {"acrossFiles": true, "enabled": true}, "inlayHints": {"enable": true}}}, "name": "rescriptls", "path": "rescript-language-server", "workspaceConfig": {"settings": []}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Rls(opts: dict<any> = {})
@@ -981,7 +989,7 @@ export def RuneLanguageserver(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def RustAnalyzer(opts: dict<any> = {})
-  var settings = {"args": [], "features": {"experimental": {"serverStatusNotification": true}}, "filetype": ["rust"], "name": "rust_analyzer", "path": "rust-analyzer"}
+  var settings = {"args": [], "features": {"experimental": {"serverStatusNotification": true}}, "filetype": ["rust"], "name": "rust_analyzer", "path": "rust-analyzer", "syncInit": true}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def SaltLs(opts: dict<any> = {})
@@ -1145,7 +1153,7 @@ export def TabbyMl(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Tailwindcss(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge", "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "gohtmltmpl", "haml", "handlebars", "hbs", "html", "htmlangular", "html-eex", "heex", "jade", "leaf", "liquid", "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact", "vue", "svelte", "templ"], "name": "tailwindcss", "path": "tailwindcss-language-server", "workspaceConfig": {"settings": {"tailwindCSS": {"classAttributes": ["class", "className", "class:list", "classList", "ngClass"], "lint": {"recommendedVariantOrder": "warning", "cssConflict": "warning", "invalidApply": "error", "invalidScreen": "error", "invalidVariant": "error", "invalidConfigPath": "error", "invalidTailwindDirective": "error"}, "includeLanguages": {"eruby": "erb", "htmlangular": "html", "templ": "html", "eelixir": "html-eex"}, "validate": true}}}}
+  var settings = {"args": ["--stdio"], "filetype": ["aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge", "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "gohtmltmpl", "haml", "handlebars", "hbs", "html", "htmlangular", "html-eex", "heex", "jade", "leaf", "liquid", "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact", "vue", "svelte", "templ"], "name": "tailwindcss", "path": "tailwindcss-language-server", "workspaceConfig": {"settings": {"tailwindCSS": {"classAttributes": ["class", "className", "class:list", "classList", "ngClass"], "includeLanguages": {"eelixir": "html-eex", "eruby": "erb", "htmlangular": "html", "templ": "html"}, "lint": {"cssConflict": "warning", "invalidApply": "error", "invalidConfigPath": "error", "invalidScreen": "error", "invalidTailwindDirective": "error", "invalidVariant": "error", "recommendedVariantOrder": "warning"}, "validate": true}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Taplo(opts: dict<any> = {})
@@ -1173,11 +1181,11 @@ export def Terraformls(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Texlab(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["tex", "plaintex", "bib"], "name": "texlab", "path": "texlab", "workspaceConfig": {"settings": {"texlab": {"formatterLineLength": 80, "build": {"args": ["-pdf", "-interaction=nonstopmode", "-synctex=1", "%f"], "executable": "latexmk", "forwardSearchAfter": false, "onSave": false}, "diagnosticsDelay": 300, "latexFormatter": "latexindent", "latexindent": {"modifyLineBreaks": false}, "bibtexFormatter": "texlab", "forwardSearch": {"args": []}, "chktex": {"onOpenAndSave": false, "onEdit": false}}}}}
+  var settings = {"args": [], "filetype": ["tex", "plaintex", "bib"], "name": "texlab", "path": "texlab", "workspaceConfig": {"settings": {"texlab": {"bibtexFormatter": "texlab", "build": {"args": ["-pdf", "-interaction=nonstopmode", "-synctex=1", "%f"], "executable": "latexmk", "forwardSearchAfter": false, "onSave": false}, "chktex": {"onEdit": false, "onOpenAndSave": false}, "diagnosticsDelay": 300, "formatterLineLength": 80, "forwardSearch": {"args": []}, "latexFormatter": "latexindent", "latexindent": {"modifyLineBreaks": false}}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Textlsp(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["text", "tex", "org"], "name": "textlsp", "path": "textlsp", "workspaceConfig": {"settings": {"textLSP": {"documents": {"org": {"org_todo_keywords": ["TODO", "IN_PROGRESS", "DONE"]}}, "analysers": {"languagetool": {"check_text": {"on_open": true, "on_save": true, "on_change": false}, "enabled": true}}}}}}
+  var settings = {"args": [], "filetype": ["text", "tex", "org"], "name": "textlsp", "path": "textlsp", "workspaceConfig": {"settings": {"textLSP": {"analysers": {"languagetool": {"check_text": {"on_change": false, "on_open": true, "on_save": true}, "enabled": true}}, "documents": {"org": {"org_todo_keywords": ["TODO", "IN_PROGRESS", "DONE"]}}}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Tflint(opts: dict<any> = {})
@@ -1205,7 +1213,7 @@ export def TsLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def TsQueryLs(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["query"], "name": "ts_query_ls", "path": "ts_query_ls", "workspaceConfig": {"settings": {"parser_aliases": {"jsx": "javascript", "php_only": "php", "ecma": "javascript"}}}}
+  var settings = {"args": [], "filetype": ["query"], "name": "ts_query_ls", "path": "ts_query_ls", "workspaceConfig": {"settings": {"parser_aliases": {"ecma": "javascript", "jsx": "javascript", "php_only": "php"}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def TspServer(opts: dict<any> = {})
@@ -1277,7 +1285,7 @@ export def ValeLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Vdmj(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["vdmsl", "vdmpp", "vdmrt"], "name": "vdmj", "options": {"annotation_paths": [], "mavenrepo": "/home/sacca/.m2/repository/com/fujitsu", "debugger_port": -1, "high_precision": false, "java_opts": ["-Xmx3000m", "-Xss1m"], "logfile": "/home/sacca/.cache/nvim/vdm-lsp.log", "java": "java"}, "path": "java"}
+  var settings = {"args": [], "filetype": ["vdmsl", "vdmpp", "vdmrt"], "name": "vdmj", "options": {"annotation_paths": [], "debugger_port": -1, "high_precision": false, "java": "java", "java_opts": ["-Xmx3000m", "-Xss1m"], "logfile": "/home/sacca/.cache/nvim/vdm-lsp.log", "mavenrepo": "/home/sacca/.m2/repository/com/fujitsu"}, "path": "java"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Verible(opts: dict<any> = {})
@@ -1297,7 +1305,7 @@ export def VhdlLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Vimls(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["vim"], "init_options": {"vimruntime": "", "runtimepath": "", "indexes": {"gap": 100, "projectRootPatterns": ["runtime", "nvim", ".git", "autoload", "plugin"], "runtimepath": true, "count": 3}, "diagnostic": {"enable": true}, "suggest": {"fromRuntimepath": true, "fromVimruntime": true}, "isNeovim": true, "iskeyword": "@,48-57,_,192-255,-#"}, "name": "vimls", "path": "vim-language-server"}
+  var settings = {"args": ["--stdio"], "filetype": ["vim"], "init_options": {"diagnostic": {"enable": true}, "indexes": {"count": 3, "gap": 100, "projectRootPatterns": ["runtime", "nvim", ".git", "autoload", "plugin"], "runtimepath": true}, "isNeovim": true, "iskeyword": "@,48-57,_,192-255,-#", "runtimepath": "", "suggest": {"fromRuntimepath": true, "fromVimruntime": true}, "vimruntime": ""}, "name": "vimls", "path": "vim-language-server"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def VisualforceLs(opts: dict<any> = {})
@@ -1321,7 +1329,7 @@ export def Vtsls(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Vuels(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["vue"], "init_options": {"config": {"emmet": [], "stylusSupremacy": [], "typescript": {"format": []}, "vetur": {"validation": {"script": true, "template": true, "style": true}, "useWorkspaceDependencies": false, "format": {"defaultFormatter": {"ts": "none", "js": "none"}, "styleInitialIndent": false, "defaultFormatterOptions": [], "scriptInitialIndent": false}, "completion": {"autoImport": false, "useScaffoldSnippets": false, "tagCasing": "kebab"}}, "html": {"suggest": []}, "css": [], "javascript": {"format": []}}}, "name": "vuels", "path": "vls"}
+  var settings = {"args": [], "filetype": ["vue"], "init_options": {"config": {"css": [], "emmet": [], "html": {"suggest": []}, "javascript": {"format": []}, "stylusSupremacy": [], "typescript": {"format": []}, "vetur": {"completion": {"autoImport": false, "tagCasing": "kebab", "useScaffoldSnippets": false}, "format": {"defaultFormatter": {"js": "none", "ts": "none"}, "defaultFormatterOptions": [], "scriptInitialIndent": false, "styleInitialIndent": false}, "useWorkspaceDependencies": false, "validation": {"script": true, "style": true, "template": true}}}}, "name": "vuels", "path": "vls"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def WgslAnalyzer(opts: dict<any> = {})
