@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+set -euf
 
 panic() { printf "\033[0;31m%s\033[0m\n" "$1" >&2 && exit 1; }
 executable() { type "$1" >/dev/null 2>&1; }
@@ -23,8 +23,6 @@ if [ -d "$path" ]; then
         echo "==> $count new updates on nvim/nvim-lspconfig"
         git -C "$path" merge --ff-only '@{u}'
         rev=$(git -C "$path" rev-parse --short HEAD)
-        git commit -m "Merge nvim/nvim-lspconfig $rev"
-        git push origin
     fi
 else
     echo "==> Cloning nvim/nvim-lspconfig repository"

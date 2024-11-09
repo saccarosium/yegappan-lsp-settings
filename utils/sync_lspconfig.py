@@ -1,23 +1,35 @@
 import json
-import os
+import subprocess
+import sys
 
 
-def check_key(obj, key):
-    if key in obj:
-        return obj[key]
-    for k, v in obj.items():
-        if isinstance(v, dict):
-            return check_key(v, key)
+def panic_after_non_normalized_server(key):
+    sys.stderr.write(
+        """
+The server.json wasn't normalized properly. The invalid '{}' key was present in the configuration. 
+This is normal since lua sometimes suck to remove keys from dictionaries. Try to run the script again." 
+""".format(
+            key
+        )
+    )
+    sys.exit(-1)
 
 
 # Making sure the serialization was successfull
-def ensure_normalized(obj):
-    for key in ["filetypes"]:
-        assert check_key(obj, key) == None
+def ensure_normalized(configs):
+    for _, config in configs.items():
+        for key in ["filetypes", "cmd", "single_file_support"]:
+            if key in config:
+                panic_after_non_normalized_server(key)
 
 
 if __name__ == "__main__":
-    os.system("nvim -l utils/sync_lspconfig.lua")
+    result = subprocess.run(["nvim", "-l", "utils/sync_lspconfig.lua"])
+
+    if result.returncode != 0:
+        sys.stderr.write("nvim script failed for some reason")
+        sys.exit(-1)
+
     with open("servers.json", "r") as file:
         content = file.read()
         configs = json.loads(content)
