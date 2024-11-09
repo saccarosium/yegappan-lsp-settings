@@ -18,7 +18,7 @@ This is normal since lua sometimes suck to remove keys from dictionaries. Try to
 # Making sure the serialization was successfull
 def ensure_normalized(configs):
     for _, config in configs.items():
-        for key in ["filetypes", "cmd", "single_file_support"]:
+        for key in ["filetypes", "cmd", "single_file_support", "settings"]:
             if key in config:
                 panic_after_non_normalized_server(key)
 
