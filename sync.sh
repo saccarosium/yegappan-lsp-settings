@@ -38,8 +38,6 @@ Generating files
 ================================================================================
 EOF
 
-while [ : ]; do
-    python3 ./utils/sync_lspconfig.py 2>/dev/null && break
-done
+python3 ./utils/sync_lspconfig.py 2>/dev/null && break
 
 echo "==> Done"

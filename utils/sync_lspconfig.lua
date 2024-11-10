@@ -88,6 +88,7 @@ end
 local function main()
 	local server_configs = get_server_configs()
 	local server_configs_normalized = normalize_server_configs(server_configs)
+    collectgarbage("collect")
 	write_server_configs(server_configs_normalized)
 end
 
