@@ -11,7 +11,13 @@ Defaults: >
         "ada"
       ],
       "name": "ada_ls",
-      "path": "ada_language_server"
+      "path": "ada_language_server",
+      "rootSearch": [
+        "Makefile",
+        ".git",
+        "*.gpr",
+        "*.adc"
+      ]
     }
 
 AGDA LS ~
@@ -25,7 +31,11 @@ Defaults: >
         "agda"
       ],
       "name": "agda_ls",
-      "path": "als"
+      "path": "als",
+      "rootSearch": [
+        ".git",
+        "*.agda-lib"
+      ]
     }
 
 AIKEN ~
@@ -41,7 +51,11 @@ Defaults: >
         "aiken"
       ],
       "name": "aiken",
-      "path": "aiken"
+      "path": "aiken",
+      "rootSearch": [
+        "aiken.toml",
+        ".git"
+      ]
     }
 
 ANAKIN LANGUAGE SERVER ~
@@ -56,6 +70,13 @@ Defaults: >
       ],
       "name": "anakin_language_server",
       "path": "anakinls",
+      "rootSearch": [
+        "pyproject.toml",
+        "setup.py",
+        "setup.cfg",
+        "requirements.txt",
+        "Pipfile"
+      ],
       "workspaceConfig": {
         "settings": {
           "anakinls": {
@@ -118,7 +139,10 @@ Defaults: >
         "htmlangular"
       ],
       "name": "angularls",
-      "path": "ngserver"
+      "path": "ngserver",
+      "rootSearch": [
+        "angular.json"
+      ]
     }
 
 ANSIBLELS ~
@@ -135,6 +159,10 @@ Defaults: >
       ],
       "name": "ansiblels",
       "path": "ansible-language-server",
+      "rootSearch": [
+        "ansible.cfg",
+        ".ansible-lint"
+      ],
       "workspaceConfig": {
         "settings": {
           "ansible": {
@@ -173,7 +201,10 @@ Defaults: >
         "antlers"
       ],
       "name": "antlersls",
-      "path": "antlersls"
+      "path": "antlersls",
+      "rootSearch": [
+        "composer.json"
+      ]
     }
 
 APEX LS ~
@@ -185,7 +216,10 @@ Defaults: >
       "filetype": [
         "apexcode"
       ],
-      "name": "apex_ls"
+      "name": "apex_ls",
+      "rootSearch": [
+        "sfdx-project.json"
+      ]
     }
 
 ARDUINO LANGUAGE SERVER ~
@@ -207,7 +241,10 @@ Defaults: >
         "arduino"
       ],
       "name": "arduino_language_server",
-      "path": "arduino-language-server"
+      "path": "arduino-language-server",
+      "rootSearch": [
+        "*.ino"
+      ]
     }
 
 ASM LSP ~
@@ -250,7 +287,11 @@ Defaults: >
         "lua"
       ],
       "name": "ast_grep",
-      "path": "ast-grep"
+      "path": "ast-grep",
+      "rootSearch": [
+        "sgconfig.yaml",
+        "sgconfig.yml"
+      ]
     }
 
 ASTRO ~
@@ -265,11 +306,17 @@ Defaults: >
       "filetype": [
         "astro"
       ],
-      "init_options": {
+      "initializationOptions": {
         "typescript": []
       },
       "name": "astro",
-      "path": "astro-ls"
+      "path": "astro-ls",
+      "rootSearch": [
+        "package.json",
+        "tsconfig.json",
+        "jsconfig.json",
+        ".git"
+      ]
     }
 
 AUTOTOOLS LS ~
@@ -285,7 +332,13 @@ Defaults: >
         "make"
       ],
       "name": "autotools_ls",
-      "path": "autotools-language-server"
+      "path": "autotools-language-server",
+      "rootSearch": [
+        "configure.ac",
+        "Makefile",
+        "Makefile.am",
+        "*.mk"
+      ]
     }
 
 AWK LS ~
@@ -316,6 +369,9 @@ Defaults: >
       ],
       "name": "azure_pipelines_ls",
       "path": "azure-pipelines-language-server",
+      "rootSearch": [
+        "azure-pipelines.yml"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -333,6 +389,10 @@ Defaults: >
       ],
       "name": "bacon_ls",
       "path": "bacon-ls",
+      "rootSearch": [
+        ".bacon-locations",
+        "Cargo.toml"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -351,7 +411,10 @@ Defaults: >
         "ballerina"
       ],
       "name": "ballerina",
-      "path": "bal"
+      "path": "bal",
+      "rootSearch": [
+        "Ballerina.toml"
+      ]
     }
 
 BASEDPYRIGHT ~
@@ -368,6 +431,15 @@ Defaults: >
       ],
       "name": "basedpyright",
       "path": "basedpyright-langserver",
+      "rootSearch": [
+        "pyproject.toml",
+        "setup.py",
+        "setup.cfg",
+        "requirements.txt",
+        "Pipfile",
+        "pyrightconfig.json",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": {
           "basedpyright": {
@@ -457,7 +529,7 @@ Defaults: >
         "beancount",
         "bean"
       ],
-      "init_options": [],
+      "initializationOptions": [],
       "name": "beancount",
       "path": "beancount-language-server"
     }
@@ -471,7 +543,7 @@ Defaults: >
       "filetype": [
         "bicep"
       ],
-      "init_options": [],
+      "initializationOptions": [],
       "name": "bicep"
     }
 
@@ -499,7 +571,11 @@ Defaults: >
         "vue"
       ],
       "name": "biome",
-      "path": "biome"
+      "path": "biome",
+      "rootSearch": [
+        "biome.json",
+        "biome.jsonc"
+      ]
     }
 
 BITBAKE LANGUAGE SERVER ~
@@ -541,9 +617,6 @@ Defaults: >
       "args": [
         "lsp"
       ],
-      "cmd_env": {
-        "GLOB_PATTERN": "*@(.blp)"
-      },
       "filetype": [
         "blueprint"
       ],
@@ -608,7 +681,10 @@ Defaults: >
         "bzl"
       ],
       "name": "buck2",
-      "path": "buck2"
+      "path": "buck2",
+      "rootSearch": [
+        ".buckconfig"
+      ]
     }
 
 BUDDY LS ~
@@ -641,7 +717,11 @@ Defaults: >
         "proto"
       ],
       "name": "buf_ls",
-      "path": "buf"
+      "path": "buf",
+      "rootSearch": [
+        "buf.yaml",
+        ".git"
+      ]
     }
 
 BUFLS ~
@@ -657,7 +737,11 @@ Defaults: >
         "proto"
       ],
       "name": "bufls",
-      "path": "bufls"
+      "path": "bufls",
+      "rootSearch": [
+        "buf.work.yaml",
+        ".git"
+      ]
     }
 
 BZL ~
@@ -674,7 +758,11 @@ Defaults: >
         "bzl"
       ],
       "name": "bzl",
-      "path": "bzl"
+      "path": "bzl",
+      "rootSearch": [
+        "WORKSPACE",
+        "WORKSPACE.bazel"
+      ]
     }
 
 C3 LSP ~
@@ -689,7 +777,14 @@ Defaults: >
         "c3i"
       ],
       "name": "c3_lsp",
-      "path": "c3lsp"
+      "path": "c3lsp",
+      "rootSearch": [
+        [
+          "project.json",
+          "manifest.json",
+          ".git"
+        ]
+      ]
     }
 
 CADENCE ~
@@ -705,11 +800,14 @@ Defaults: >
       "filetype": [
         "cdc"
       ],
-      "init_options": {
+      "initializationOptions": {
         "numberOfAccounts": "1"
       },
       "name": "cadence",
-      "path": "flow"
+      "path": "flow",
+      "rootSearch": [
+        "flow.json"
+      ]
     }
 
 CAIRO LS ~
@@ -725,11 +823,16 @@ Defaults: >
       "filetype": [
         "cairo"
       ],
-      "init_options": {
+      "initializationOptions": {
         "hostInfo": "neovim"
       },
       "name": "cairo_ls",
-      "path": "scarb-cairo-language-server"
+      "path": "scarb-cairo-language-server",
+      "rootSearch": [
+        "Scarb.toml",
+        "cairo_project.toml",
+        ".git"
+      ]
     }
 
 CCLS ~
@@ -746,9 +849,13 @@ Defaults: >
         "objcpp",
         "cuda"
       ],
+      "forceOffsetEncoding": "utf-32",
       "name": "ccls",
-      "offset_encoding": "utf-32",
-      "path": "ccls"
+      "path": "ccls",
+      "rootSearch": [
+        "compile_commands.json",
+        ".ccls"
+      ]
     }
 
 CDS LSP ~
@@ -765,6 +872,11 @@ Defaults: >
       ],
       "name": "cds_lsp",
       "path": "cds-lsp",
+      "rootSearch": [
+        "package.json",
+        "db",
+        "srv"
+      ],
       "workspaceConfig": {
         "settings": {
           "cds": {
@@ -815,7 +927,15 @@ Defaults: >
         "proto"
       ],
       "name": "clangd",
-      "path": "clangd"
+      "path": "clangd",
+      "rootSearch": [
+        ".clangd",
+        ".clang-tidy",
+        ".clang-format",
+        "compile_commands.json",
+        "compile_flags.txt",
+        "configure.ac"
+      ]
     }
 
 CLARITY LSP ~
@@ -830,7 +950,10 @@ Defaults: >
         "clarity"
       ],
       "name": "clarity_lsp",
-      "path": "clarity-lsp"
+      "path": "clarity-lsp",
+      "rootSearch": [
+        ".git"
+      ]
     }
 
 CLOJURE LSP ~
@@ -845,7 +968,15 @@ Defaults: >
         "edn"
       ],
       "name": "clojure_lsp",
-      "path": "clojure-lsp"
+      "path": "clojure-lsp",
+      "rootSearch": [
+        "project.clj",
+        "deps.edn",
+        "build.boot",
+        "shadow-cljs.edn",
+        ".git",
+        "bb.edn"
+      ]
     }
 
 CMAKE ~
@@ -858,11 +989,18 @@ Defaults: >
       "filetype": [
         "cmake"
       ],
-      "init_options": {
+      "initializationOptions": {
         "buildDirectory": "build"
       },
       "name": "cmake",
-      "path": "cmake-language-server"
+      "path": "cmake-language-server",
+      "rootSearch": [
+        "CMakePresets.json",
+        "CTestConfig.cmake",
+        ".git",
+        "build",
+        "cmake"
+      ]
     }
 
 COBOL LS ~
@@ -895,9 +1033,11 @@ Defaults: >
       "filetype": [
         "ql"
       ],
-      "log_level": 2,
       "name": "codeqlls",
       "path": "codeql",
+      "rootSearch": [
+        "qlpack.yml"
+      ],
       "workspaceConfig": {
         "settings": {
           "search_path": {}
@@ -918,7 +1058,10 @@ Defaults: >
         "coffee"
       ],
       "name": "coffeesense",
-      "path": "coffeesense-language-server"
+      "path": "coffeesense-language-server",
+      "rootSearch": [
+        "package.json"
+      ]
     }
 
 CONTEXTIVE ~
@@ -929,7 +1072,11 @@ Defaults: >
     {
       "args": [],
       "name": "contextive",
-      "path": "Contextive.LanguageServer"
+      "path": "Contextive.LanguageServer",
+      "rootSearch": [
+        ".contextive",
+        ".git"
+      ]
     }
 
 COQ LSP ~
@@ -943,7 +1090,10 @@ Defaults: >
         "coq"
       ],
       "name": "coq_lsp",
-      "path": "coq-lsp"
+      "path": "coq-lsp",
+      "rootSearch": [
+        "_CoqProject"
+      ]
     }
 
 CRYSTALLINE ~
@@ -957,7 +1107,10 @@ Defaults: >
         "crystal"
       ],
       "name": "crystalline",
-      "path": "crystalline"
+      "path": "crystalline",
+      "rootSearch": [
+        "shard.yml"
+      ]
     }
 
 CSHARP LS ~
@@ -970,11 +1123,14 @@ Defaults: >
       "filetype": [
         "cs"
       ],
-      "init_options": {
+      "initializationOptions": {
         "AutomaticWorkspaceInit": true
       },
       "name": "csharp_ls",
-      "path": "csharp-ls"
+      "path": "csharp-ls",
+      "rootSearch": [
+        "*.sln"
+      ]
     }
 
 CSS VARIABLES ~
@@ -993,6 +1149,10 @@ Defaults: >
       ],
       "name": "css_variables",
       "path": "css-variables-language-server",
+      "rootSearch": [
+        "package.json",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": {
           "cssVariables": {
@@ -1035,11 +1195,15 @@ Defaults: >
         "scss",
         "less"
       ],
-      "init_options": {
+      "initializationOptions": {
         "provideFormatter": true
       },
       "name": "cssls",
       "path": "vscode-css-language-server",
+      "rootSearch": [
+        "package.json",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": {
           "css": {
@@ -1097,11 +1261,17 @@ Defaults: >
       "args": [
         "--stdio"
       ],
-      "init_options": {
+      "initializationOptions": {
         "hostInfo": "neovim"
       },
       "name": "custom_elements_ls",
-      "path": "custom-elements-languageserver"
+      "path": "custom-elements-languageserver",
+      "rootSearch": [
+        "tsconfig.json",
+        "package.json",
+        "jsconfig.json",
+        ".git"
+      ]
     }
 
 CYPHER LS ~
@@ -1132,6 +1302,15 @@ Defaults: >
       ],
       "name": "daedalus_ls",
       "path": "DaedalusLanguageServer",
+      "rootSearch": [
+        "Gothic.src",
+        "Camera.src",
+        "Menu.src",
+        "Music.src",
+        "ParticleFX.src",
+        "SFX.src",
+        "VisualFX.src"
+      ],
       "workspaceConfig": {
         "settings": {
           "DaedalusLanguageServer": {
@@ -1175,7 +1354,11 @@ Defaults: >
         "cue"
       ],
       "name": "dagger",
-      "path": "cuelsp"
+      "path": "cuelsp",
+      "rootSearch": [
+        "cue.mod",
+        ".git"
+      ]
     }
 
 DARTLS ~
@@ -1191,7 +1374,7 @@ Defaults: >
       "filetype": [
         "dart"
       ],
-      "init_options": {
+      "initializationOptions": {
         "closingLabels": true,
         "flutterOutline": true,
         "onlyAnalyzeProjectsWithOpenFiles": true,
@@ -1200,6 +1383,9 @@ Defaults: >
       },
       "name": "dartls",
       "path": "dart",
+      "rootSearch": [
+        "pubspec.yaml"
+      ],
       "workspaceConfig": {
         "settings": {
           "dart": {
@@ -1224,7 +1410,10 @@ Defaults: >
         "dart"
       ],
       "name": "dcmls",
-      "path": "dcm"
+      "path": "dcm",
+      "rootSearch": [
+        "pubspec.yaml"
+      ]
     }
 
 DEBPUTY ~
@@ -1245,7 +1434,10 @@ Defaults: >
         "yaml"
       ],
       "name": "debputy",
-      "path": "debputy"
+      "path": "debputy",
+      "rootSearch": [
+        "debian"
+      ]
     }
 
 DELPHI LS ~
@@ -1259,7 +1451,10 @@ Defaults: >
         "pascal"
       ],
       "name": "delphi_ls",
-      "path": "DelphiLSP.exe"
+      "path": "DelphiLSP.exe",
+      "rootSearch": [
+        "*.dpr"
+      ]
     }
 
 DENOLS ~
@@ -1271,9 +1466,6 @@ Defaults: >
       "args": [
         "lsp"
       ],
-      "cmd_env": {
-        "NO_COLOR": true
-      },
       "filetype": [
         "javascript",
         "javascriptreact",
@@ -1282,9 +1474,13 @@ Defaults: >
         "typescriptreact",
         "typescript.tsx"
       ],
-      "handlers": [],
       "name": "denols",
       "path": "deno",
+      "rootSearch": [
+        "deno.json",
+        "deno.jsonc",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": {
           "deno": {
@@ -1376,7 +1572,13 @@ Defaults: >
         "yaml.docker-compose"
       ],
       "name": "docker_compose_language_service",
-      "path": "docker-compose-langserver"
+      "path": "docker-compose-langserver",
+      "rootSearch": [
+        "docker-compose.yaml",
+        "docker-compose.yml",
+        "compose.yaml",
+        "compose.yml"
+      ]
     }
 
 DOCKERLS ~
@@ -1392,7 +1594,10 @@ Defaults: >
         "dockerfile"
       ],
       "name": "dockerls",
-      "path": "docker-langserver"
+      "path": "docker-langserver",
+      "rootSearch": [
+        "Dockerfile"
+      ]
     }
 
 DOLMENLS ~
@@ -1455,6 +1660,12 @@ Defaults: >
       ],
       "name": "dprint",
       "path": "dprint",
+      "rootSearch": [
+        "dprint.json",
+        ".dprint.json",
+        "dprint.jsonc",
+        ".dprint.jsonc"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -1483,7 +1694,7 @@ Defaults: >
         "markdown",
         "org"
       ],
-      "init_options": {
+      "initializationOptions": {
         "completion_on": true,
         "match_as_same_as_input": true,
         "match_long_input": true,
@@ -1523,7 +1734,10 @@ Defaults: >
         "ecsact"
       ],
       "name": "ecsact",
-      "path": "ecsact_lsp_server"
+      "path": "ecsact_lsp_server",
+      "rootSearch": [
+        ".git"
+      ]
     }
 
 EFM ~
@@ -1568,7 +1782,7 @@ Defaults: >
       "filetype": [
         "elm"
       ],
-      "init_options": {
+      "initializationOptions": {
         "disableElmLSDiagnostics": false,
         "elmReviewDiagnostics": "off",
         "onlyUpdateDiagnosticsOnSave": false,
@@ -1591,7 +1805,12 @@ Defaults: >
         "erlang"
       ],
       "name": "elp",
-      "path": "elp"
+      "path": "elp",
+      "rootSearch": [
+        "rebar.config",
+        "erlang.mk",
+        ".git"
+      ]
     }
 
 EMBER ~
@@ -1611,7 +1830,11 @@ Defaults: >
         "javascript.glimmer"
       ],
       "name": "ember",
-      "path": "ember-language-server"
+      "path": "ember-language-server",
+      "rootSearch": [
+        "ember-cli-build.js",
+        ".git"
+      ]
     }
 
 EMMET LANGUAGE SERVER ~
@@ -1682,7 +1905,10 @@ Defaults: >
         "erg"
       ],
       "name": "erg_language_server",
-      "path": "erg"
+      "path": "erg",
+      "rootSearch": [
+        "package.er"
+      ]
     }
 
 ERLANGLS ~
@@ -1696,7 +1922,12 @@ Defaults: >
         "erlang"
       ],
       "name": "erlangls",
-      "path": "erlang_ls"
+      "path": "erlang_ls",
+      "rootSearch": [
+        "rebar.config",
+        "erlang.mk",
+        ".git"
+      ]
     }
 
 ESBONIO ~
@@ -1736,9 +1967,22 @@ Defaults: >
         "svelte",
         "astro"
       ],
-      "handlers": [],
       "name": "eslint",
       "path": "vscode-eslint-language-server",
+      "rootSearch": [
+        ".eslintrc",
+        ".eslintrc.js",
+        ".eslintrc.cjs",
+        ".eslintrc.yaml",
+        ".eslintrc.yml",
+        ".eslintrc.json",
+        "eslint.config.js",
+        "eslint.config.mjs",
+        "eslint.config.cjs",
+        "eslint.config.ts",
+        "eslint.config.mts",
+        "eslint.config.cts"
+      ],
       "workspaceConfig": {
         "settings": {
           "codeAction": {
@@ -1824,6 +2068,7 @@ Defaults: >
       ],
       "name": "fennel_ls",
       "path": "fennel-ls",
+      "rootSearch": "vim/fs.lua:0: invalid value (nil) at index 1 in table for 'concat'",
       "workspaceConfig": {
         "settings": []
       }
@@ -1838,9 +2083,6 @@ Defaults: >
       "args": [
         "start"
       ],
-      "cmd_env": {
-        "fish_lsp_show_client_popups": false
-      },
       "filetype": [
         "fish"
       ],
@@ -1865,7 +2107,10 @@ Defaults: >
         "javascript.jsx"
       ],
       "name": "flow",
-      "path": "npx"
+      "path": "npx",
+      "rootSearch": [
+        ".flowconfig"
+      ]
     }
 
 FLUX LSP ~
@@ -1916,6 +2161,9 @@ Defaults: >
       ],
       "name": "fortls",
       "path": "fortls",
+      "rootSearch": [
+        ".fortls"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -1933,11 +2181,16 @@ Defaults: >
       "filetype": [
         "fsharp"
       ],
-      "init_options": {
+      "initializationOptions": {
         "AutomaticWorkspaceInit": true
       },
       "name": "fsautocomplete",
       "path": "fsautocomplete",
+      "rootSearch": [
+        "*.sln",
+        "*.fsproj",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": {
           "FSharp": {
@@ -1974,11 +2227,16 @@ Defaults: >
       "filetype": [
         "fsharp"
       ],
-      "init_options": {
+      "initializationOptions": {
         "AutomaticWorkspaceInit": true
       },
       "name": "fsharp_language_server",
       "path": "dotnet",
+      "rootSearch": [
+        "*.sln",
+        "*.fsproj",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -2028,7 +2286,11 @@ Defaults: >
         "gdscript",
         "gdscript3"
       ],
-      "name": "gdscript"
+      "name": "gdscript",
+      "rootSearch": [
+        "project.godot",
+        ".git"
+      ]
     }
 
 GDSHADER LSP ~
@@ -2045,7 +2307,10 @@ Defaults: >
         "gdshaderinc"
       ],
       "name": "gdshader_lsp",
-      "path": "gdshader-lsp"
+      "path": "gdshader-lsp",
+      "rootSearch": [
+        "project.godot"
+      ]
     }
 
 GHCIDE ~
@@ -2062,7 +2327,14 @@ Defaults: >
         "lhaskell"
       ],
       "name": "ghcide",
-      "path": "ghcide"
+      "path": "ghcide",
+      "rootSearch": [
+        "stack.yaml",
+        "hie-bios",
+        "BUILD.bazel",
+        "cabal.config",
+        "package.yaml"
+      ]
     }
 
 GHDL LS ~
@@ -2076,7 +2348,10 @@ Defaults: >
         "vhdl"
       ],
       "name": "ghdl_ls",
-      "path": "ghdl-ls"
+      "path": "ghdl-ls",
+      "rootSearch": [
+        "hdl-prj.json"
+      ]
     }
 
 GINKO LS ~
@@ -2106,12 +2381,16 @@ Defaults: >
       "filetype": [
         "yaml.gitlab"
       ],
-      "init_options": {
+      "initializationOptions": {
         "cache_path": "/home/sacca/.cache/gitlab-ci-ls/",
         "log_path": "/home/sacca/.cache/gitlab-ci-ls//log/gitlab-ci-ls.log"
       },
       "name": "gitlab_ci_ls",
-      "path": "gitlab-ci-ls"
+      "path": "gitlab-ci-ls",
+      "rootSearch": [
+        ".gitlab*",
+        ".git"
+      ]
     }
 
 GLASGOW ~
@@ -2144,7 +2423,11 @@ Defaults: >
         "gleam"
       ],
       "name": "gleam",
-      "path": "gleam"
+      "path": "gleam",
+      "rootSearch": [
+        "gleam.toml",
+        ".git"
+      ]
     }
 
 GLINT ~
@@ -2163,7 +2446,15 @@ Defaults: >
         "javascript.glimmer"
       ],
       "name": "glint",
-      "path": "glint-language-server"
+      "path": "glint-language-server",
+      "rootSearch": [
+        ".glintrc.yml",
+        ".glintrc",
+        ".glintrc.json",
+        ".glintrc.js",
+        "glint.config.js",
+        "package.json"
+      ]
     }
 
 GLSL ANALYZER ~
@@ -2231,7 +2522,7 @@ Defaults: >
         "go",
         "gomod"
       ],
-      "init_options": {
+      "initializationOptions": {
         "command": [
           "golangci-lint",
           "run",
@@ -2240,7 +2531,16 @@ Defaults: >
         ]
       },
       "name": "golangci_lint_ls",
-      "path": "golangci-lint-langserver"
+      "path": "golangci-lint-langserver",
+      "rootSearch": [
+        ".golangci.yml",
+        ".golangci.yaml",
+        ".golangci.toml",
+        ".golangci.json",
+        "go.work",
+        "go.mod",
+        ".git"
+      ]
     }
 
 GOPLS ~
@@ -2257,7 +2557,8 @@ Defaults: >
         "gotmpl"
       ],
       "name": "gopls",
-      "path": "gopls"
+      "path": "gopls",
+      "rootSearch": "...e/pack/deps/start/nvim-lspconfig/lua/lspconfig/async.lua:15: assertion failed!"
     }
 
 GRADLE LS ~
@@ -2270,13 +2571,17 @@ Defaults: >
       "filetype": [
         "groovy"
       ],
-      "init_options": {
+      "initializationOptions": {
         "settings": {
           "gradleWrapperEnabled": true
         }
       },
       "name": "gradle_ls",
-      "path": "gradle-language-server"
+      "path": "gradle-language-server",
+      "rootSearch": [
+        "settings.gradle",
+        "build.gradle"
+      ]
     }
 
 GRAMMARLY ~
@@ -2291,8 +2596,7 @@ Defaults: >
       "filetype": [
         "markdown"
       ],
-      "handlers": [],
-      "init_options": {
+      "initializationOptions": {
         "clientId": "client_BaDkMgx4X19X9UxxYRCXZo"
       },
       "name": "grammarly",
@@ -2316,7 +2620,12 @@ Defaults: >
         "javascriptreact"
       ],
       "name": "graphql",
-      "path": "graphql-lsp"
+      "path": "graphql-lsp",
+      "rootSearch": [
+        ".graphqlrc*",
+        ".graphql.config.*",
+        "graphql.config.*"
+      ]
     }
 
 GROOVYLS ~
@@ -2333,7 +2642,10 @@ Defaults: >
         "groovy"
       ],
       "name": "groovyls",
-      "path": "java"
+      "path": "java",
+      "rootSearch": [
+        "Jenkinsfile"
+      ]
     }
 
 GUILE LS ~
@@ -2347,7 +2659,10 @@ Defaults: >
         "scheme.guile"
       ],
       "name": "guile_ls",
-      "path": "guile-lsp-server"
+      "path": "guile-lsp-server",
+      "rootSearch": [
+        "guix.scm"
+      ]
     }
 
 HARPER LS ~
@@ -2393,9 +2708,13 @@ Defaults: >
       "filetype": [
         "haxe"
       ],
-      "init_options": [],
+      "initializationOptions": [],
       "name": "haxe_language_server",
       "path": "haxe-language-server",
+      "rootSearch": [
+        "*.hxml",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": {
           "haxe": {
@@ -2443,7 +2762,10 @@ Defaults: >
         "helm"
       ],
       "name": "helm_ls",
-      "path": "helm_ls"
+      "path": "helm_ls",
+      "rootSearch": [
+        "Chart.yaml"
+      ]
     }
 
 HHVM ~
@@ -2460,7 +2782,10 @@ Defaults: >
         "hack"
       ],
       "name": "hhvm",
-      "path": "hh_client"
+      "path": "hh_client",
+      "rootSearch": [
+        ".hhconfig"
+      ]
     }
 
 HIE ~
@@ -2476,7 +2801,12 @@ Defaults: >
         "haskell"
       ],
       "name": "hie",
-      "path": "hie-wrapper"
+      "path": "hie-wrapper",
+      "rootSearch": [
+        "stack.yaml",
+        "package.yaml",
+        ".git"
+      ]
     }
 
 HLASM ~
@@ -2490,7 +2820,10 @@ Defaults: >
         "hlasm"
       ],
       "name": "hlasm",
-      "path": "hlasm_language_server"
+      "path": "hlasm_language_server",
+      "rootSearch": [
+        ".hlasmplugin"
+      ]
     }
 
 HLS ~
@@ -2508,6 +2841,13 @@ Defaults: >
       ],
       "name": "hls",
       "path": "haskell-language-server-wrapper",
+      "rootSearch": [
+        "hie.yaml",
+        "stack.yaml",
+        "cabal.project",
+        "*.cabal",
+        "package.yaml"
+      ],
       "workspaceConfig": {
         "settings": {
           "haskell": {
@@ -2545,7 +2885,7 @@ Defaults: >
         "html",
         "templ"
       ],
-      "init_options": {
+      "initializationOptions": {
         "configurationSection": [
           "html",
           "css",
@@ -2559,6 +2899,10 @@ Defaults: >
       },
       "name": "html",
       "path": "vscode-html-language-server",
+      "rootSearch": [
+        "package.json",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -2631,7 +2975,10 @@ Defaults: >
         "yaml"
       ],
       "name": "hydra_lsp",
-      "path": "hydra-lsp"
+      "path": "hydra-lsp",
+      "rootSearch": [
+        ".git"
+      ]
     }
 
 HYPRLS ~
@@ -2661,7 +3008,10 @@ Defaults: >
         "idris2"
       ],
       "name": "idris2_lsp",
-      "path": "idris2-lsp"
+      "path": "idris2-lsp",
+      "rootSearch": [
+        "*.ipkg"
+      ]
     }
 
 INTELEPHENSE ~
@@ -2677,7 +3027,8 @@ Defaults: >
         "php"
       ],
       "name": "intelephense",
-      "path": "intelephense"
+      "path": "intelephense",
+      "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)"
     }
 
 JANET LSP ~
@@ -2693,7 +3044,10 @@ Defaults: >
         "janet"
       ],
       "name": "janet_lsp",
-      "path": "janet-lsp"
+      "path": "janet-lsp",
+      "rootSearch": [
+        "project.janet"
+      ]
     }
 
 JAVA LANGUAGE SERVER ~
@@ -2706,6 +3060,11 @@ Defaults: >
         "java"
       ],
       "name": "java_language_server",
+      "rootSearch": [
+        "build.gradle",
+        "pom.xml",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -2726,13 +3085,17 @@ Defaults: >
       "filetype": [
         "java"
       ],
-      "handlers": [],
-      "init_options": {
+      "initializationOptions": {
         "jvm_args": [],
         "workspace": "/home/sacca/.cache/jdtls/workspace"
       },
       "name": "jdtls",
-      "path": "jdtls"
+      "path": "jdtls",
+      "rootSearch": [
+        ".git",
+        "build.gradle",
+        "build.gradle.kts"
+      ]
     }
 
 JEDI LANGUAGE SERVER ~
@@ -2746,7 +3109,15 @@ Defaults: >
         "python"
       ],
       "name": "jedi_language_server",
-      "path": "jedi-language-server"
+      "path": "jedi-language-server",
+      "rootSearch": [
+        "pyproject.toml",
+        "setup.py",
+        "setup.cfg",
+        "requirements.txt",
+        "Pipfile",
+        ".git"
+      ]
     }
 
 JINJA LSP ~
@@ -2790,7 +3161,7 @@ Defaults: >
         "json",
         "jsonc"
       ],
-      "init_options": {
+      "initializationOptions": {
         "provideFormatter": true
       },
       "name": "jsonls",
@@ -2809,7 +3180,10 @@ Defaults: >
         "libsonnet"
       ],
       "name": "jsonnet_ls",
-      "path": "jsonnet-language-server"
+      "path": "jsonnet-language-server",
+      "rootSearch": [
+        "jsonnetfile.json"
+      ]
     }
 
 JULIALS ~
@@ -2828,7 +3202,11 @@ Defaults: >
         "julia"
       ],
       "name": "julials",
-      "path": "julia"
+      "path": "julia",
+      "rootSearch": [
+        "Project.toml",
+        "JuliaProject.toml"
+      ]
     }
 
 KCL ~
@@ -2842,7 +3220,10 @@ Defaults: >
         "kcl"
       ],
       "name": "kcl",
-      "path": "kcl-language-server"
+      "path": "kcl-language-server",
+      "rootSearch": [
+        ".git"
+      ]
     }
 
 KOKA ~
@@ -2872,9 +3253,26 @@ Defaults: >
       "filetype": [
         "kotlin"
       ],
-      "init_options": [],
+      "initializationOptions": {
+        "storagePath": [
+          "settings.gradle",
+          "settings.gradle.kts",
+          "build.xml",
+          "pom.xml",
+          "build.gradle",
+          "build.gradle.kts"
+        ]
+      },
       "name": "kotlin_language_server",
-      "path": "kotlin-language-server"
+      "path": "kotlin-language-server",
+      "rootSearch": [
+        "settings.gradle",
+        "settings.gradle.kts",
+        "build.xml",
+        "pom.xml",
+        "build.gradle",
+        "build.gradle.kts"
+      ]
     }
 
 KULALA LS ~
@@ -2910,9 +3308,10 @@ Defaults: >
       "filetype": [
         "lean3"
       ],
+      "forceOffsetEncoding": "utf-32",
       "name": "lean3ls",
-      "offset_encoding": "utf-32",
-      "path": "lean-language-server"
+      "path": "lean-language-server",
+      "rootSearch": "...s/start/nvim-lspconfig/lua/lspconfig/configs/lean3ls.lua:13: attempt to index local 'fname' (a nil value)"
     }
 
 LEANLS ~
@@ -2929,7 +3328,8 @@ Defaults: >
         "lean"
       ],
       "name": "leanls",
-      "path": "lake"
+      "path": "lake",
+      "rootSearch": "...ps/start/nvim-lspconfig/lua/lspconfig/configs/leanls.lua:12: attempt to index local 'fname' (a nil value)"
     }
 
 LELWEL LS ~
@@ -2976,7 +3376,10 @@ Defaults: >
         "heex",
         "surface"
       ],
-      "name": "lexical"
+      "name": "lexical",
+      "rootSearch": [
+        "mix.exs"
+      ]
     }
 
 LSP AI ~
@@ -2987,7 +3390,7 @@ Defaults: >
     {
       "args": [],
       "filetype": [],
-      "init_options": {
+      "initializationOptions": {
         "memory": {
           "file_store": {}
         },
@@ -3059,9 +3462,17 @@ Defaults: >
       "filetype": [
         "lua"
       ],
-      "log_level": 2,
       "name": "lua_ls",
-      "path": "lua-language-server"
+      "path": "lua-language-server",
+      "rootSearch": [
+        ".luarc.json",
+        ".luarc.jsonc",
+        ".luacheckrc",
+        ".stylua.toml",
+        "stylua.toml",
+        "selene.toml",
+        "selene.yml"
+      ]
     }
 
 LUAU LSP ~
@@ -3093,13 +3504,16 @@ Defaults: >
         "javascript",
         "html"
       ],
-      "init_options": {
+      "initializationOptions": {
         "embeddedLanguages": {
           "javascript": true
         }
       },
       "name": "lwc_ls",
-      "path": "lwc-language-server"
+      "path": "lwc-language-server",
+      "rootSearch": [
+        "sfdx-project.json"
+      ]
     }
 
 M68K ~
@@ -3115,7 +3529,11 @@ Defaults: >
         "asm68k"
       ],
       "name": "m68k",
-      "path": "m68k-lsp-server"
+      "path": "m68k-lsp-server",
+      "rootSearch": [
+        "Makefile",
+        ".git"
+      ]
     }
 
 MARKDOWN OXIDE ~
@@ -3129,7 +3547,12 @@ Defaults: >
         "markdown"
       ],
       "name": "markdown_oxide",
-      "path": "markdown-oxide"
+      "path": "markdown-oxide",
+      "rootSearch": [
+        ".git",
+        ".obsidian",
+        ".moxide.toml"
+      ]
     }
 
 MARKO JS ~
@@ -3162,7 +3585,10 @@ Defaults: >
         "markdown.mdx"
       ],
       "name": "marksman",
-      "path": "marksman"
+      "path": "marksman",
+      "rootSearch": [
+        ".marksman.toml"
+      ]
     }
 
 MATLAB LS ~
@@ -3203,11 +3629,14 @@ Defaults: >
       "filetype": [
         "markdown.mdx"
       ],
-      "init_options": {
+      "initializationOptions": {
         "typescript": []
       },
       "name": "mdx_analyzer",
       "path": "mdx-language-server",
+      "rootSearch": [
+        "package.json"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -3226,7 +3655,13 @@ Defaults: >
         "meson"
       ],
       "name": "mesonlsp",
-      "path": "mesonlsp"
+      "path": "mesonlsp",
+      "rootSearch": [
+        "meson.build",
+        "meson_options.txt",
+        "meson.options",
+        ".git"
+      ]
     }
 
 METALS ~
@@ -3244,16 +3679,21 @@ Defaults: >
       "filetype": [
         "scala"
       ],
-      "init_options": {
+      "initializationOptions": {
         "compilerOptions": {
           "snippetAutoIndent": false
         },
         "isHttpEnabled": true,
         "statusBarProvider": "show-message"
       },
-      "message_level": 4,
       "name": "metals",
-      "path": "metals"
+      "path": "metals",
+      "rootSearch": [
+        "build.sbt",
+        "build.sc",
+        "build.gradle",
+        "pom.xml"
+      ]
     }
 
 MILLET ~
@@ -3267,7 +3707,10 @@ Defaults: >
         "sml"
       ],
       "name": "millet",
-      "path": "millet"
+      "path": "millet",
+      "rootSearch": [
+        "millet.toml"
+      ]
     }
 
 MINT ~
@@ -3283,7 +3726,10 @@ Defaults: >
         "mint"
       ],
       "name": "mint",
-      "path": "mint"
+      "path": "mint",
+      "rootSearch": [
+        "mint.json"
+      ]
     }
 
 MLIR LSP SERVER ~
@@ -3311,7 +3757,10 @@ Defaults: >
         "pdll"
       ],
       "name": "mlir_pdll_lsp_server",
-      "path": "mlir-pdll-lsp-server"
+      "path": "mlir-pdll-lsp-server",
+      "rootSearch": [
+        "pdll_compile_commands.yml"
+      ]
     }
 
 MM0 LS ~
@@ -3356,11 +3805,15 @@ Defaults: >
       "filetype": [
         "motoko"
       ],
-      "init_options": {
+      "initializationOptions": {
         "formatter": "auto"
       },
       "name": "motoko_lsp",
-      "path": "motoko-lsp"
+      "path": "motoko-lsp",
+      "rootSearch": [
+        "dfx.json",
+        ".git"
+      ]
     }
 
 MOVE ANALYZER ~
@@ -3374,7 +3827,10 @@ Defaults: >
         "move"
       ],
       "name": "move_analyzer",
-      "path": "move-analyzer"
+      "path": "move-analyzer",
+      "rootSearch": [
+        "Move.toml"
+      ]
     }
 
 MSBUILD PROJECT TOOLS SERVER ~
@@ -3391,7 +3847,7 @@ Defaults: >
         "xml.fsproj",
         "sln"
       ],
-      "init_options": [],
+      "initializationOptions": [],
       "name": "msbuild_project_tools_server",
       "path": "dotnet"
     }
@@ -3423,7 +3879,12 @@ Defaults: >
       "filetype": [
         "nelua"
       ],
-      "name": "nelua_lsp"
+      "name": "nelua_lsp",
+      "rootSearch": [
+        "Makefile",
+        ".git",
+        "*.nelua"
+      ]
     }
 
 NEOCMAKE ~
@@ -3439,7 +3900,12 @@ Defaults: >
         "cmake"
       ],
       "name": "neocmake",
-      "path": "neocmakelsp"
+      "path": "neocmakelsp",
+      "rootSearch": [
+        ".git",
+        "build",
+        "cmake"
+      ]
     }
 
 NEXTFLOW LS ~
@@ -3457,6 +3923,10 @@ Defaults: >
       ],
       "name": "nextflow_ls",
       "path": "java",
+      "rootSearch": [
+        "nextflow.config",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": {
           "nextflow": {
@@ -3484,7 +3954,10 @@ Defaults: >
         "heex",
         "surface"
       ],
-      "name": "nextls"
+      "name": "nextls",
+      "rootSearch": [
+        "mix.exs"
+      ]
     }
 
 NGINX LANGUAGE SERVER ~
@@ -3498,7 +3971,11 @@ Defaults: >
         "nginx"
       ],
       "name": "nginx_language_server",
-      "path": "nginx-language-server"
+      "path": "nginx-language-server",
+      "rootSearch": [
+        "nginx.conf",
+        ".git"
+      ]
     }
 
 NICKEL LS ~
@@ -3527,7 +4004,11 @@ Defaults: >
         "nix"
       ],
       "name": "nil_ls",
-      "path": "nil"
+      "path": "nil",
+      "rootSearch": [
+        "flake.nix",
+        ".git"
+      ]
     }
 
 NIM LANGSERVER ~
@@ -3541,7 +4022,10 @@ Defaults: >
         "nim"
       ],
       "name": "nim_langserver",
-      "path": "nimlangserver"
+      "path": "nimlangserver",
+      "rootSearch": [
+        "*.nimble"
+      ]
     }
 
 NIMLS ~
@@ -3555,7 +4039,10 @@ Defaults: >
         "nim"
       ],
       "name": "nimls",
-      "path": "nimlsp"
+      "path": "nimlsp",
+      "rootSearch": [
+        "*.nimble"
+      ]
     }
 
 NIXD ~
@@ -3569,7 +4056,10 @@ Defaults: >
         "nix"
       ],
       "name": "nixd",
-      "path": "nixd"
+      "path": "nixd",
+      "rootSearch": [
+        "flake.nix"
+      ]
     }
 
 NOMAD LSP ~
@@ -3584,7 +4074,10 @@ Defaults: >
         "nomad"
       ],
       "name": "nomad_lsp",
-      "path": "nomad-lsp"
+      "path": "nomad-lsp",
+      "rootSearch": [
+        "*.nomad"
+      ]
     }
 
 NTT ~
@@ -3600,7 +4093,10 @@ Defaults: >
         "ttcn"
       ],
       "name": "ntt",
-      "path": "ntt"
+      "path": "ntt",
+      "rootSearch": [
+        ".git"
+      ]
     }
 
 NUSHELL ~
@@ -3633,7 +4129,11 @@ Defaults: >
         "jsonc"
       ],
       "name": "nxls",
-      "path": "nxls"
+      "path": "nxls",
+      "rootSearch": [
+        "nx.json",
+        ".git"
+      ]
     }
 
 OCAMLLS ~
@@ -3650,7 +4150,12 @@ Defaults: >
         "reason"
       ],
       "name": "ocamlls",
-      "path": "ocaml-language-server"
+      "path": "ocaml-language-server",
+      "rootSearch": [
+        "*.opam",
+        "esy.json",
+        "package.json"
+      ]
     }
 
 OCAMLLSP ~
@@ -3669,7 +4174,15 @@ Defaults: >
         "dune"
       ],
       "name": "ocamllsp",
-      "path": "ocamllsp"
+      "path": "ocamllsp",
+      "rootSearch": [
+        "*.opam",
+        "esy.json",
+        "package.json",
+        ".git",
+        "dune-project",
+        "dune-workspace"
+      ]
     }
 
 OLS ~
@@ -3683,7 +4196,12 @@ Defaults: >
         "odin"
       ],
       "name": "ols",
-      "path": "ols"
+      "path": "ols",
+      "rootSearch": [
+        "ols.json",
+        ".git",
+        "*.odin"
+      ]
     }
 
 OMNISHARP ~
@@ -3696,8 +4214,14 @@ Defaults: >
         "cs",
         "vb"
       ],
-      "init_options": [],
+      "initializationOptions": [],
       "name": "omnisharp",
+      "rootSearch": [
+        "*.sln",
+        "*.csproj",
+        "omnisharp.json",
+        "function.json"
+      ],
       "workspaceConfig": {
         "settings": {
           "FormattingOptions": {
@@ -3735,7 +4259,10 @@ Defaults: >
       "filetype": [
         "progress"
       ],
-      "name": "openedge_ls"
+      "name": "openedge_ls",
+      "rootSearch": [
+        "openedge-project.json"
+      ]
     }
 
 OPENSCAD LS ~
@@ -3793,7 +4320,12 @@ Defaults: >
         "pascal"
       ],
       "name": "pasls",
-      "path": "pasls"
+      "path": "pasls",
+      "rootSearch": [
+        "*.lpi",
+        "*.lpk",
+        ".git"
+      ]
     }
 
 PBLS ~
@@ -3807,7 +4339,11 @@ Defaults: >
         "proto"
       ],
       "name": "pbls",
-      "path": "pbls"
+      "path": "pbls",
+      "rootSearch": [
+        ".pbls.toml",
+        ".git"
+      ]
     }
 
 PERLLS ~
@@ -3919,7 +4455,8 @@ Defaults: >
         "php"
       ],
       "name": "phan",
-      "path": "phan"
+      "path": "phan",
+      "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)"
     }
 
 PHPACTOR ~
@@ -3935,7 +4472,8 @@ Defaults: >
         "php"
       ],
       "name": "phpactor",
-      "path": "phpactor"
+      "path": "phpactor",
+      "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)"
     }
 
 PICO8 LS ~
@@ -3952,6 +4490,9 @@ Defaults: >
       ],
       "name": "pico8_ls",
       "path": "pico8-ls",
+      "rootSearch": [
+        "*.p8"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -3985,7 +4526,10 @@ Defaults: >
         "bzl"
       ],
       "name": "please",
-      "path": "plz"
+      "path": "plz",
+      "rootSearch": [
+        ".plzconfig"
+      ]
     }
 
 PORYSCRIPT PLS ~
@@ -4013,7 +4557,10 @@ Defaults: >
         "sql"
       ],
       "name": "postgres_lsp",
-      "path": "postgres_lsp"
+      "path": "postgres_lsp",
+      "rootSearch": [
+        "root-file.txt"
+      ]
     }
 
 POWERSHELL ES ~
@@ -4025,8 +4572,7 @@ Defaults: >
       "filetype": [
         "ps1"
       ],
-      "name": "powershell_es",
-      "shell": "pwsh"
+      "name": "powershell_es"
     }
 
 PRISMALS ~
@@ -4043,6 +4589,10 @@ Defaults: >
       ],
       "name": "prismals",
       "path": "prisma-language-server",
+      "rootSearch": [
+        ".git",
+        "package.json"
+      ],
       "workspaceConfig": {
         "settings": {
           "prisma": {
@@ -4072,7 +4622,10 @@ Defaults: >
         "prolog"
       ],
       "name": "prolog_ls",
-      "path": "swipl"
+      "path": "swipl",
+      "rootSearch": [
+        "pack.pl"
+      ]
     }
 
 PROSEMD LSP ~
@@ -4118,7 +4671,11 @@ Defaults: >
         "php"
       ],
       "name": "psalm",
-      "path": "psalm"
+      "path": "psalm",
+      "rootSearch": [
+        "psalm.xml",
+        "psalm.xml.dist"
+      ]
     }
 
 PUG ~
@@ -4148,7 +4705,13 @@ Defaults: >
         "puppet"
       ],
       "name": "puppet",
-      "path": "puppet-languageserver"
+      "path": "puppet-languageserver",
+      "rootSearch": [
+        "manifests",
+        ".puppet-lint.rc",
+        "hiera.yaml",
+        ".git"
+      ]
     }
 
 PURESCRIPTLS ~
@@ -4164,7 +4727,15 @@ Defaults: >
         "purescript"
       ],
       "name": "purescriptls",
-      "path": "purescript-language-server"
+      "path": "purescript-language-server",
+      "rootSearch": [
+        "bower.json",
+        "flake.nix",
+        "psc-package.json",
+        "shell.nix",
+        "spago.dhall",
+        "spago.yaml"
+      ]
     }
 
 PYLSP ~
@@ -4178,7 +4749,14 @@ Defaults: >
         "python"
       ],
       "name": "pylsp",
-      "path": "pylsp"
+      "path": "pylsp",
+      "rootSearch": [
+        "pyproject.toml",
+        "setup.py",
+        "setup.cfg",
+        "requirements.txt",
+        "Pipfile"
+      ]
     }
 
 PYLYZER ~
@@ -4195,6 +4773,13 @@ Defaults: >
       ],
       "name": "pylyzer",
       "path": "pylyzer",
+      "rootSearch": [
+        "setup.py",
+        "tox.ini",
+        "requirements.txt",
+        "Pipfile",
+        "pyproject.toml"
+      ],
       "workspaceConfig": {
         "settings": {
           "python": {
@@ -4220,7 +4805,10 @@ Defaults: >
         "python"
       ],
       "name": "pyre",
-      "path": "pyre"
+      "path": "pyre",
+      "rootSearch": [
+        ".pyre_configuration"
+      ]
     }
 
 PYRIGHT ~
@@ -4237,6 +4825,15 @@ Defaults: >
       ],
       "name": "pyright",
       "path": "pyright-langserver",
+      "rootSearch": [
+        "pyproject.toml",
+        "setup.py",
+        "setup.cfg",
+        "requirements.txt",
+        "Pipfile",
+        "pyrightconfig.json",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": {
           "python": {
@@ -4261,7 +4858,10 @@ Defaults: >
         "qmljs"
       ],
       "name": "qml_lsp",
-      "path": "qml-lsp"
+      "path": "qml-lsp",
+      "rootSearch": [
+        "*.qml"
+      ]
     }
 
 QMLLS ~
@@ -4293,7 +4893,12 @@ Defaults: >
         "typescript"
       ],
       "name": "quick_lint_js",
-      "path": "quick-lint-js"
+      "path": "quick-lint-js",
+      "rootSearch": [
+        "package.json",
+        "jsconfig.json",
+        ".git"
+      ]
     }
 
 R LANGUAGE SERVER ~
@@ -4311,9 +4916,9 @@ Defaults: >
         "r",
         "rmd"
       ],
-      "log_level": 2,
       "name": "r_language_server",
-      "path": "R"
+      "path": "R",
+      "rootSearch": "/home/sacca"
     }
 
 RACKET LANGSERVER ~
@@ -4358,7 +4963,11 @@ Defaults: >
         "reason"
       ],
       "name": "reason_ls",
-      "path": "reason-language-server"
+      "path": "reason-language-server",
+      "rootSearch": [
+        "bsconfig.json",
+        ".git"
+      ]
     }
 
 REGAL ~
@@ -4374,7 +4983,10 @@ Defaults: >
         "rego"
       ],
       "name": "regal",
-      "path": "regal"
+      "path": "regal",
+      "rootSearch": [
+        "*.rego"
+      ]
     }
 
 REGOLS ~
@@ -4388,7 +5000,10 @@ Defaults: >
         "rego"
       ],
       "name": "regols",
-      "path": "regols"
+      "path": "regols",
+      "rootSearch": [
+        "*.rego"
+      ]
     }
 
 RELAY LSP ~
@@ -4400,7 +5015,6 @@ Defaults: >
       "args": [
         "lsp"
       ],
-      "auto_start_compiler": false,
       "filetype": [
         "javascript",
         "javascriptreact",
@@ -4409,9 +5023,12 @@ Defaults: >
         "typescriptreact",
         "typescript.tsx"
       ],
-      "handlers": [],
       "name": "relay_lsp",
-      "path": "relay-compiler"
+      "path": "relay-compiler",
+      "rootSearch": [
+        "relay.config.*",
+        "package.json"
+      ]
     }
 
 REMARK LS ~
@@ -4427,7 +5044,17 @@ Defaults: >
         "markdown"
       ],
       "name": "remark_ls",
-      "path": "remark-language-server"
+      "path": "remark-language-server",
+      "rootSearch": [
+        ".remarkrc",
+        ".remarkrc.json",
+        ".remarkrc.js",
+        ".remarkrc.cjs",
+        ".remarkrc.mjs",
+        ".remarkrc.yml",
+        ".remarkrc.yaml",
+        ".remarkignore"
+      ]
     }
 
 RESCRIPTLS ~
@@ -4442,7 +5069,7 @@ Defaults: >
       "filetype": [
         "rescript"
       ],
-      "init_options": {
+      "initializationOptions": {
         "extensionConfiguration": {
           "allowBuiltInFormatter": true,
           "askToStartBuild": false,
@@ -4463,6 +5090,11 @@ Defaults: >
       },
       "name": "rescriptls",
       "path": "rescript-language-server",
+      "rootSearch": [
+        "bsconfig.json",
+        "rescript.json",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -4479,7 +5111,10 @@ Defaults: >
         "rust"
       ],
       "name": "rls",
-      "path": "rls"
+      "path": "rls",
+      "rootSearch": [
+        "Cargo.toml"
+      ]
     }
 
 RNIX ~
@@ -4492,9 +5127,10 @@ Defaults: >
       "filetype": [
         "nix"
       ],
-      "init_options": [],
+      "initializationOptions": [],
       "name": "rnix",
       "path": "rnix-lsp",
+      "rootSearch": "/home/sacca",
       "workspaceConfig": {
         "settings": []
       }
@@ -4511,7 +5147,13 @@ Defaults: >
         "robot"
       ],
       "name": "robotframework_ls",
-      "path": "robotframework_ls"
+      "path": "robotframework_ls",
+      "rootSearch": [
+        "robotidy.toml",
+        "pyproject.toml",
+        "conda.yaml",
+        "robot.yaml"
+      ]
     }
 
 ROC LS ~
@@ -4562,7 +5204,11 @@ Defaults: >
         "ruby"
       ],
       "name": "rubocop",
-      "path": "rubocop"
+      "path": "rubocop",
+      "rootSearch": [
+        "Gemfile",
+        ".git"
+      ]
     }
 
 RUBY LSP ~
@@ -4575,11 +5221,15 @@ Defaults: >
       "filetype": [
         "ruby"
       ],
-      "init_options": {
+      "initializationOptions": {
         "formatter": "auto"
       },
       "name": "ruby_lsp",
-      "path": "ruby-lsp"
+      "path": "ruby-lsp",
+      "rootSearch": [
+        "Gemfile",
+        ".git"
+      ]
     }
 
 RUFF ~
@@ -4596,6 +5246,11 @@ Defaults: >
       ],
       "name": "ruff",
       "path": "ruff",
+      "rootSearch": [
+        "pyproject.toml",
+        "ruff.toml",
+        ".ruff.toml"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -4613,6 +5268,10 @@ Defaults: >
       ],
       "name": "ruff_lsp",
       "path": "ruff-lsp",
+      "rootSearch": [
+        "pyproject.toml",
+        "ruff.toml"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -4649,6 +5308,7 @@ Defaults: >
       ],
       "name": "rust_analyzer",
       "path": "rust-analyzer",
+      "rootSearch": "...e/pack/deps/start/nvim-lspconfig/lua/lspconfig/async.lua:15: assertion failed!",
       "syncInit": true
     }
 
@@ -4681,7 +5341,11 @@ Defaults: >
         "scheme"
       ],
       "name": "scheme_langserver",
-      "path": "scheme-langserver"
+      "path": "scheme-langserver",
+      "rootSearch": [
+        "Akku.manifest",
+        ".git"
+      ]
     }
 
 SCRY ~
@@ -4695,7 +5359,10 @@ Defaults: >
         "crystal"
       ],
       "name": "scry",
-      "path": "scry"
+      "path": "scry",
+      "rootSearch": [
+        "shard.yml"
+      ]
     }
 
 SERVE D ~
@@ -4709,7 +5376,12 @@ Defaults: >
         "d"
       ],
       "name": "serve_d",
-      "path": "serve-d"
+      "path": "serve-d",
+      "rootSearch": [
+        "dub.json",
+        "dub.sdl",
+        ".git"
+      ]
     }
 
 SHOPIFY THEME LS ~
@@ -4727,6 +5399,12 @@ Defaults: >
       ],
       "name": "shopify_theme_ls",
       "path": "shopify",
+      "rootSearch": [
+        ".shopifyignore",
+        ".theme-check.yml",
+        ".theme-check.yaml",
+        "shopify.theme.toml"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -4787,9 +5465,10 @@ Defaults: >
       "filetype": [
         "smarty"
       ],
-      "init_options": [],
+      "initializationOptions": [],
       "name": "smarty_ls",
       "path": "smarty-language-server",
+      "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)",
       "workspaceConfig": {
         "settings": {
           "css": {
@@ -4815,7 +5494,13 @@ Defaults: >
         "smithy"
       ],
       "name": "smithy_ls",
-      "path": "smithy-language-server"
+      "path": "smithy-language-server",
+      "rootSearch": [
+        "smithy-build.json",
+        "build.gradle",
+        "build.gradle.kts",
+        ".git"
+      ]
     }
 
 SNAKESKIN LS ~
@@ -4832,7 +5517,10 @@ Defaults: >
         "ss"
       ],
       "name": "snakeskin_ls",
-      "path": "snakeskin-cli"
+      "path": "snakeskin-cli",
+      "rootSearch": [
+        "package.json"
+      ]
     }
 
 SNYK LS ~
@@ -4855,11 +5543,15 @@ Defaults: >
         "terraform",
         "terraform-vars"
       ],
-      "init_options": {
+      "initializationOptions": {
         "activateSnykCode": "true"
       },
       "name": "snyk_ls",
       "path": "snyk-ls",
+      "rootSearch": [
+        ".git",
+        ".snyk"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -4895,11 +5587,15 @@ Defaults: >
       "filetype": [
         "ruby"
       ],
-      "init_options": {
+      "initializationOptions": {
         "formatting": true
       },
       "name": "solargraph",
       "path": "solargraph",
+      "rootSearch": [
+        "Gemfile",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": {
           "solargraph": {
@@ -4922,7 +5618,11 @@ Defaults: >
         "solidity"
       ],
       "name": "solc",
-      "path": "solc"
+      "path": "solc",
+      "rootSearch": [
+        "hardhat.config.*",
+        ".git"
+      ]
     }
 
 SOLIDITY ~
@@ -4939,6 +5639,10 @@ Defaults: >
       ],
       "name": "solidity",
       "path": "solidity-ls",
+      "rootSearch": [
+        ".git",
+        "package.json"
+      ],
       "workspaceConfig": {
         "settings": {
           "solidity": {
@@ -4962,7 +5666,16 @@ Defaults: >
         "solidity"
       ],
       "name": "solidity_ls",
-      "path": "vscode-solidity-server"
+      "path": "vscode-solidity-server",
+      "rootSearch": [
+        "hardhat.config.js",
+        "hardhat.config.ts",
+        "foundry.toml",
+        "remappings.txt",
+        "truffle.js",
+        "truffle-config.js",
+        "ape-config.yaml"
+      ]
     }
 
 SOLIDITY LS NOMICFOUNDATION ~
@@ -4978,7 +5691,16 @@ Defaults: >
         "solidity"
       ],
       "name": "solidity_ls_nomicfoundation",
-      "path": "nomicfoundation-solidity-language-server"
+      "path": "nomicfoundation-solidity-language-server",
+      "rootSearch": [
+        "hardhat.config.js",
+        "hardhat.config.ts",
+        "foundry.toml",
+        "remappings.txt",
+        "truffle.js",
+        "truffle-config.js",
+        "ape-config.yaml"
+      ]
     }
 
 SOMESASS LS ~
@@ -4996,6 +5718,10 @@ Defaults: >
       ],
       "name": "somesass_ls",
       "path": "some-sass-language-server",
+      "rootSearch": [
+        ".git",
+        ".package.json"
+      ],
       "workspaceConfig": {
         "settings": {
           "somesass": {
@@ -5019,7 +5745,11 @@ Defaults: >
         "ruby"
       ],
       "name": "sorbet",
-      "path": "srb"
+      "path": "srb",
+      "rootSearch": [
+        "Gemfile",
+        ".git"
+      ]
     }
 
 SOURCEKIT ~
@@ -5037,7 +5767,10 @@ Defaults: >
         "cpp"
       ],
       "name": "sourcekit",
-      "path": "sourcekit-lsp"
+      "path": "sourcekit-lsp",
+      "rootSearch": [
+        "buildServer.json"
+      ]
     }
 
 SOURCERY ~
@@ -5056,12 +5789,20 @@ Defaults: >
         "typescript",
         "typescriptreact"
       ],
-      "init_options": {
+      "initializationOptions": {
         "editor_version": "vim",
         "extension_version": "vim.lsp"
       },
       "name": "sourcery",
-      "path": "sourcery"
+      "path": "sourcery",
+      "rootSearch": [
+        "pyproject.toml",
+        "setup.py",
+        "setup.cfg",
+        "requirements.txt",
+        "Pipfile",
+        "pyrightconfig.json"
+      ]
     }
 
 SPECTRAL ~
@@ -5080,6 +5821,12 @@ Defaults: >
       ],
       "name": "spectral",
       "path": "spectral-language-server",
+      "rootSearch": [
+        ".spectral.yaml",
+        ".spectral.yml",
+        ".spectral.json",
+        ".spectral.js"
+      ],
       "workspaceConfig": {
         "settings": {
           "enable": true,
@@ -5106,7 +5853,10 @@ Defaults: >
         "mcfunction"
       ],
       "name": "spyglassmc_language_server",
-      "path": "spyglassmc-language-server"
+      "path": "spyglassmc-language-server",
+      "rootSearch": [
+        "pack.mcmeta"
+      ]
     }
 
 SQLLS ~
@@ -5126,6 +5876,9 @@ Defaults: >
       ],
       "name": "sqlls",
       "path": "sql-language-server",
+      "rootSearch": [
+        ".sqllsrc.json"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -5144,6 +5897,9 @@ Defaults: >
       ],
       "name": "sqls",
       "path": "sqls",
+      "rootSearch": [
+        "config.yml"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -5162,7 +5918,11 @@ Defaults: >
         "ruby"
       ],
       "name": "standardrb",
-      "path": "standardrb"
+      "path": "standardrb",
+      "rootSearch": [
+        "Gemfile",
+        ".git"
+      ]
     }
 
 STARLARK RUST ~
@@ -5208,7 +5968,11 @@ Defaults: >
         "nix"
       ],
       "name": "statix",
-      "path": "statix"
+      "path": "statix",
+      "rootSearch": [
+        "flake.nix",
+        ".git"
+      ]
     }
 
 STEEP ~
@@ -5225,7 +5989,11 @@ Defaults: >
         "eruby"
       ],
       "name": "steep",
-      "path": "steep"
+      "path": "steep",
+      "rootSearch": [
+        "Steepfile",
+        ".git"
+      ]
     }
 
 STIMULUS LS ~
@@ -5245,7 +6013,11 @@ Defaults: >
         "php"
       ],
       "name": "stimulus_ls",
-      "path": "stimulus-language-server"
+      "path": "stimulus-language-server",
+      "rootSearch": [
+        "Gemfile",
+        ".git"
+      ]
     }
 
 STYLELINT LSP ~
@@ -5267,6 +6039,16 @@ Defaults: >
       ],
       "name": "stylelint_lsp",
       "path": "stylelint-lsp",
+      "rootSearch": [
+        ".stylelintrc",
+        ".stylelintrc.cjs",
+        ".stylelintrc.js",
+        ".stylelintrc.json",
+        ".stylelintrc.yaml",
+        ".stylelintrc.yml",
+        "stylelint.config.cjs",
+        "stylelint.config.js"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -5302,7 +6084,11 @@ Defaults: >
         "svelte"
       ],
       "name": "svelte",
-      "path": "svelteserver"
+      "path": "svelteserver",
+      "rootSearch": [
+        "package.json",
+        ".git"
+      ]
     }
 
 SVLANGSERVER ~
@@ -5318,6 +6104,9 @@ Defaults: >
       ],
       "name": "svlangserver",
       "path": "svlangserver",
+      "rootSearch": [
+        ".svlangserver"
+      ],
       "workspaceConfig": {
         "settings": {
           "systemverilog": {
@@ -5358,7 +6147,13 @@ Defaults: >
         "meson"
       ],
       "name": "swift_mesonls",
-      "path": "Swift-MesonLSP"
+      "path": "Swift-MesonLSP",
+      "rootSearch": [
+        "meson.build",
+        "meson_options.txt",
+        "meson.options",
+        ".git"
+      ]
     }
 
 SYNTAX TREE ~
@@ -5374,7 +6169,12 @@ Defaults: >
         "ruby"
       ],
       "name": "syntax_tree",
-      "path": "stree"
+      "path": "stree",
+      "rootSearch": [
+        ".streerc",
+        "Gemfile",
+        ".git"
+      ]
     }
 
 TABBY ML ~
@@ -5455,6 +6255,16 @@ Defaults: >
       ],
       "name": "tailwindcss",
       "path": "tailwindcss-language-server",
+      "rootSearch": [
+        "tailwind.config.js",
+        "tailwind.config.cjs",
+        "tailwind.config.mjs",
+        "tailwind.config.ts",
+        "postcss.config.js",
+        "postcss.config.cjs",
+        "postcss.config.mjs",
+        "postcss.config.ts"
+      ],
       "workspaceConfig": {
         "settings": {
           "tailwindCSS": {
@@ -5514,7 +6324,10 @@ Defaults: >
         "tablegen"
       ],
       "name": "tblgen_lsp_server",
-      "path": "tblgen-lsp-server"
+      "path": "tblgen-lsp-server",
+      "rootSearch": [
+        "tablegen_compile_commands.yml"
+      ]
     }
 
 TEAL LS ~
@@ -5528,7 +6341,10 @@ Defaults: >
         "teal"
       ],
       "name": "teal_ls",
-      "path": "teal-language-server"
+      "path": "teal-language-server",
+      "rootSearch": [
+        "tlconfig.lua"
+      ]
     }
 
 TEMPL ~
@@ -5544,7 +6360,12 @@ Defaults: >
         "templ"
       ],
       "name": "templ",
-      "path": "templ"
+      "path": "templ",
+      "rootSearch": [
+        "go.work",
+        "go.mod",
+        ".git"
+      ]
     }
 
 TERRAFORM LSP ~
@@ -5559,7 +6380,11 @@ Defaults: >
         "hcl"
       ],
       "name": "terraform_lsp",
-      "path": "terraform-lsp"
+      "path": "terraform-lsp",
+      "rootSearch": [
+        ".terraform",
+        ".git"
+      ]
     }
 
 TERRAFORMLS ~
@@ -5576,7 +6401,11 @@ Defaults: >
         "terraform-vars"
       ],
       "name": "terraformls",
-      "path": "terraform-ls"
+      "path": "terraform-ls",
+      "rootSearch": [
+        ".terraform",
+        ".git"
+      ]
     }
 
 TEXLAB ~
@@ -5593,6 +6422,13 @@ Defaults: >
       ],
       "name": "texlab",
       "path": "texlab",
+      "rootSearch": [
+        ".git",
+        ".latexmkrc",
+        ".texlabroot",
+        "texlabroot",
+        "Tectonic.toml"
+      ],
       "workspaceConfig": {
         "settings": {
           "texlab": {
@@ -5680,7 +6516,12 @@ Defaults: >
         "terraform"
       ],
       "name": "tflint",
-      "path": "tflint"
+      "path": "tflint",
+      "rootSearch": [
+        ".terraform",
+        ".git",
+        ".tflint.hcl"
+      ]
     }
 
 THEME CHECK ~
@@ -5697,6 +6538,9 @@ Defaults: >
       ],
       "name": "theme_check",
       "path": "theme-check-language-server",
+      "rootSearch": [
+        ".theme-check.yml"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -5713,7 +6557,10 @@ Defaults: >
         "thrift"
       ],
       "name": "thriftls",
-      "path": "thriftls"
+      "path": "thriftls",
+      "rootSearch": [
+        ".thrift"
+      ]
     }
 
 TILT LS ~
@@ -5764,11 +6611,17 @@ Defaults: >
         "typescriptreact",
         "typescript.tsx"
       ],
-      "init_options": {
+      "initializationOptions": {
         "hostInfo": "neovim"
       },
       "name": "ts_ls",
-      "path": "typescript-language-server"
+      "path": "typescript-language-server",
+      "rootSearch": [
+        "tsconfig.json",
+        "jsconfig.json",
+        "package.json",
+        ".git"
+      ]
     }
 
 TS QUERY LS ~
@@ -5783,6 +6636,10 @@ Defaults: >
       ],
       "name": "ts_query_ls",
       "path": "ts_query_ls",
+      "rootSearch": [
+        "queries",
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": {
           "parser_aliases": {
@@ -5807,7 +6664,11 @@ Defaults: >
         "typespec"
       ],
       "name": "tsp_server",
-      "path": "tsp-server"
+      "path": "tsp-server",
+      "rootSearch": [
+        "tspconfig.yaml",
+        ".git"
+      ]
     }
 
 TTAGS ~
@@ -5826,7 +6687,10 @@ Defaults: >
         "haskell"
       ],
       "name": "ttags",
-      "path": "ttags"
+      "path": "ttags",
+      "rootSearch": [
+        ".git"
+      ]
     }
 
 TURTLE LS ~
@@ -5863,7 +6727,11 @@ Defaults: >
         "cpp"
       ],
       "name": "tvm_ffi_navigator",
-      "path": "python"
+      "path": "python",
+      "rootSearch": [
+        "pyproject.toml",
+        ".git"
+      ]
     }
 
 TWIGGY LANGUAGE SERVER ~
@@ -5879,7 +6747,11 @@ Defaults: >
         "twig"
       ],
       "name": "twiggy_language_server",
-      "path": "twiggy-language-server"
+      "path": "twiggy-language-server",
+      "rootSearch": [
+        "composer.json",
+        ".git"
+      ]
     }
 
 TYPEPROF ~
@@ -5897,7 +6769,11 @@ Defaults: >
         "eruby"
       ],
       "name": "typeprof",
-      "path": "typeprof"
+      "path": "typeprof",
+      "rootSearch": [
+        "Gemfile",
+        ".git"
+      ]
     }
 
 TYPOS LSP ~
@@ -5909,6 +6785,11 @@ Defaults: >
       "args": [],
       "name": "typos_lsp",
       "path": "typos-lsp",
+      "rootSearch": [
+        "typos.toml",
+        "_typos.toml",
+        ".typos.toml"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -5941,7 +6822,11 @@ Defaults: >
         "uiua"
       ],
       "name": "uiua",
-      "path": "uiua"
+      "path": "uiua",
+      "rootSearch": [
+        "main.ua",
+        ".fmt.ua"
+      ]
     }
 
 UNGRAMMAR LANGUAGESERVER ~
@@ -5987,6 +6872,9 @@ Defaults: >
       ],
       "name": "unison",
       "path": "nc",
+      "rootSearch": [
+        "*.u"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -6027,7 +6915,13 @@ Defaults: >
         "rust"
       ],
       "name": "unocss",
-      "path": "unocss-language-server"
+      "path": "unocss-language-server",
+      "rootSearch": [
+        "unocss.config.js",
+        "unocss.config.ts",
+        "uno.config.js",
+        "uno.config.ts"
+      ]
     }
 
 UVLS ~
@@ -6057,7 +6951,11 @@ Defaults: >
         "vv"
       ],
       "name": "v_analyzer",
-      "path": "v-analyzer"
+      "path": "v-analyzer",
+      "rootSearch": [
+        "v.mod",
+        ".git"
+      ]
     }
 
 VACUUM ~
@@ -6105,7 +7003,10 @@ Defaults: >
         "tex"
       ],
       "name": "vale_ls",
-      "path": "vale-ls"
+      "path": "vale-ls",
+      "rootSearch": [
+        ".vale.ini"
+      ]
     }
 
 VDMJ ~
@@ -6121,18 +7022,6 @@ Defaults: >
         "vdmrt"
       ],
       "name": "vdmj",
-      "options": {
-        "annotation_paths": [],
-        "debugger_port": -1,
-        "high_precision": false,
-        "java": "java",
-        "java_opts": [
-          "-Xmx3000m",
-          "-Xss1m"
-        ],
-        "logfile": "/home/sacca/.cache/nvim/vdm-lsp.log",
-        "mavenrepo": "/home/sacca/.m2/repository/com/fujitsu"
-      },
       "path": "java"
     }
 
@@ -6192,7 +7081,11 @@ Defaults: >
         "vhdl"
       ],
       "name": "vhdl_ls",
-      "path": "vhdl_ls"
+      "path": "vhdl_ls",
+      "rootSearch": [
+        "vhdl_ls.toml",
+        ".vhdl_ls.toml"
+      ]
     }
 
 VIMLS ~
@@ -6207,7 +7100,7 @@ Defaults: >
       "filetype": [
         "vim"
       ],
-      "init_options": {
+      "initializationOptions": {
         "diagnostic": {
           "enable": true
         },
@@ -6245,13 +7138,16 @@ Defaults: >
       "filetype": [
         "visualforce"
       ],
-      "init_options": {
+      "initializationOptions": {
         "embeddedLanguages": {
           "css": true,
           "javascript": true
         }
       },
-      "name": "visualforce_ls"
+      "name": "visualforce_ls",
+      "rootSearch": [
+        "sfdx-project.json"
+      ]
     }
 
 VLS ~
@@ -6268,7 +7164,11 @@ Defaults: >
         "vlang"
       ],
       "name": "vls",
-      "path": "v"
+      "path": "v",
+      "rootSearch": [
+        "v.mod",
+        ".git"
+      ]
     }
 
 VOLAR ~
@@ -6283,13 +7183,16 @@ Defaults: >
       "filetype": [
         "vue"
       ],
-      "init_options": {
+      "initializationOptions": {
         "typescript": {
           "tsdk": ""
         }
       },
       "name": "volar",
-      "path": "vue-language-server"
+      "path": "vue-language-server",
+      "rootSearch": [
+        "package.json"
+      ]
     }
 
 VSCOQTOP ~
@@ -6303,7 +7206,10 @@ Defaults: >
         "coq"
       ],
       "name": "vscoqtop",
-      "path": "vscoqtop"
+      "path": "vscoqtop",
+      "rootSearch": [
+        "_CoqProject"
+      ]
     }
 
 VTSLS ~
@@ -6324,7 +7230,13 @@ Defaults: >
         "typescript.tsx"
       ],
       "name": "vtsls",
-      "path": "vtsls"
+      "path": "vtsls",
+      "rootSearch": [
+        "tsconfig.json",
+        "package.json",
+        "jsconfig.json",
+        ".git"
+      ]
     }
 
 VUELS ~
@@ -6337,7 +7249,7 @@ Defaults: >
       "filetype": [
         "vue"
       ],
-      "init_options": {
+      "initializationOptions": {
         "config": {
           "css": [],
           "emmet": [],
@@ -6376,7 +7288,11 @@ Defaults: >
         }
       },
       "name": "vuels",
-      "path": "vls"
+      "path": "vls",
+      "rootSearch": [
+        "package.json",
+        "vue.config.js"
+      ]
     }
 
 WGSL ANALYZER ~
@@ -6391,6 +7307,9 @@ Defaults: >
       ],
       "name": "wgsl_analyzer",
       "path": "wgsl_analyzer",
+      "rootSearch": [
+        ".git"
+      ],
       "workspaceConfig": {
         "settings": []
       }
@@ -6500,7 +7419,10 @@ Defaults: >
         "markdown"
       ],
       "name": "zk",
-      "path": "zk"
+      "path": "zk",
+      "rootSearch": [
+        ".zk"
+      ]
     }
 
 ZLS ~
@@ -6515,7 +7437,12 @@ Defaults: >
         "zir"
       ],
       "name": "zls",
-      "path": "zls"
+      "path": "zls",
+      "rootSearch": [
+        "zls.json",
+        "build.zig",
+        ".git"
+      ]
     }
 
 vim:tw=78:ts=8:noet:ft=help:norl:
