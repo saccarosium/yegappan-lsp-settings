@@ -14,20 +14,17 @@ Syncing nvim/nvim-lspconfig
 ================================================================================
 EOF
 
-path="${XDG_DATA_HOME:-"$HOME/.local/share"}/nvim/site/pack/deps/start/nvim-lspconfig"
-config_path="$path/lua/lspconfig/configs"
+repo_path="${XDG_DATA_HOME:-"$HOME/.local/share"}/nvim/site/pack/deps/start/nvim-lspconfig"
+config_path="$repo_path/lua/lspconfig/configs"
 
-if [ -d "$path" ]; then
-    count="$(git -C "$path" rev-list --count 'HEAD...@{u}')"
-    if [ "$count" -gt 0 ]; then
-        echo "==> $count new updates on nvim/nvim-lspconfig"
-        git -C "$path" merge --ff-only '@{u}'
-        rev=$(git -C "$path" rev-parse --short HEAD)
-    fi
+if [ -d "$repo_path" ]; then
+    git -C "$repo_path" pull --rebase -q &&
+        echo "==> Last pulled commit from nvim/nvim-lspconfig" &&
+        git -C "$repo_path" -c pager.show=false show --format="%ci %h %an %s" -q @@{1}..@@{0}
 else
     echo "==> Cloning nvim/nvim-lspconfig repository"
     url="https://github.com/neovim/nvim-lspconfig.git"
-    git clone --depth=1 "$url" "$path"
+    git clone "$url" "$path"
 fi
 
 echo "==> Done"
@@ -38,6 +35,8 @@ Generating files
 ================================================================================
 EOF
 
-python3 ./utils/sync_lspconfig.py 2>/dev/null && break
-
-echo "==> Done"
+if python3 ./utils/sync_lspconfig.py; then 
+    echo "==> Done"
+else
+    echo "==> Failed"
+fi

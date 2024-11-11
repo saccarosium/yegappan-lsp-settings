@@ -27,7 +27,7 @@ if __name__ == "__main__":
     result = subprocess.run(["nvim", "-l", "utils/sync_lspconfig.lua"])
 
     if result.returncode != 0:
-        sys.stderr.write("nvim script failed for some reason")
+        sys.stderr.write("nvim script failed for some reason\n")
         sys.exit(-1)
 
     with open("servers.json", "r") as file:
@@ -72,3 +72,5 @@ if __name__ == "__main__":
 
     with open("doc/lsp_settings_servers.txt", "w") as f:
         f.write(buffer)
+
+    sys.exit(0)
