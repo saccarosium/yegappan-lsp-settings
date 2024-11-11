@@ -1,7 +1,7 @@
 ---@diagnostic disable: undefined-global
 
---- NOTE: That the Scheme is not complete. 
---- All the key with a function type were 
+--- NOTE: That the Scheme is not complete.
+--- All the key with a function type were
 --- excluded to be able to serialize the table.
 ---
 ---@class NvimScheme
@@ -23,8 +23,8 @@
 ---@field name? string
 ---@field root_dir? string
 
---- NOTE: That the Scheme is not complete. 
---- All the key with a function type were 
+--- NOTE: That the Scheme is not complete.
+--- All the key with a function type were
 --- excluded.  source: `:h lsp-cfg-*`
 ---
 ---@class YeggapanScheme
@@ -66,7 +66,10 @@ local function transform_server_config(server_name, server_config)
         elseif k == "root_dir" then
             trasformed_config.rootSearch = v
         elseif k == "capabilities" then
-            trasformed_config.features = v
+            local cap = server_config.capabilities
+            if cap and cap.offsetEncoding then
+                trasformed_config.forceOffsetEncoding = cap.offsetEncoding
+            end
         elseif k == "offset_encoding" then
             trasformed_config.forceOffsetEncoding = v
         end
@@ -76,7 +79,6 @@ local function transform_server_config(server_name, server_config)
     if server_name == "rust_analyzer" then
         trasformed_config.syncInit = true
     end
-
 
     return trasformed_config
 end

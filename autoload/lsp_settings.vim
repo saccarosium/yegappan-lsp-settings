@@ -33,7 +33,7 @@ export def ApexLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def ArduinoLanguageServer(opts: dict<any> = {})
-  var settings = {"args": [], "features": {"textDocument": {"semanticTokens": null}, "workspace": {"semanticTokens": null}}, "filetype": ["arduino"], "name": "arduino_language_server", "path": "arduino-language-server", "rootSearch": ["*.ino"]}
+  var settings = {"args": [], "filetype": ["arduino"], "name": "arduino_language_server", "path": "arduino-language-server", "rootSearch": ["*.ino"]}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def AsmLsp(opts: dict<any> = {})
@@ -165,7 +165,7 @@ export def CircomLsp(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Clangd(opts: dict<any> = {})
-  var settings = {"args": [], "features": {"offsetEncoding": ["utf-8", "utf-16"], "textDocument": {"completion": {"editsNearCursor": true}}}, "filetype": ["c", "cpp", "objc", "objcpp", "cuda", "proto"], "name": "clangd", "path": "clangd", "rootSearch": [".clangd", ".clang-tidy", ".clang-format", "compile_commands.json", "compile_flags.txt", "configure.ac"]}
+  var settings = {"args": [], "filetype": ["c", "cpp", "objc", "objcpp", "cuda", "proto"], "forceOffsetEncoding": ["utf-8", "utf-16"], "name": "clangd", "path": "clangd", "rootSearch": [".clangd", ".clang-tidy", ".clang-format", "compile_commands.json", "compile_flags.txt", "configure.ac"]}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def ClarityLsp(opts: dict<any> = {})
@@ -325,7 +325,7 @@ export def Elixirls(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Elmls(opts: dict<any> = {})
-  var settings = {"args": [], "features": {"offsetEncoding": ["utf-8", "utf-16"]}, "filetype": ["elm"], "initializationOptions": {"disableElmLSDiagnostics": false, "elmReviewDiagnostics": "off", "onlyUpdateDiagnosticsOnSave": false, "skipInstallPackageConfirmation": false}, "name": "elmls", "path": "elm-language-server"}
+  var settings = {"args": [], "filetype": ["elm"], "forceOffsetEncoding": ["utf-8", "utf-16"], "initializationOptions": {"disableElmLSDiagnostics": false, "elmReviewDiagnostics": "off", "onlyUpdateDiagnosticsOnSave": false, "skipInstallPackageConfirmation": false}, "name": "elmls", "path": "elm-language-server"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Elp(opts: dict<any> = {})
@@ -369,7 +369,7 @@ export def FennelLanguageServer(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def FennelLs(opts: dict<any> = {})
-  var settings = {"args": [], "features": {"offsetEncoding": ["utf-8", "utf-16"]}, "filetype": ["fennel"], "name": "fennel_ls", "path": "fennel-ls", "rootSearch": "vim/fs.lua:0: invalid value (nil) at index 1 in table for 'concat'", "workspaceConfig": {"settings": []}}
+  var settings = {"args": [], "filetype": ["fennel"], "forceOffsetEncoding": ["utf-8", "utf-16"], "name": "fennel_ls", "path": "fennel-ls", "rootSearch": "vim/fs.lua:0: invalid value (nil) at index 1 in table for 'concat'", "workspaceConfig": {"settings": []}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def FishLsp(opts: dict<any> = {})
@@ -445,11 +445,11 @@ export def Glint(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def GlslAnalyzer(opts: dict<any> = {})
-  var settings = {"args": [], "features": [], "filetype": ["glsl", "vert", "tesc", "tese", "frag", "geom", "comp"], "name": "glsl_analyzer", "path": "glsl_analyzer"}
+  var settings = {"args": [], "filetype": ["glsl", "vert", "tesc", "tese", "frag", "geom", "comp"], "name": "glsl_analyzer", "path": "glsl_analyzer"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Glslls(opts: dict<any> = {})
-  var settings = {"args": ["--stdin"], "features": {"offsetEncoding": ["utf-8", "utf-16"], "textDocument": {"completion": {"editsNearCursor": true}}}, "filetype": ["glsl", "vert", "tesc", "tese", "frag", "geom", "comp"], "name": "glslls", "path": "glslls"}
+  var settings = {"args": ["--stdin"], "filetype": ["glsl", "vert", "tesc", "tese", "frag", "geom", "comp"], "forceOffsetEncoding": ["utf-8", "utf-16"], "name": "glslls", "path": "glslls"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def GolangciLintLs(opts: dict<any> = {})
@@ -493,7 +493,7 @@ export def HdlChecker(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def HelmLs(opts: dict<any> = {})
-  var settings = {"args": ["serve"], "features": {"workspace": {"didChangeWatchedFiles": {"dynamicRegistration": true}}}, "filetype": ["helm"], "name": "helm_ls", "path": "helm_ls", "rootSearch": ["Chart.yaml"]}
+  var settings = {"args": ["serve"], "filetype": ["helm"], "name": "helm_ls", "path": "helm_ls", "rootSearch": ["Chart.yaml"]}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Hhvm(opts: dict<any> = {})
@@ -661,7 +661,7 @@ export def Mesonlsp(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Metals(opts: dict<any> = {})
-  var settings = {"args": [], "features": {"workspace": {"configuration": false}}, "filetype": ["scala"], "initializationOptions": {"compilerOptions": {"snippetAutoIndent": false}, "isHttpEnabled": true, "statusBarProvider": "show-message"}, "name": "metals", "path": "metals", "rootSearch": ["build.sbt", "build.sc", "build.gradle", "pom.xml"]}
+  var settings = {"args": [], "filetype": ["scala"], "initializationOptions": {"compilerOptions": {"snippetAutoIndent": false}, "isHttpEnabled": true, "statusBarProvider": "show-message"}, "name": "metals", "path": "metals", "rootSearch": ["build.sbt", "build.sc", "build.gradle", "pom.xml"]}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Millet(opts: dict<any> = {})
@@ -989,7 +989,7 @@ export def RuneLanguageserver(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def RustAnalyzer(opts: dict<any> = {})
-  var settings = {"args": [], "features": {"experimental": {"serverStatusNotification": true}}, "filetype": ["rust"], "name": "rust_analyzer", "path": "rust-analyzer", "rootSearch": "...e/pack/deps/start/nvim-lspconfig/lua/lspconfig/async.lua:15: assertion failed!", "syncInit": true}
+  var settings = {"args": [], "filetype": ["rust"], "name": "rust_analyzer", "path": "rust-analyzer", "rootSearch": "...e/pack/deps/start/nvim-lspconfig/lua/lspconfig/async.lua:15: assertion failed!", "syncInit": true}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def SaltLs(opts: dict<any> = {})

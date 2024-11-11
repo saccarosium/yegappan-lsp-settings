@@ -229,14 +229,6 @@ Usage: >
 Defaults: >
     {
       "args": [],
-      "features": {
-        "textDocument": {
-          "semanticTokens": null
-        },
-        "workspace": {
-          "semanticTokens": null
-        }
-      },
       "filetype": [
         "arduino"
       ],
@@ -907,17 +899,6 @@ Usage: >
 Defaults: >
     {
       "args": [],
-      "features": {
-        "offsetEncoding": [
-          "utf-8",
-          "utf-16"
-        ],
-        "textDocument": {
-          "completion": {
-            "editsNearCursor": true
-          }
-        }
-      },
       "filetype": [
         "c",
         "cpp",
@@ -925,6 +906,10 @@ Defaults: >
         "objcpp",
         "cuda",
         "proto"
+      ],
+      "forceOffsetEncoding": [
+        "utf-8",
+        "utf-16"
       ],
       "name": "clangd",
       "path": "clangd",
@@ -1773,14 +1758,12 @@ Usage: >
 Defaults: >
     {
       "args": [],
-      "features": {
-        "offsetEncoding": [
-          "utf-8",
-          "utf-16"
-        ]
-      },
       "filetype": [
         "elm"
+      ],
+      "forceOffsetEncoding": [
+        "utf-8",
+        "utf-16"
       ],
       "initializationOptions": {
         "disableElmLSDiagnostics": false,
@@ -2057,14 +2040,12 @@ Usage: >
 Defaults: >
     {
       "args": [],
-      "features": {
-        "offsetEncoding": [
-          "utf-8",
-          "utf-16"
-        ]
-      },
       "filetype": [
         "fennel"
+      ],
+      "forceOffsetEncoding": [
+        "utf-8",
+        "utf-16"
       ],
       "name": "fennel_ls",
       "path": "fennel-ls",
@@ -2464,7 +2445,6 @@ Usage: >
 Defaults: >
     {
       "args": [],
-      "features": [],
       "filetype": [
         "glsl",
         "vert",
@@ -2487,17 +2467,6 @@ Defaults: >
       "args": [
         "--stdin"
       ],
-      "features": {
-        "offsetEncoding": [
-          "utf-8",
-          "utf-16"
-        ],
-        "textDocument": {
-          "completion": {
-            "editsNearCursor": true
-          }
-        }
-      },
       "filetype": [
         "glsl",
         "vert",
@@ -2506,6 +2475,10 @@ Defaults: >
         "frag",
         "geom",
         "comp"
+      ],
+      "forceOffsetEncoding": [
+        "utf-8",
+        "utf-16"
       ],
       "name": "glslls",
       "path": "glslls"
@@ -2751,13 +2724,6 @@ Defaults: >
       "args": [
         "serve"
       ],
-      "features": {
-        "workspace": {
-          "didChangeWatchedFiles": {
-            "dynamicRegistration": true
-          }
-        }
-      },
       "filetype": [
         "helm"
       ],
@@ -3671,11 +3637,6 @@ Usage: >
 Defaults: >
     {
       "args": [],
-      "features": {
-        "workspace": {
-          "configuration": false
-        }
-      },
       "filetype": [
         "scala"
       ],
@@ -5298,11 +5259,6 @@ Usage: >
 Defaults: >
     {
       "args": [],
-      "features": {
-        "experimental": {
-          "serverStatusNotification": true
-        }
-      },
       "filetype": [
         "rust"
       ],
