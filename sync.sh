@@ -35,7 +35,7 @@ Generating files
 ================================================================================
 EOF
 
-if python3 ./utils/sync_lspconfig.py; then 
+if python3 ./scripts/sync_lspconfig.py; then 
     echo "==> Done"
 else
     echo "==> Failed"

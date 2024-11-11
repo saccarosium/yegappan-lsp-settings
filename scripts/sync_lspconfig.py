@@ -16,7 +16,7 @@ This is normal since lua sometimes suck to remove keys from dictionaries. Try to
 
 
 if __name__ == "__main__":
-    result = subprocess.run(["nvim", "-l", "utils/sync_lspconfig.lua"])
+    result = subprocess.run(["nvim", "-l", "scripts/sync_lspconfig.lua"])
 
     if result.returncode != 0:
         sys.stderr.write("nvim script failed for some reason\n")
