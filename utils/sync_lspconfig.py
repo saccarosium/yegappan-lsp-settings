@@ -15,14 +15,6 @@ This is normal since lua sometimes suck to remove keys from dictionaries. Try to
     sys.exit(-1)
 
 
-# Making sure the serialization was successfull
-def ensure_normalized(configs):
-    for _, config in configs.items():
-        for key in ["filetypes", "cmd", "single_file_support", "settings"]:
-            if key in config:
-                panic_after_non_normalized_server(key)
-
-
 if __name__ == "__main__":
     result = subprocess.run(["nvim", "-l", "utils/sync_lspconfig.lua"])
 
@@ -33,7 +25,6 @@ if __name__ == "__main__":
     with open("servers.json", "r") as file:
         content = file.read()
         configs = json.loads(content)
-        ensure_normalized(configs)
 
     servers = {}
     buffer = "vim9script\n\n"
@@ -72,5 +63,3 @@ if __name__ == "__main__":
 
     with open("doc/lsp_settings_servers.txt", "w") as f:
         f.write(buffer)
-
-    sys.exit(0)
