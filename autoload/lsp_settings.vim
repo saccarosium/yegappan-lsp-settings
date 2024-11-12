@@ -369,7 +369,7 @@ export def FennelLanguageServer(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def FennelLs(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["fennel"], "forceOffsetEncoding": ["utf-8", "utf-16"], "name": "fennel_ls", "path": "fennel-ls", "rootSearch": "vim/fs.lua:0: invalid value (nil) at index 1 in table for 'concat'", "workspaceConfig": {"settings": []}}
+  var settings = {"args": [], "filetype": ["fennel"], "forceOffsetEncoding": ["utf-8", "utf-16"], "name": "fennel_ls", "path": "fennel-ls", "workspaceConfig": {"settings": []}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def FishLsp(opts: dict<any> = {})
@@ -457,7 +457,7 @@ export def GolangciLintLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Gopls(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["go", "gomod", "gowork", "gotmpl"], "name": "gopls", "path": "gopls", "rootSearch": "...e/pack/deps/start/nvim-lspconfig/lua/lspconfig/async.lua:15: assertion failed!"}
+  var settings = {"args": [], "filetype": ["go", "gomod", "gowork", "gotmpl"], "name": "gopls", "path": "gopls"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def GradleLs(opts: dict<any> = {})
@@ -537,7 +537,7 @@ export def Idris2Lsp(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Intelephense(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["php"], "name": "intelephense", "path": "intelephense", "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)"}
+  var settings = {"args": ["--stdio"], "filetype": ["php"], "name": "intelephense", "path": "intelephense"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def JanetLsp(opts: dict<any> = {})
@@ -593,11 +593,11 @@ export def KulalaLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Lean3Ls(opts: dict<any> = {})
-  var settings = {"args": ["--stdio", "--", "-M", "4096", "-T", "100000"], "filetype": ["lean3"], "forceOffsetEncoding": "utf-32", "name": "lean3ls", "path": "lean-language-server", "rootSearch": "...s/start/nvim-lspconfig/lua/lspconfig/configs/lean3ls.lua:13: attempt to index local 'fname' (a nil value)"}
+  var settings = {"args": ["--stdio", "--", "-M", "4096", "-T", "100000"], "filetype": ["lean3"], "forceOffsetEncoding": "utf-32", "name": "lean3ls", "path": "lean-language-server"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Leanls(opts: dict<any> = {})
-  var settings = {"args": ["serve", "--"], "filetype": ["lean"], "name": "leanls", "path": "lake", "rootSearch": "...ps/start/nvim-lspconfig/lua/lspconfig/configs/leanls.lua:12: attempt to index local 'fname' (a nil value)"}
+  var settings = {"args": ["serve", "--"], "filetype": ["lean"], "name": "leanls", "path": "lake"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def LelwelLs(opts: dict<any> = {})
@@ -821,11 +821,11 @@ export def PestLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Phan(opts: dict<any> = {})
-  var settings = {"args": ["-m", "json", "--no-color", "--no-progress-bar", "-x", "-u", "-S", "--language-server-on-stdin", "--allow-polyfill-parser"], "filetype": ["php"], "name": "phan", "path": "phan", "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)"}
+  var settings = {"args": ["-m", "json", "--no-color", "--no-progress-bar", "-x", "-u", "-S", "--language-server-on-stdin", "--allow-polyfill-parser"], "filetype": ["php"], "name": "phan", "path": "phan"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Phpactor(opts: dict<any> = {})
-  var settings = {"args": ["language-server"], "filetype": ["php"], "name": "phpactor", "path": "phpactor", "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)"}
+  var settings = {"args": ["language-server"], "filetype": ["php"], "name": "phpactor", "path": "phpactor"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Pico8Ls(opts: dict<any> = {})
@@ -913,7 +913,7 @@ export def QuickLintJs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def RLanguageServer(opts: dict<any> = {})
-  var settings = {"args": ["--no-echo", "-e", "languageserver::run()"], "filetype": ["r", "rmd"], "name": "r_language_server", "path": "R", "rootSearch": "/home/sacca"}
+  var settings = {"args": ["--no-echo", "-e", "languageserver::run()"], "filetype": ["r", "rmd"], "name": "r_language_server", "path": "R"}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def RacketLangserver(opts: dict<any> = {})
@@ -953,7 +953,9 @@ export def Rls(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Rnix(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["nix"], "initializationOptions": [], "name": "rnix", "path": "rnix-lsp", "rootSearch": "/home/sacca", "workspaceConfig": {"settings": []}}
+  var settings = {"args": [], "filetype": ["nix"], "initializationOptions": [], "name": "rnix", "path": "rnix-lsp", "workspaceConfig": {"settings": []}}
+  g:LspAddServer([settings->extend(opts, 'force')])
+enddef
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def RobotframeworkLs(opts: dict<any> = {})
@@ -989,7 +991,7 @@ export def RuneLanguageserver(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def RustAnalyzer(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["rust"], "name": "rust_analyzer", "path": "rust-analyzer", "rootSearch": "...e/pack/deps/start/nvim-lspconfig/lua/lspconfig/async.lua:15: assertion failed!", "syncInit": true}
+  var settings = {"args": [], "filetype": ["rust"], "name": "rust_analyzer", "path": "rust-analyzer", "rootSearch": ["Cargo.toml", "rust-project.json", ".git"], "syncInit": true}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def SaltLs(opts: dict<any> = {})
@@ -1025,7 +1027,7 @@ export def SlintLsp(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def SmartyLs(opts: dict<any> = {})
-  var settings = {"args": ["--stdio"], "filetype": ["smarty"], "initializationOptions": [], "name": "smarty_ls", "path": "smarty-language-server", "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)", "workspaceConfig": {"settings": {"css": {"validate": true}, "smarty": {"pluginDirs": []}}}}
+  var settings = {"args": ["--stdio"], "filetype": ["smarty"], "initializationOptions": [], "name": "smarty_ls", "path": "smarty-language-server", "workspaceConfig": {"settings": {"css": {"validate": true}, "smarty": {"pluginDirs": []}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def SmithyLs(opts: dict<any> = {})

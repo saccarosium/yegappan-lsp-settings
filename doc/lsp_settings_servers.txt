@@ -2049,7 +2049,6 @@ Defaults: >
       ],
       "name": "fennel_ls",
       "path": "fennel-ls",
-      "rootSearch": "vim/fs.lua:0: invalid value (nil) at index 1 in table for 'concat'",
       "workspaceConfig": {
         "settings": []
       }
@@ -2530,8 +2529,7 @@ Defaults: >
         "gotmpl"
       ],
       "name": "gopls",
-      "path": "gopls",
-      "rootSearch": "...e/pack/deps/start/nvim-lspconfig/lua/lspconfig/async.lua:15: assertion failed!"
+      "path": "gopls"
     }
 
 GRADLE LS ~
@@ -2993,8 +2991,7 @@ Defaults: >
         "php"
       ],
       "name": "intelephense",
-      "path": "intelephense",
-      "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)"
+      "path": "intelephense"
     }
 
 JANET LSP ~
@@ -3276,8 +3273,7 @@ Defaults: >
       ],
       "forceOffsetEncoding": "utf-32",
       "name": "lean3ls",
-      "path": "lean-language-server",
-      "rootSearch": "...s/start/nvim-lspconfig/lua/lspconfig/configs/lean3ls.lua:13: attempt to index local 'fname' (a nil value)"
+      "path": "lean-language-server"
     }
 
 LEANLS ~
@@ -3294,8 +3290,7 @@ Defaults: >
         "lean"
       ],
       "name": "leanls",
-      "path": "lake",
-      "rootSearch": "...ps/start/nvim-lspconfig/lua/lspconfig/configs/leanls.lua:12: attempt to index local 'fname' (a nil value)"
+      "path": "lake"
     }
 
 LELWEL LS ~
@@ -4416,8 +4411,7 @@ Defaults: >
         "php"
       ],
       "name": "phan",
-      "path": "phan",
-      "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)"
+      "path": "phan"
     }
 
 PHPACTOR ~
@@ -4433,8 +4427,7 @@ Defaults: >
         "php"
       ],
       "name": "phpactor",
-      "path": "phpactor",
-      "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)"
+      "path": "phpactor"
     }
 
 PICO8 LS ~
@@ -4878,8 +4871,7 @@ Defaults: >
         "rmd"
       ],
       "name": "r_language_server",
-      "path": "R",
-      "rootSearch": "/home/sacca"
+      "path": "R"
     }
 
 RACKET LANGSERVER ~
@@ -5091,7 +5083,6 @@ Defaults: >
       "initializationOptions": [],
       "name": "rnix",
       "path": "rnix-lsp",
-      "rootSearch": "/home/sacca",
       "workspaceConfig": {
         "settings": []
       }
@@ -5264,7 +5255,11 @@ Defaults: >
       ],
       "name": "rust_analyzer",
       "path": "rust-analyzer",
-      "rootSearch": "...e/pack/deps/start/nvim-lspconfig/lua/lspconfig/async.lua:15: assertion failed!",
+      "rootSearch": [
+        "Cargo.toml",
+        "rust-project.json",
+        ".git"
+      ],
       "syncInit": true
     }
 
@@ -5424,7 +5419,6 @@ Defaults: >
       "initializationOptions": [],
       "name": "smarty_ls",
       "path": "smarty-language-server",
-      "rootSearch": "...te/pack/deps/start/nvim-lspconfig/lua/lspconfig/util.lua:180: bad argument #1 to 'fs_realpath' (string expected, got table)",
       "workspaceConfig": {
         "settings": {
           "css": {

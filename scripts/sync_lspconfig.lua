@@ -1,5 +1,25 @@
 ---@diagnostic disable: undefined-global
 
+---Merge two tables together IT WILL MUTATE THE FIRST TABLE
+---@param tbl table<any, any>
+---@param keys table<any, any>
+---@return nil
+local function tbl_add_keys(tbl, keys)
+    tbl = vim.tbl_deep_extend("force", tbl, keys)
+end
+
+---@param tbl table<any, any>
+---@return nil
+local function strip_functions(tbl)
+    for k, v in pairs(tbl) do
+        if type(v) == "function" then
+            tbl[k] = nil
+        elseif type(v) == "table" and not vim.isarray(v) then
+            strip_functions(v)
+        end
+    end
+end
+
 --- NOTE: That the Scheme is not complete.
 --- All the key with a function type were
 --- excluded to be able to serialize the table.
@@ -49,50 +69,50 @@ local function transform_server_config(server_name, server_config)
         name = server_name,
     }
 
+    local add_keys = function(keys)
+        tbl_add_keys(trasformed_config, keys)
+    end
+
     for k, v in pairs(server_config) do
         if k == "cmd" then
-            trasformed_config.path = v[1]
-            table.remove(v, 1)
-            trasformed_config.args = v
+            add_keys({
+                -- This works because table remove returns the removed value
+                path = table.remove(v, 1),
+                args = v,
+            })
         elseif k == "init_options" then
-            trasformed_config.initializationOptions = v
+            add_keys({ initializationOptions = v })
         elseif k == "filetype" then
-            trasformed_config.filetype = { v }
+            add_keys({ filetype = { v } })
         elseif k == "filetypes" then
-            trasformed_config.filetype = v
+            add_keys({ filetype = v })
         elseif k == "settings" then
-            trasformed_config.workspaceConfig = {}
-            trasformed_config.workspaceConfig.settings = v
+            add_keys({
+                workspaceConfig = {
+                    settings = v,
+                },
+            })
         elseif k == "root_dir" then
-            trasformed_config.rootSearch = v
+            add_keys({ rootSearch = v })
         elseif k == "capabilities" then
             local cap = server_config.capabilities
             if cap and cap.offsetEncoding then
-                trasformed_config.forceOffsetEncoding = cap.offsetEncoding
+                add_keys({ forceOffsetEncoding = cap.offsetEncoding })
             end
         elseif k == "offset_encoding" then
-            trasformed_config.forceOffsetEncoding = v
+            add_keys({ forceOffsetEncoding = v })
         end
     end
 
     -- Apply server specific overides
     if server_name == "rust_analyzer" then
-        trasformed_config.syncInit = true
+        tbl_add_keys(trasformed_config, {
+            syncInit = true,
+            rootSearch = { "Cargo.toml", "rust-project.json", ".git" },
+        })
     end
 
     return trasformed_config
-end
-
----@param tbl table<any, any>
----@return nil
-local function strip_functions(tbl)
-    for k, v in pairs(tbl) do
-        if type(v) == "function" then
-            tbl[k] = nil
-        elseif type(v) == "table" and not vim.isarray(v) then
-            strip_functions(v)
-        end
-    end
 end
 
 ---@return table<string, NvimScheme>
@@ -100,7 +120,8 @@ local function get_server_configs()
     -- Overide root_pattern function so we can extract the root files makers as a List
     require("lspconfig.util").root_pattern = function(...)
         local tbl = { ... }
-        return function()
+        ---@diagnostic disable-next-line: unused-vararg
+        return function(...)
             return tbl
         end
     end
@@ -115,7 +136,10 @@ local function get_server_configs()
             local server_definition = require("lspconfig.configs." .. server_name)
             local server_config = vim.deepcopy(server_definition.default_config)
             if server_config.root_dir then
-                _, server_config.root_dir = pcall(server_config.root_dir)
+                local _, res = pcall(server_config.root_dir)
+                if type(res) == "table" then
+                    server_config.root_dir = res
+                end
             end
             strip_functions(server_config)
             server_configs[server_name] = server_config
