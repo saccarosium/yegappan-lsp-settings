@@ -2529,7 +2529,12 @@ Defaults: >
         "gotmpl"
       ],
       "name": "gopls",
-      "path": "gopls"
+      "path": "gopls",
+      "rootSearch": [
+        "go.work",
+        "go.mod",
+        ".git"
+      ]
     }
 
 GRADLE LS ~

@@ -1,25 +1,5 @@
 ---@diagnostic disable: undefined-global
 
----Merge two tables together IT WILL MUTATE THE FIRST TABLE
----@param tbl table<any, any>
----@param keys table<any, any>
----@return nil
-local function tbl_add_keys(tbl, keys)
-    tbl = vim.tbl_deep_extend("force", tbl, keys)
-end
-
----@param tbl table<any, any>
----@return nil
-local function strip_functions(tbl)
-    for k, v in pairs(tbl) do
-        if type(v) == "function" then
-            tbl[k] = nil
-        elseif type(v) == "table" and not vim.isarray(v) then
-            strip_functions(v)
-        end
-    end
-end
-
 --- NOTE: That the Scheme is not complete.
 --- All the key with a function type were
 --- excluded to be able to serialize the table.
@@ -65,54 +45,50 @@ end
 ---@param server_config NvimScheme
 ---@return YeggapanScheme
 local function transform_server_config(server_name, server_config)
-    local trasformed_config = {
+    local new_server_config = {
         name = server_name,
     }
 
-    local add_keys = function(keys)
-        tbl_add_keys(trasformed_config, keys)
-    end
-
     for k, v in pairs(server_config) do
         if k == "cmd" then
-            add_keys({
-                -- This works because table remove returns the removed value
-                path = table.remove(v, 1),
-                args = v,
-            })
+            -- This works because table remove returns the removed value
+            new_server_config.path = table.remove(v, 1)
+            new_server_config.args = v
         elseif k == "init_options" then
-            add_keys({ initializationOptions = v })
+            new_server_config.initializationOptions = v
         elseif k == "filetype" then
-            add_keys({ filetype = { v } })
+            new_server_config.filetype = { v }
         elseif k == "filetypes" then
-            add_keys({ filetype = v })
+            new_server_config.filetype = v
         elseif k == "settings" then
-            add_keys({
-                workspaceConfig = {
-                    settings = v,
-                },
-            })
+            new_server_config.workspaceConfig = {
+                settings = v,
+            }
         elseif k == "root_dir" then
-            add_keys({ rootSearch = v })
+            new_server_config.rootSearch = v
         elseif k == "capabilities" then
             local cap = server_config.capabilities
             if cap and cap.offsetEncoding then
-                add_keys({ forceOffsetEncoding = cap.offsetEncoding })
+                new_server_config.forceOffsetEncoding = cap.offsetEncoding
             end
         elseif k == "offset_encoding" then
-            add_keys({ forceOffsetEncoding = v })
+            new_server_config.forceOffsetEncoding = v
         end
     end
 
-    -- Apply server specific overides
-    if server_name == "rust_analyzer" then
-        tbl_add_keys(trasformed_config, {
-            syncInit = true,
-            rootSearch = { "Cargo.toml", "rust-project.json", ".git" },
-        })
-    end
+    return new_server_config
+end
 
-    return trasformed_config
+---@param tbl table<any, any>
+---@return nil
+local function strip_functions(tbl)
+    for k, v in pairs(tbl) do
+        if type(v) == "function" then
+            tbl[k] = nil
+        elseif type(v) == "table" and not vim.isarray(v) then
+            strip_functions(v)
+        end
+    end
 end
 
 ---@return table<string, NvimScheme>
@@ -150,6 +126,16 @@ local function get_server_configs()
 end
 
 ---@param server_configs table<string, YeggapanScheme>
+local function apply_server_specific_override(server_configs)
+    local rust_analyzer = server_configs.rust_analyzer
+    rust_analyzer.syncInit = true
+    rust_analyzer.rootSearch = { "Cargo.toml", "rust-project.json", ".git" }
+
+    local gopls = server_configs.gopls
+    gopls.rootSearch = { "go.work", "go.mod", ".git" }
+end
+
+---@param server_configs table<string, YeggapanScheme>
 local function write_server_configs(server_configs)
     local file = vim.uv.fs_open("servers.json", "w", 438)
     if not file then
@@ -165,10 +151,15 @@ end
 
 local function main()
     local neovim_server_configs = get_server_configs()
+
+    -- Process configs
     local yeggapan_server_configs = {}
     for server, config in pairs(neovim_server_configs) do
         yeggapan_server_configs[server] = transform_server_config(server, config)
     end
+
+    apply_server_specific_override(yeggapan_server_configs)
+
     write_server_configs(yeggapan_server_configs)
 end
 

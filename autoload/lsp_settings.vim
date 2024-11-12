@@ -457,7 +457,7 @@ export def GolangciLintLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Gopls(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["go", "gomod", "gowork", "gotmpl"], "name": "gopls", "path": "gopls"}
+  var settings = {"args": [], "filetype": ["go", "gomod", "gowork", "gotmpl"], "name": "gopls", "path": "gopls", "rootSearch": ["go.work", "go.mod", ".git"]}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def GradleLs(opts: dict<any> = {})
