@@ -956,6 +956,8 @@ export def Rnix(opts: dict<any> = {})
   var settings = {"args": [], "filetype": ["nix"], "initializationOptions": [], "name": "rnix", "path": "rnix-lsp", "workspaceConfig": {"settings": []}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
+export def Robotcode(opts: dict<any> = {})
+  var settings = {"args": ["language-server"], "filetype": ["robot", "resource"], "name": "robotcode", "path": "robotcode", "rootSearch": ["robot.toml", "pyproject.toml", "Pipfile", ".git"]}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def RobotframeworkLs(opts: dict<any> = {})

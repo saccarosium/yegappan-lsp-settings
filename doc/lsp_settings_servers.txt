@@ -5088,6 +5088,29 @@ Defaults: >
       }
     }
 
+ROBOTCODE ~
+Usage: >
+    call lsp_settings#Robotcode()
+<
+Defaults: >
+    {
+      "args": [
+        "language-server"
+      ],
+      "filetype": [
+        "robot",
+        "resource"
+      ],
+      "name": "robotcode",
+      "path": "robotcode",
+      "rootSearch": [
+        "robot.toml",
+        "pyproject.toml",
+        "Pipfile",
+        ".git"
+      ]
+    }
+
 ROBOTFRAMEWORK LS ~
 Usage: >
     call lsp_settings#RobotframeworkLs()
