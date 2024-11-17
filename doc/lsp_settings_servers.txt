@@ -5199,7 +5199,8 @@ Defaults: >
     {
       "args": [],
       "filetype": [
-        "ruby"
+        "ruby",
+        "eruby"
       ],
       "initializationOptions": {
         "formatter": "auto"

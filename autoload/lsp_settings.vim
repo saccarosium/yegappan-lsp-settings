@@ -977,7 +977,7 @@ export def Rubocop(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def RubyLsp(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["ruby"], "initializationOptions": {"formatter": "auto"}, "name": "ruby_lsp", "path": "ruby-lsp", "rootSearch": ["Gemfile", ".git"]}
+  var settings = {"args": [], "filetype": ["ruby", "eruby"], "initializationOptions": {"formatter": "auto"}, "name": "ruby_lsp", "path": "ruby-lsp", "rootSearch": ["Gemfile", ".git"]}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Ruff(opts: dict<any> = {})
