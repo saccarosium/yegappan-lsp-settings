@@ -27,7 +27,7 @@
 --- All the key with a function type were
 --- excluded.  source: `:h lsp-cfg-*`
 ---
----@class YeggapanScheme
+---@class YegappanScheme
 ---@field args string[]
 ---@field features table<any, any>
 ---@field filetype string[]
@@ -43,7 +43,7 @@
 
 ---@param server_name string
 ---@param server_config NvimScheme
----@return YeggapanScheme
+---@return YegappanScheme
 local function transform_server_config(server_name, server_config)
     local new_server_config = {
         name = server_name,
@@ -125,7 +125,7 @@ local function get_server_configs()
     return server_configs
 end
 
----@param server_configs table<string, YeggapanScheme>
+---@param server_configs table<string, YegappanScheme>
 local function apply_server_specific_override(server_configs)
     local rust_analyzer = server_configs.rust_analyzer
     rust_analyzer.syncInit = true
@@ -135,7 +135,7 @@ local function apply_server_specific_override(server_configs)
     gopls.rootSearch = { "go.work", "go.mod", ".git" }
 end
 
----@param server_configs table<string, YeggapanScheme>
+---@param server_configs table<string, YegappanScheme>
 local function write_server_configs(server_configs)
     local file = vim.uv.fs_open("servers.json", "w", 438)
     if not file then
@@ -153,14 +153,14 @@ local function main()
     local neovim_server_configs = get_server_configs()
 
     -- Process configs
-    local yeggapan_server_configs = {}
+    local yegappan_server_configs = {}
     for server, config in pairs(neovim_server_configs) do
-        yeggapan_server_configs[server] = transform_server_config(server, config)
+        yegappan_server_configs[server] = transform_server_config(server, config)
     end
 
-    apply_server_specific_override(yeggapan_server_configs)
+    apply_server_specific_override(yegappan_server_configs)
 
-    write_server_configs(yeggapan_server_configs)
+    write_server_configs(yegappan_server_configs)
 end
 
 main()

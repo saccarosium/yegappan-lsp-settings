@@ -1,6 +1,6 @@
 # Vim Settings
 
-This is a sets of preconfigured lsp settings for [yeggapan/lsp](https://github.com/yegappan/lsp) client.
+This is a sets of preconfigured lsp settings for [yegappan/lsp](https://github.com/yegappan/lsp) client.
 
 ## Features
 
@@ -14,9 +14,9 @@ This is a sets of preconfigured lsp settings for [yeggapan/lsp](https://github.c
 
 ```vim
 " Vim plug
-Plug 'saccarosium/yeggapan-lsp-settings'
+Plug 'saccarosium/yegappan-lsp-settings'
 " Minpac
-call minpac#add('saccarosium/yeggapan-lsp-settings')
+call minpac#add('saccarosium/yegappan-lsp-settings')
 ```
 
 ## How to use
