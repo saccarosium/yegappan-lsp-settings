@@ -6979,7 +6979,8 @@ Defaults: >
       "filetype": [
         "markdown",
         "text",
-        "tex"
+        "tex",
+        "rst"
       ],
       "name": "vale_ls",
       "path": "vale-ls",

@@ -1285,7 +1285,7 @@ export def ValaLs(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def ValeLs(opts: dict<any> = {})
-  var settings = {"args": [], "filetype": ["markdown", "text", "tex"], "name": "vale_ls", "path": "vale-ls", "rootSearch": [".vale.ini"]}
+  var settings = {"args": [], "filetype": ["markdown", "text", "tex", "rst"], "name": "vale_ls", "path": "vale-ls", "rootSearch": [".vale.ini"]}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Vdmj(opts: dict<any> = {})
