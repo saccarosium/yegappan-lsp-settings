@@ -24,7 +24,7 @@ if [ -d "$repo_path" ]; then
 else
     echo "==> Cloning nvim/nvim-lspconfig repository"
     url="https://github.com/neovim/nvim-lspconfig.git"
-    git clone "$url" "$path"
+    git clone "$url" "$repo_path"
 fi
 
 echo "==> Done"
@@ -35,7 +35,7 @@ Generating files
 ================================================================================
 EOF
 
-if python3 ./scripts/sync_lspconfig.py; then 
+if python3 ./scripts/sync_lspconfig.py; then
     echo "==> Done"
 else
     echo "==> Failed"
