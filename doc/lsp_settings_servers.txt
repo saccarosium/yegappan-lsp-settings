@@ -455,6 +455,7 @@ Defaults: >
         "start"
       ],
       "filetype": [
+        "bash",
         "sh"
       ],
       "name": "bashls",

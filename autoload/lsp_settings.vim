@@ -73,7 +73,7 @@ export def Basedpyright(opts: dict<any> = {})
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def Bashls(opts: dict<any> = {})
-  var settings = {"args": ["start"], "filetype": ["sh"], "name": "bashls", "path": "bash-language-server", "workspaceConfig": {"settings": {"bashIde": {"globPattern": "*@(.sh|.inc|.bash|.command)"}}}}
+  var settings = {"args": ["start"], "filetype": ["bash", "sh"], "name": "bashls", "path": "bash-language-server", "workspaceConfig": {"settings": {"bashIde": {"globPattern": "*@(.sh|.inc|.bash|.command)"}}}}
   g:LspAddServer([settings->extend(opts, 'force')])
 enddef
 export def BasicsLs(opts: dict<any> = {})
